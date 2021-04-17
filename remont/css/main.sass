@@ -1,0 +1,219 @@
+@import __base
+@import __settings
+
+// Header
+.header
+  height: 100vh
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/header.png') 
+  background-size: cover
+  background-position: center center
+  background-attachment: fixed
+  font-family: 'Montserrat-Regular'
+  &__menu
+    padding: 5rem 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    font-size: 4rem
+    color: $white
+  &__links
+    padding: 1rem
+    width: 55%
+    display: flex
+    justify-content: space-around 
+    +media(1024px)
+      width: 65%
+    +media(768px)
+      padding: 2rem
+      position: absolute
+      display: none
+      flex-direction: column
+      background-color: $yellow
+      text-align: center
+      top: 15rem
+      left: 2
+      width: 95%
+      border-radius: 1rem
+  &__link
+    cursor: pointer
+    color: $white
+    font-size: 1.8rem
+    position: relative
+    transition: all 0.6s
+    &:before
+      content: ""
+      width: 0
+      height: 0.1em
+      position: absolute
+      bottom: 0
+      left: 50%
+      background: $yellow
+      transition: all 0.3s
+    &:hover 
+      &:before 
+        width: 100%
+        left: 0
+        background: $yellow 
+    +media(1024px)
+      font-size: 1.5rem
+    +media(768px)
+      font-family: 'Montserrat-Bold'
+      margin-top: 3.5rem
+      font-size: 3.5rem
+      color: $black  
+  &__contacts
+    display: flex
+    flex-direction: column
+    text-align: center
+    +media(768px)
+      display: none
+  &__telephone
+    font-family: 'Montserrat-Medium'
+    color: $white
+    text-decoration: none
+    font-size: 3rem
+    +media(1024px)
+      font-size: 2.5rem
+      white-space: nowrap
+  &__bell
+    padding: 2rem
+    font-size: 2rem
+    color: $yellow
+    white-space: nowrap
+    +media(1024px)
+      font-size: 1.8rem
+  &__active
+    display: none
+    +media(768px)
+      display: flex
+      align-items: center 
+  &__phone
+    margin-right: 2rem         
+  &__burger
+    cursor: pointer
+  .line
+    width: 2.5rem
+    height: 2px
+    margin: 5px
+    background-color: $white
+    transition: all .4s ease      
+  .display
+    display: flex
+  &__content
+    display: flex
+    justify-content: space-between
+    +media(1024px)
+      flex-direction: column
+  &__text
+    margin-right: 2rem
+    padding: 6rem 0
+    max-width: 70rem
+    +media(1280px)
+      max-width: 55rem 
+    +media(1024px)
+      padding: 3rem 0
+      margin: 0 auto
+      text-align: center
+      max-width: 70rem
+  &__title
+    color: $white
+    font-size: 7rem
+    font-family: 'Montserrat-Bold'
+    +media(768px)
+      font-size: 6rem
+    +media(414px)
+      font-size: 5rem
+    +media(320px)
+      font-size: 4rem    
+  &__description
+    margin-top: 7rem
+    font-size: 2rem
+    color: $white
+    line-height: 1.5
+    +media(1280px)
+      font-size: 1.5rem
+    +media(768px)
+      margin-top: 6rem  
+  &__form
+    margin-top: 9rem
+    display: flex
+    flex-direction: column
+    max-width: 45rem
+    padding: 7rem 5rem
+    background-color: $white
+    border-radius: 5px
+    text-align: center
+    +media(1024px)
+      margin: 9rem auto
+    +media(768px)
+      margin-top: 10rem
+      padding: 6rem 3rem  
+    &-title
+      font-family: 'Montserrat-Medium'
+      font-size: 2.2rem
+      user-select: none
+    &-input
+      margin-top: 2rem
+      padding: 1.5rem
+      font-size: 1.7rem
+      background-color: $gray
+      border: none
+      outline: none
+    &-btn
+      margin-top: 2rem
+      font-family: 'Montserrat-Bold'
+      cursor: pointer
+      background-color: $yellow
+      outline: none
+      border: none
+      border-radius: 1rem
+      padding: 1.5rem 0
+      font-size: 1.5rem
+      &:hover
+        background-color: $black  
+  .label
+    font-family: 'Montserrat-Medium'
+    margin-top: 2rem
+    display: flex
+    align-items: center
+    font-size: 1.4rem
+    user-select: none
+  .checkbox
+    display: none
+    &__text
+      margin-left: 1rem
+      white-space: nowrap
+      +media(667px)
+        white-space: normal
+      +media(414px)
+        font-size: 1.3rem   
+  .fake
+    cursor: pointer
+    display: block
+    user-select: none
+    width: 2rem
+    height: 2rem
+    border: 2px solid $black
+    border-radius: 3px
+    position: relative
+    &::before
+      content: '\2714'
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: .2s
+  .checkbox:checked + .fake::before
+    opacity: 1
+
+
+    
+
+                
+
+
+
+    
+
