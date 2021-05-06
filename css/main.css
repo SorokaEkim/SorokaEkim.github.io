@@ -63,7 +63,7 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.header__img {
   width: 50%;
   height: 100%;
   display: block;
@@ -78,5 +78,5 @@
   background-color: #2b5d8e;
   top: 0;
   left: 0;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }

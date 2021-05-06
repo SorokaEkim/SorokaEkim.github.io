@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Section Header -->
   <section class="header w-full">
     <div class="header-top bg-blue-450 py-3 text-xl">
       <div class="container mx-auto px-2 md:px-10 xl:px-28 justify-between sm:flex">
         <div class="header__search w-full lg:w-2/3 xl:w-3/5 text-gray-400 relative focus-within:text-gray-600 lg:flex lg:items-center">
-          <input class=" header__input h-10 w-full pl-10 rounded focus:outline-none" placeholder="Поиск по товарам" type="text">
+          <input class=" header__input h-10 w-full pl-10 rounded-lg focus:outline-none" placeholder="Поиск по товарам" type="text">
           <div class="header-search__svg absolute top-0 left-0 h-full w-10 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -22,7 +22,6 @@
           </div>
         </div>
         <!-- /.header__search -->
-
         <div class="header__contacts w-full sm:w-1/4 lg:w-1/3 xl:w-2/5 lg:ml-2 2xl:w-2/3 2xl:ml-2 flex sm:justify-end lg:justify-between items-center text-white">
           <a class="header__schedule hidden lg:flex items-center">
             <div class="header-schedule__svg">
@@ -33,7 +32,6 @@
             <span class="header__time ml-1 whitespace-nowrap">с 9:00 до 18:00</span>
           </a>
           <!-- /.header__schedule -->
-
           <a href="tel:+79196774095" class="header__phone hidden sm:flex items-center sm:mr-5">
             <div class="header-phone__svg">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,7 +41,6 @@
             <span class="header__number ml-1 hidden xl:block">89196774095</span>
           </a>       
           <!-- /.header__phone -->
-
           <div class="header__register flex items-center">
             <a href="#" class="header-register__svg hidden sm:flex">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +56,6 @@
       <!-- /.container -->
     </div>
     <!-- /.header-top -->
-
     <div class="header__menu py-3 text-xl relative shadow">
       <div class="container mx-auto px-2 md:px-10 xl:px-28 flex items-center justify-between ">
         <div class="header__burger w-10 h-9 text-blue-450 lg:hidden relative">
@@ -94,7 +90,7 @@
         </div>
         <!-- /.header__nav -->
         <div class="header__navigations flex items-center text-blue-450">
-          <button class="header__btn p-2 cursor-pointer ring-2 rounded ring-blue-450 hover:bg-blue-450 hover:text-white focus:outline-none duration-100 hidden sm:block">Направить заявку</button>
+          <button class="header__btn p-2 cursor-pointer ring-2 rounded-lg ring-blue-450 hover:bg-blue-450 hover:text-white focus:outline-none duration-100 hidden sm:block">Отправить заявку</button>
           <a href="#" class="header__basket ml-5">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -117,21 +113,20 @@
       <div class="container mx-auto px-2 md:px-10 xl:px-28 lg:flex items-center">
         <div class="header__text flex flex-col">
           <h1 class="header__title text-4xl xl:text-5xl font-medium text-center lg:text-left mb-12">Бюджетные смесители и комплектующие оптом</h1>
-          <button class="header-main__btn text-white bg-blue-450 text-xl py-2 w-52 mx-auto lg:mx-0 cursor-pointer ring-2 rounded ring-blue-450 hover:bg-white hover:text-blue-450 focus:outline-none duration-100">Подробнее</button>
+          <button class="header-main__btn text-white bg-blue-450 text-xl py-2 w-52 mx-auto lg:mx-0 cursor-pointer ring-2 rounded-lg ring-blue-450 hover:bg-white hover:text-blue-450 focus:outline-none duration-100">Подробнее</button>
         </div>
         <!-- /.header-main__text -->
-
         <div class="header__slider lg:w-1/2">
           <div class="swiper-container mySwiper mt-10">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./images/1.png" alt="популярный смеситель"></div>
-              <div class="swiper-slide"><img src="./images/2.png" alt="популярный смеситель"></div>
-              <div class="swiper-slide"><img src="./images/3.png" alt="популярный смеситель"></div>
+              <div class="swiper-slide"><img class="header__img" src="./images/1.png" alt="популярный смеситель"></div>
+              <div class="swiper-slide"><img class="header__img" src="./images/2.png" alt="популярный смеситель"></div>
+              <div class="swiper-slide"><img class="header__img" src="./images/3.png" alt="популярный смеситель"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
-
+          <!-- swiper-container -->
         </div>
         <!-- /.header__slider -->
       </div>
@@ -141,24 +136,463 @@
   </section>
   <!-- /.header -->
 
-  <!-- Gallery -->
+  <!-- Section Gallery -->
   <section class="gallery">
     <div class="container mx-auto px-2 md:px-10 xl:px-28">
       <div class="gallery__wrap text-white text-2xl font-semibold grid sm:grid-cols-2 sm:gap-2 md:gap-6 xl:grid-cols-4">
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_1 bg-cover relative"><h2 class="gallery__title z-0">Для ванной</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_2 bg-cover relative"><h2 class="gallery__title z-0">Для душа</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_3 bg-cover relative"><h2 class="gallery__title z-0">Для умывальника</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_4 bg-cover relative"><h2 class="gallery__title z-0">Для кухонной мойки</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_5 bg-cover relative"><h2 class="gallery__title z-0">Для биде</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_6 bg-cover relative"><h2 class="gallery__title z-0">Для гигиены</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_7 bg-cover relative"><h2 class="gallery__title z-0">Для писсуара</h2></a>
-        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded flex items-center justify-center bg-gallery_8 bg-cover relative"><h2 class="gallery__title z-0">Аксессуары</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_1 bg-cover relative"><h2 class="gallery__title z-0">Для ванной</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_2 bg-cover relative"><h2 class="gallery__title z-0">Для душа</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_3 bg-cover relative"><h2 class="gallery__title z-0">Для умывальника</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_4 bg-cover relative"><h2 class="gallery__title z-0">Для кухонной мойки</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_5 bg-cover relative"><h2 class="gallery__title z-0">Для биде</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_6 bg-cover relative"><h2 class="gallery__title z-0">Для гигиены</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_7 bg-cover relative"><h2 class="gallery__title z-0">Для писсуара</h2></a>
+        <a href="#" class="gallery__block shadow-2xl h-36 my-2 rounded-lg flex items-center justify-center bg-gallery_8 bg-cover relative"><h2 class="gallery__title z-0">Аксессуары</h2></a>
       </div>
       <!-- /.gallery__wrap -->
     </div>
     <!-- /.container -->
   </section>
   <!-- /.gallery -->
+
+  <!-- Section New and Popular  -->
+  <section class="popular">
+    <div class="container mx-auto px-2 md:px-10 xl:px-28 flex justify-center flex-col">
+      <div class="popular__header py-10 flex text-2xl sm:text-4xl justify-center sm:justify-start">
+        <button class="new__product mr-4 cursor-pointer focus:text-blue-450 focus:outline-none font-medium">Популярное</button>
+        <div class="font-thin">|</div>
+        <button class="popular__product ml-4 cursor-pointer focus:text-blue-450 focus:outline-none font-medium">Новинки</button>
+      </div>
+      <!-- /.popular__header -->
+      <div class="swiper-container mySwiper_2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide rounded-xl">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+          <div class="swiper-slide">
+            <div class="product px-6 py-3 shadow-xl rounded-lg text-md">
+              <div class="product__header text-blue-450">
+                <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>
+              </div>
+              <!-- /.cart__header -->
+              <a href="#" class="product__image">
+                <img src="./images/cart1.png" alt="смеситель для кухонной мойки">
+              </a>
+              <!-- /.cart__image -->
+              <p href="#" class="product__name text-left text-blue-450">Смеситель для кухонной мойки Lemark Arc LM5079S Хром</p>
+              <div class="pruduct__price flex items-center justify-between mt-1">
+                <span class="price">5252 руб.</span>
+                <div class="product__stock flex items-center">
+                  <div class="circle rounded-full w-4 h-4 bg-green-500 mr-2"></div> В наличии
+                </div>
+              </div>
+              <!-- /.pruduct__price -->
+              <div class="product__quantity flex justify-between mt-2">
+                <div class="product__quantity-wrap flex items-center">
+                  <p class="product__quanity-text text-left mr-2">Кол-во</p>
+                  <div class="product__input border-blue-450 border-2 rounded-lg h-12 w-16 flex items-center relative">
+                    <span class="quanity font-medium ml-3">1</span>
+                    <button class="quanity-up text-blue-450 cursor-pointer absolute right-1 top-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7" />
+                      </svg>
+                    </button>
+                    <button class="quanity-down text-blue-450 cursor-pointer absolute right-1 bottom-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </a>
+              </div>
+              <!-- /.product__quantity -->
+            </div>
+            <!-- /.cart -->
+          </div>
+        </div>
+        <div class="swiper-button-next next"></div>
+        <div class="swiper-button-prev prev"></div>
+      </div>
+      <!-- swiper container -->
+      <button class="popular__btn text-xl text-blue-450 p-2 mx-auto w-60 mt-10 cursor-pointer ring-2 rounded-lg ring-blue-450 hover:bg-blue-450 hover:text-white focus:outline-none duration-100 ">Перейти в каталог</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.popular -->
+
+  <!-- Section footer -->
+  <section class="footer">
+    <div class="container mx-auto px-2 md:px-10 xl:px-28">
+      <div class="footer__wrap grid">
+
+      </div>
+      <!-- /.footer__wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.footer -->
   <script src="./js/swiper-min.js"></script>
   <script src="./js/main.js"></script>
 </body>
