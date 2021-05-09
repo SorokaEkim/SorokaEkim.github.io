@@ -80,3 +80,7 @@
   left: 0;
   border-radius: 0.5rem;
 }
+
+input:checked + svg {
+  display: block;
+}

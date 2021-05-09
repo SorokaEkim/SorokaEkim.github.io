@@ -99,7 +99,7 @@
           <!-- /.header__basket -->
         </div>
         <!-- /.header__navigations -->
-        <div class="header-register__svg text-blue-450 sm:hidden">
+        <div class="header-register__svg header__register2 text-blue-450 sm:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -669,6 +669,57 @@
     <!-- /.container -->
   </section>
   <!-- /.footer -->
+
+  <!-- Popups -->
+  <div class="popups fixed w-full h-full top-0 left-0 z-10 hidden">
+    <div class="popup-log h-full flex justify-center items-center">
+      <div class="popup-log__content p-10 rounded-lg text-center bg-blue-450 relative flex flex-col">
+        <a href="#" class="popup-log__close absolute top-2 right-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+        <h2 class="popup-log__title text-4xl text-white font-medium">Войти</h2>
+        <input type="text" placeholder="Ваш email" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <input type="text" placeholder="Пароль" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <label class="flex items-center mt-5">
+          <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-white bg-white rounded-lg ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="label__text text-xl text-white select-none ml-5">Запомнить меня</span>
+        </label>
+        <button class="header-main__btn text-blue-450 bg-white text-xl py-2 mt-5 border-2 border-white cursor-pointer rounded-lg hover:bg-blue-450 hover:text-white focus:outline-none duration-100">Войти</button>
+        <div class="popup-log__footer flex justify-between mt-5 text-white">
+          <a href="#" class="underline">Забыли пароль?</a>
+          <a href="#" class="popup-log__registred underline">Регистрация</a>
+        </div>
+        <!-- /.pop-up__footer -->
+      </div>
+      <!-- /.popup-log__content -->
+    </div>
+    <!-- /.popup-log -->
+    <div class="popup-reg flex justify-center items-center h-full">
+      <div class="popup-reg__content p-10 rounded-lg text-center bg-blue-450 relative flex flex-col">
+        <a href="#" class="popup-reg__close absolute top-2 right-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+        <h2 class="popup-reg__title text-4xl text-white font-medium">Регистрация</h2>
+        <input type="text" placeholder="Ваш email" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <button class="popup-reg__btn text-blue-450 bg-white text-xl py-2 mt-5 border-2 border-white cursor-pointer rounded-lg hover:bg-blue-450 hover:text-white focus:outline-none duration-100">Регистрация</button> 
+        <div class="popup-reg__footer flex justify-between mt-5 text-white">
+          <a href="#" class="underline">Забыли пароль?</a>
+          <a href="#" class="popup-reg__login underline">Войти</a>
+        </div>
+      </div>
+      <!-- /.popup-log__content -->
+    </div>
+    <!-- /.popup-reg -->
+  </div>
+  <!-- /.popups -->
+
   <script src="./js/swiper-min.js"></script>
   <script src="./js/main.js"></script>
 </body>

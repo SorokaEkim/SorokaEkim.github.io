@@ -14,6 +14,7 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 // Swiper_2
 var swiper = new Swiper(".mySwiper_2", {
   slidesPerView: 4,
@@ -55,6 +56,7 @@ var swiper = new Swiper(".mySwiper_2", {
 }
 });
 
+// Счетчик товаров
 function addHandlers(count) {
   var minus = count.querySelector(".quanity-down");
   var number = count.querySelector(".quanity");
@@ -73,6 +75,66 @@ function addHandlers(count) {
 
 var counts = document.querySelectorAll(".product__input");
 counts.forEach(addHandlers);
+
+// Open and close popup
+const popupMenu   = document.querySelector('.popups');
+      openPopup   = document.querySelector('.header__register');
+      openPopup2  = document.querySelector('.header__register2');
+      closePopup  = document.querySelector('.popup-log__close');
+      sections    = document.querySelectorAll('section')
+
+      openPopupReg = document.querySelector('.popup-log__registred');
+      popupLogMenu = document.querySelector('.popup-log');
+
+      popupRegClose = document.querySelector('.popup-reg__close');
+      popupLogOpen  = document.querySelector('.popup-reg__login');
+      popupRegMenu  = document.querySelector('.popup-reg');
+
+// Открытие блока с popups
+openPopup.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.add('opacity-20')
+  });
+};
+
+// Открытие блока с popups(мобильная версия)
+openPopup2.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.add('opacity-20')
+  });
+}; 
+
+// Закрытиe блока popups 
+closePopup.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.remove('opacity-20')
+  });
+}
+
+// Закрытиe блока popup, через блока "Регистрация"
+popupRegClose.onclick = function() {
+  popupLogMenu.classList.remove('hidden');
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.remove('opacity-20')
+  });
+}
+
+// Открытие блока "Регистрация" через блок "Войти"
+openPopupReg.onclick = function() {
+  popupLogMenu.classList.add('hidden');
+};
+
+// Открытие блока "Войти" через блок "Регистрация"
+popupLogOpen.onclick = function() {
+  popupLogMenu.classList.remove('hidden')
+}
+
+
+
 
 
 
