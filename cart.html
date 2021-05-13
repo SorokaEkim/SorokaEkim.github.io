@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О магазине</title>
+  <title>Корзина</title>
   <link rel="stylesheet" href="./css/swiper.css">
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
@@ -91,7 +91,7 @@
         <!-- /.header__nav -->
         <div class="header__navigations flex items-center text-blue-450">
           <button class="header__btn p-2 cursor-pointer ring-2 rounded-lg ring-blue-450 hover:bg-blue-450 hover:text-white focus:outline-none duration-100 hidden sm:block">Отправить заявку</button>
-          <a href="cart.html" class="header__basket ml-5">
+          <a href="#" class="header__basket ml-5">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
@@ -112,19 +112,37 @@
   </section>
   <!-- /.header -->
 
-  <!-- Section Content -->
-  <section class="content py-10">
+  <!-- Section cart -->
+  <section class="cart py-10">
     <div class="container mx-auto px-10 xl:px-28">
-      <div class="content__wrap">
-        <h2 class="content__title text-5xl font-medium">О магазине</h2>
-        <p class="content__text text-xl mt-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores sed odio sunt nisi molestias vel enim provident amet. Saepe molestiae sint eos placeat nemo excepturi. Itaque unde vero nemo molestias?</p>
+      <h2 class="cart__title text-5xl font-medium">Корзина</h2>
+      <div class="cart__head flex">
+        <div class="cart__product-name">
+          Товар
+        </div>
+        <!-- /.cart__product-name -->
+        <div class="cart__product-price">
+          Цена
+        </div>
+        <!-- /.cart__product-price -->
+        <div class="cart__quantity">
+          Количество
+        </div>
+        <!-- /.cart__quantity -->
+        <div class="cart__product-total">
+          Итого
+        </div>
+        <!-- /.cart__product-total -->
+      </div>
+      <!-- /.cart__head -->
+      <div class="cart__wrap mt-10">
 
       </div>
-      <!-- /.content__wrap -->
+      <!-- /.cart__wrap -->
     </div>
     <!-- /.container -->
   </section>
-  <!-- /.content -->
+  <!-- /.cart -->
 
   <!-- Section footer -->
   <section class="footer bg-blue-450 py-10">
