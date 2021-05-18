@@ -115,53 +115,476 @@
   <!-- Section Content -->
   <section class="catalog py-10">
     <div class="container mx-auto px-10 xl:px-28">
-      <div class="catalog__header grid 2xl:grid-cols-4 2xl:gap-10">
-        <div class="catalog__filter">
-          <div class="catalog__section text-lg">
-            <h3 class="catalog__types font-medium">Тип</h3>
-            <label class="catalog__type flex items-center mt-2 cursor-pointer">
-              <input type="checkbox" class="appearance-none h-6 w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="label__text text-blue-450 select-none ml-5">На стену <span class="text-black font-medium">(количество)</span></span>
-            </label>
-            <label class="catalog__type flex items-center mt-2 cursor-pointer">
-              <input type="checkbox" class="appearance-none h-6 w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="label__text text-blue-450 select-none ml-5">На мойку <span class="text-black font-medium">(количество)</span></span>
-            </label>
+      <div class="open-filter text-blue-450 lg:hidden">
+        <button class="open-filter__btn border-2 border-blue-450 rounded mb-5 p-2 font-medium focus:outline-none">Фильтр по товарам</button>
+      </div>
+      <!-- /.open-filter -->
+      <div class="catalog__header grid lg:grid-cols-6 2xl:grid-cols-4 grid-cols-1 lg:gap-10">
+        <div class="catalog__filter text-blue-450 hidden lg:block col-span-2 2xl:col-span-1">
+          <div class="accordion font-bold text-sm grid md:grid-cols-2 md:gap-x-5 lg:grid-cols-1" id="accordion">
+            <div class="accordion-item show mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Назначение
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 bg-white relative rounded p-2 px-2 sm:px-10 mt-2">
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для ванной</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для душа</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для умывальника</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для кухонной мойки</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для биде</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для гигиены</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Для писсуара</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Аксессуары</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item show mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Тип
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded p-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">На мойку</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">На стену</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Брэнд
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Lemark</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Брэнд_2</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Коллекция
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Коллекция_1</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Коллекция_2</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Коллекция_3</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Материал
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Пластик</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Латунь</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">ПВХ</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Встраиваемая система
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-2">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Да</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Нет</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Управление
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Рычажное</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Вентильное</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Сенсорное</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Цвет
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Цвет_1</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Цвет_2</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Цвет_3</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Поверхность
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Глянецевая</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Матовая</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Тип подводки
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Гибкая</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Жесткая</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Стандарт подводки
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">1/2"</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">1¼"</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Выдвижной излив
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Есть</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Длина шланга ( см )
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">150</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">200</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Стилистика
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Ретро</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Современный</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Классический</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Форма
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Квадратная</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Круглая</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Механизм
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Керамичемкий картридж</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Керамическая кран-букса</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Душевой гарнитур
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Есть</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
+            <div class="accordion-item mt-2">
+              <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
+                Встроенный кран для питьевой воды
+              </div>
+              <div class="accordion-item-content border-2 border-blue-450 rounded py-2 px-2 sm:px-10 mt-2 bg-white relative">
+                <label class="flex items-center flex justify-between relative mt-1">
+                  <span class="label__text text-blue-450 select-none cursor-pointer">Есть</span>
+                  <input type="checkbox" class="appearance-none h-4 w-4 border-2 cursor-pointer border-blue-450 bg-white rounded-lg ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 absolute top-0.5 right-0 hidden text-blue-450 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <!-- /.accordion-item -->
           </div>
-          <!-- /.catalog__section -->
-          <div class="catalog__section mt-10 text-lg">
-            <h3 class="catalog__types font-medium">Производитель</h3>
-            <label class="catalog__type flex items-center mt-2 cursor-pointer">
-              <input type="checkbox" class="appearance-none h-6 w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="label__text text-blue-450 select-none ml-5">Чехия <span class="text-black font-medium">(количество)</span></span>
-            </label>
-            <label class="catalog__type flex items-center mt-2 cursor-pointer">
-              <input type="checkbox" class="appearance-none h-6 w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="label__text text-blue-450 select-none ml-5">Китай <span class="text-black font-medium">(количество)</span></span>
-            </label>
-          </div>
-          <!-- /.catalog__section -->
+          <!-- /.accordion -->
+          
         </div>
         <!-- /.catalog__filter -->
-
-        <div class="catalog__products col-span-3">
-          <div class="catalog__header">
+        <div class="catalog__products col-span-4 2xl:col-span-3">
+          <div class="catalog__header py-5">
             <h2 class="catalog__title text-4xl">Смесители для кухонной мойки</h2>
           </div>
           <!-- /.catalog__header -->
-          <div class="catalog__gallery grid 2xl:grid-cols-3 2xl:gap-4 mt-10">
+          <div class="catalog__gallery grid lg:grid-cols-2 2xl:grid-cols-3 lg:gap-4 mt-10">
             <div class="product px-6 py-3 rounded-lg text-md shadow-xl">
               <div class="product__header text-blue-450">
                 <div class="product__code text-left">Код <span class="product-code">6905745328102</span></div>

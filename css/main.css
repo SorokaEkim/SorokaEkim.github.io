@@ -84,3 +84,31 @@
 input:checked + svg {
   display: block;
 }
+
+.accordion-item-content {
+  display: none;
+}
+
+.accordion-item-content::before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  background-color:#2b5d8e;
+  right: 2.5rem;
+  top: -5px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.accordion-item.show .accordion-item-content {
+  display: block;
+}
+
+.accordion-item.show .accordion-item-header {
+  background: #2b5d8e;
+  color: #fff;
+}
+
+
+
