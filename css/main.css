@@ -110,5 +110,45 @@ input:checked + svg {
   color: #fff;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.noUi-connect {
+  background-color: #2b5d8e;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border-radius: 100%;
+  background-color: white;
+  border: 3px solid #2b5d8e;
+} 
+
+.noUi-horizontal .noUi-handle {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -10px;
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -4px;
+}
+
+
 
 

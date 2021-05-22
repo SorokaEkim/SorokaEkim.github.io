@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
+  <link rel="stylesheet" href="./css/nouislider.min.css">
   <link rel="stylesheet" href="./css/swiper.css">
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
@@ -122,6 +123,24 @@
       <div class="catalog__header grid lg:grid-cols-6 2xl:grid-cols-4 grid-cols-1 lg:gap-10">
         <div class="catalog__filter text-blue-450 hidden lg:block col-span-2 2xl:col-span-1">
           <div class="accordion font-bold text-sm grid md:grid-cols-2 md:gap-x-5 lg:grid-cols-1" id="accordion">
+            <!-- filter-price -->
+            <div class="filter-price mb-10">
+              <h3 class="filter-price__title text-xl">Цена</h3>
+              <div class="filter-price__slider bg-white border-1 border-blue-450 my-5 h-1" id="range-slider"></div>
+              <div class="flter-price__inputs flex justify-between items-center">
+                <label for="" class="filter-price__label border-2 border-blue-450 rounded p-2">
+                  <span class="filter-price__text">от</span>
+                  <input type="number" min="100" max="10000" placeholder="100" id="input-0" class="filter-price__input w-14 text-lg font-medium rounded border-none focus:outline-none px-1">
+                  <span class="filter-price__text">&#8381;</span>
+                </label>
+                <label for="" class="filter-price__label border-2 border-blue-450 rounded p-2">
+                  <span class="filter-price__text">до</span>
+                  <input type="number" min="100" max="10000" placeholder="10000" id="input-1" class="filter-price__input w-14 text-lg font-medium rounded border-none focus:outline-none px-1">
+                  <span class="filter-price__text">&#8381;</span>
+                </label>
+              </div>
+            </div>
+            <!-- /.filter-price -->
             <div class="accordion-item show mt-2">
               <div class="accordion-item-header border-2 border-blue-450 rounded p-2 cursor-pointer hover:bg-blue-450 hover:text-white duration-100">
                 Назначение
@@ -1153,6 +1172,7 @@
     <!-- /.request__wrap -->
   </div>
   <!-- /.request -->
+  <script src="./js/nouislider.min.js"></script>
   <script src="./js/swiper-min.js"></script>
   <script src="./js/main.js"></script>
 </body>
