@@ -65,8 +65,8 @@ function addHandlers(count) {
     number.innerText++;
   });
   minus.addEventListener("click", function() {
-    if(number.innerText < 2) {
-      number.innerText = 1;
+    if(number.innerText < 1) {
+      number.innerText = 0;
     } else {
       number.innerText--;
     }
