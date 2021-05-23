@@ -112,18 +112,145 @@
   </section>
   <!-- /.header -->
 
-  <!-- Section Content -->
-  <section class="checkout py-10">
-    <div class="container mx-auto px-10 xl:px-28">
-      <h2 class="checkout__title text-5xl font-medium">Оформление заказа</h2>
-      <div class="checkout__wrap">
-        
+  <!-- Section cart -->
+  <section class="cart py-10">
+    <div class="container mx-auto px-2 sm:px-10 xl:px-28 font-medium">
+      <h2 class="cart__title text-5xl">Оформление заказа</h2>
+      <div class="cart__head grid lg:grid-cols-12 mt-10 shadow hidden lg:grid">
+        <div class="cart__head-title col-span-7 flex justify-center">Товар</div>
+        <div class="cart__head-title">Цена</div>
+        <div class="cart__head-title col-span-2">Количество</div>
+        <div class="cart__head-title">Итого</div>
       </div>
-      <!-- /.checkout__wrap -->
+      <!-- /.cart__head -->
+      <div class="cart__wrap lg:shadow">
+        <div class="cart__product grid grid-cols-2 lg:grid-cols-12 flex items-center mt-5 shadow-md rounded p-10 lg:p-0">
+          <div class="cart__product-img col-span-1">
+            <img src="./images/cart1.png" alt="смеситель">
+          </div>
+          <!-- /.cart__product-img -->
+          <div class="cart__product-description lg:col-span-6 text-blue-450 text-md sm:text-xl md:text-2xl lg:text-lg justify-end">
+            Смеситель для кухонной мойки Lemark Arc LM5079S Хром
+          </div>
+          <!-- /.cart__product-description -->
+          <div class="cart__products-price mt-5 lg:mt-0 flex">
+            <span class="lg:hidden">Цена:</span>
+            <span class="value-price mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__products-price -->
+          <div class="cart__product-quantiy mt-5 lg:mt-0 lg:col-span-2 flex justify-end items-center lg:justify-start">
+            <span class="lg:hidden">Кол-во:</span>
+            <span class="text-xl ml-2 lg:ml-10">1</span>
+          </div>
+          <!-- /.cart__product-quantiy -->
+          <div class="cart__product-total mt-5 lg:mt-0 items-center text-xl lg:text-lg flex">
+            <span class="lg:hidden">Итого:</span>
+            <span class="value-total mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__product-title -->
+          <div class="cart__delete flex justify-end text-blue-450 cursor-pointer mt-4 lg:mt-0 lg:mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <!-- /.cart__delete -->
+        </div>
+        <!-- /.cart__product -->
+        <div class="cart__product grid grid-cols-2 lg:grid-cols-12 flex items-center mt-5 shadow-md rounded p-10 lg:p-0">
+          <div class="cart__product-img col-span-1">
+            <img src="./images/cart1.png" alt="смеситель">
+          </div>
+          <!-- /.cart__product-img -->
+          <div class="cart__product-description lg:col-span-6 text-blue-450 text-md sm:text-xl md:text-2xl lg:text-lg justify-end">
+            Смеситель для кухонной мойки Lemark Arc LM5079S Хром
+          </div>
+          <!-- /.cart__product-description -->
+          <div class="cart__products-price mt-5 lg:mt-0 flex">
+            <span class="lg:hidden">Цена:</span>
+            <span class="value-price mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__products-price -->
+          <div class="cart__product-quantiy mt-5 lg:mt-0 lg:col-span-2 flex justify-end items-center lg:justify-start">
+            <span class="lg:hidden">Кол-во:</span>
+            <span class="text-xl ml-2 lg:ml-10">1</span>
+          </div>
+          <!-- /.cart__product-quantiy -->
+          <div class="cart__product-total mt-5 lg:mt-0 items-center text-xl lg:text-lg flex">
+            <span class="lg:hidden">Итого:</span>
+            <span class="value-total mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__product-title -->
+          <div class="cart__delete flex justify-end text-blue-450 cursor-pointer mt-4 lg:mt-0 lg:mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <!-- /.cart__delete -->
+        </div>
+        <!-- /.cart__product -->
+        <div class="cart__product grid grid-cols-2 lg:grid-cols-12 flex items-center mt-5 shadow-md rounded p-10 lg:p-0">
+          <div class="cart__product-img col-span-1">
+            <img src="./images/cart1.png" alt="смеситель">
+          </div>
+          <!-- /.cart__product-img -->
+          <div class="cart__product-description lg:col-span-6 text-blue-450 text-md sm:text-xl md:text-2xl lg:text-lg justify-end">
+            Смеситель для кухонной мойки Lemark Arc LM5079S Хром
+          </div>
+          <!-- /.cart__product-description -->
+          <div class="cart__products-price mt-5 lg:mt-0 flex">
+            <span class="lg:hidden">Цена:</span>
+            <span class="value-price mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__products-price -->
+          <div class="cart__product-quantiy mt-5 lg:mt-0 lg:col-span-2 flex justify-end items-center lg:justify-start">
+            <span class="lg:hidden">Кол-во:</span>
+            <span class="text-xl ml-2 lg:ml-10">1</span>
+          </div>
+          <!-- /.cart__product-quantiy -->
+          <div class="cart__product-total mt-5 lg:mt-0 items-center text-xl lg:text-lg flex">
+            <span class="lg:hidden">Итого:</span>
+            <span class="value-total mr-2 lg:ml-0">5252</span> руб.
+          </div>
+          <!-- /.cart__product-title -->
+          <div class="cart__delete flex justify-end text-blue-450 cursor-pointer mt-4 lg:mt-0 lg:mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </div>
+          <!-- /.cart__delete -->
+        </div>
+        <!-- /.cart__product -->
+      </div>
+      <!-- /.cart__wrap -->
+
+      <!-- Secion delivery -->
+      <section class="delivery">
+        <div class="delivery__wrap grid grid-cols-1">
+          <div class="delivery__buyer mt-5">
+            <h2 class="delivery__title text-2xl">1. Покупатель</h2>
+            <input type="text" placeholder="Ваше имя" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            <input type="text" placeholder="Номер телефона" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            <input type="text" placeholder="Ваш email" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+          </div>
+          <!-- /.delivery__buyer -->
+          <div class="delivery__way mt-5">
+            <h2 class="delivery__title text-2xl">2. Доставка</h2>
+            <input type="text" placeholder="Адрес" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+          </div>
+          <!-- /.delivery__waway -->
+          <div class="delivery__payment mt-5 text-lg">
+            Сумма заказа: <span class="total-sum text-3xl ml-5">1000000$</span>
+          </div>
+          <!-- /.delivery__payment -->
+          <button class="text-2xl w-60 bg-blue-450 rounded-lg p-2 mt-5 border-2 duration-100 text-white focus:outline-none hover:bg-white hover:text-blue-450 hover:border-blue-450">Оплатить</button>
+        </div>
+        <!-- /.delivery__wrap -->
+      </section>
+      <!-- /.delivery -->
     </div>
     <!-- /.container -->
   </section>
-  <!-- /.checkout -->
+  <!-- /.cart -->
 
   <!-- Section footer -->
   <section class="footer bg-blue-450 py-10">
@@ -137,29 +264,29 @@
         </div>
         <!-- /.footer__col-1 -->
         <div class="footer__col-2 text-white flex flex-col mt-10 sm:mt-0">
-          <h3 class="foter__title text-2xl mb-4 text-center sm:text-left">Каталог</h3>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для ванной</a>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для душа</a>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для умывальника</a>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для кухонной мойки</a>
+          <a href="#" class="foter__title text-2xl mb-4 text-center sm:text-left">Каталог</a>
+          <a href="#" class="footer__link mt-2">Смесители для ванной</a>
+          <a href="#" class="footer__link mt-2">Смесители для душа</a>
+          <a href="#" class="footer__link mt-2">Смесители для умывальника</a>
+          <a href="#" class="footer__link mt-2">Смесители для кухонной мойки</a>
         </div>
         <!-- /.footer__col-2 -->
         <div class="footer__col-3 text-white flex flex-col sm:mt-12">
-          <a href="catalog.html" class="footer__link mt-2">Смесители для биде</a>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для гигиены</a>
-          <a href="catalog.html" class="footer__link mt-2">Смесители для писсуара</a>
-          <a href="catalog.html" class="footer__link mt-2">Аксессуары</a>
+          <a href="#" class="footer__link mt-2">Смесители для биде</a>
+          <a href="#" class="footer__link mt-2">Смесители для гигиены</a>
+          <a href="#" class="footer__link mt-2">Смесители для писсуара</a>
+          <a href="#" class="footer__link mt-2">Аксессуары</a>
         </div>
         <!-- /.footer__col-3 -->
         <div class="footer__col-4 text-white flex flex-col mt-10 2xl:mt-0">
-          <h3 class="foter__title text-2xl mb-4 text-center sm:text-left">Информация</h3>
-          <a href="delivery.html" class="footer__link mt-2">Доставка и оплата</a>
-          <a href="description.html" class="footer__link mt-2">О магазине</a>
-          <a href="contacts.html" class="footer__link mt-2">Контакты</a>
+          <a href="#" class="foter__title text-2xl mb-4 text-center sm:text-left">Информация</a>
+          <a href="#" class="footer__link mt-2">Доставка и оплата</a>
+          <a href="#" class="footer__link mt-2">О магазине</a>
+          <a href="#" class="footer__link mt-2">Контакты</a>
         </div>
         <!-- /.footer__col-4 -->
         <div class="footer__col-5 text-white flex flex-col mt-10 2xl:mt-0">
-          <h3 class="foter__title text-2xl mb-4 text-center sm:text-left">Способы оплаты</h3>
+          <a href="#" class="foter__title text-2xl mb-4 text-center sm:text-left">Способы оплаты</a>
           <div class="footer__banks flex justify-between">
             <div class="footer__bank"><img src="./images/visa-mastercard-mir.svg" alt="способы оплаты"></div>
             <div class="footer__bank"><img src="./images/sberbank.svg" alt="способы оплаты"></div>
@@ -257,7 +384,7 @@
           <a href="#" class="popup-reg__login underline">Войти</a>
         </div>
       </div>
-      <!-- /.popup-log__content -->
+      <!-- /.popup-reg__content -->
     </div>
     <!-- /.popup-reg -->
     <div class="popup-password flex justify-center items-center h-full">
