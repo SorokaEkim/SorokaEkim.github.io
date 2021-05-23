@@ -115,17 +115,103 @@
   <!-- Section Content -->
   <section class="content py-10">
     <div class="container mx-auto px-10 xl:px-28">
-      <div class="product__wrap">
-          <div class="product__img w-1/3">
+      <div class="product__wrap md:flex">
+          <div class="product__img w-full lg:w-2/3 xl:w-1/3">
               <img src="./images/cart1.png" alt="фото смесителя">
           </div>
           <!-- /.product__img -->
-          <div class="product__description">
-
+          <div class="product__description text-2xl">
+            <h2 class="product__title text-3xl">Смеситель для кухонной мойки Lemark Expert (LM5079S)</h2>
+            <p class="mt-10">Артикул: <span class="product__arc">LM5079S</span></p>
+            <p class="mt-5">Цена: <span class="product__price">5252</span> руб.</p>
+            <div class="product__nav mt-10 flex items-center">
+              <div class="cart__product-quantiy lg:mt-0 lg:col-span-2">
+                <div class="counter product__input flex items-center justify-end lg:justify-start">
+                  <div class="counter__minus quanity-down rounded-full bg-blue-450 text-white cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                    </svg>
+                  </div>
+                  <span class="counter__value quanity mx-5">1</span>
+                  <div class="counter__plus quanity-up rounded-full bg-blue-450 text-white cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="product__basket text-blue-450 border-2 border-blue-450 hover:bg-blue-450 hover:text-white rounded-lg duration-100 py-1 px-3 ml-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </a>
+            </div>
+            <!-- /.product__nav -->
           </div>
           <!-- /.product__description -->
       </div>
       <!-- /.product__wrap -->
+      <div class="product__specifications">
+        <h2 class="text-3xl md:ml-5">Характеристики и описание</h2>
+        <div class="product__specification-wrap grid grid-cols-1 lg:grid-cols-3 lg:gap-5">
+          <div class="product__specifications-col1 shadow-2xl text-xs sm:text-sm p-5 mt-5">
+            <p class="font-medium">Брэнд: <span class="product__brand float-right">Lemark</span></p>
+            <p class="font-medium">Коллекция: <span class="product__collecton float-right">Expert</span></p>
+            <p class="font-medium">Производитель: <span class="float-right">Чехия</span></p>
+            <p class="font-medium">Встриваемая система: <span class="float-right">Нет</span></p>
+            <p class="font-medium">Управление: <span class="float-right">Рычажное</span></p>
+            <p class="font-medium">Материал: <span class="float-right">Латунь</span></p>
+            <p class="font-medium">Цвет: <span class="float-right">Хром</span></p>
+            <p class="font-medium">Поверхность: <span class="float-right">Глянцевая</span></p>
+            <p class="font-medium">Тип подводки: <span class="float-right">Гибкая</span></p>
+            <p class="font-medium">Стандарт подводки: <span class="float-right">1/2"</span></p>
+            <p class="font-medium">Вращение излива: <span class="float-right">Поворотный</span></p>
+            <p class="font-medium">Выдвижной излив: <span class="float-right">-</span></p>
+            <p class="font-medium">Длина шланга, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Стилистика: <span class="float-right">-</span></p>
+            <p class="font-medium">Форма: <span class="float-right">-</span></p>
+            <p class="font-medium">Механизм: <span class="float-right">-</span></p>
+          </div>
+          <div class="product__specifications-col1 shadow-2xl text-xs sm:text-sm p-5 mt-5">
+            <p class="font-medium">Монтаж: <span class="float-right">На мойку</span></p>
+            <p class="font-medium">Отверстия: <span class="float-right">1 отверстие</span></p>
+            <p class="font-medium">Высота излива, см: <span class="float-right">24.9</span></p>
+            <p class="font-medium">Длина излива, см: <span class="float-right">21.2</span></p>
+            <p class="font-medium">Душевой гарнитур в комплекте: <span class="float-right">-</span></p>
+            <p class="font-medium">Фильтрация воды: <span class="float-right">-</span></p>
+            <p class="font-medium">Встроенный кран для питьевой воды: <span class="float-right">-</span></p>
+            <p class="font-medium">Донный клапан: <span class="float-right">-</span></p>
+            <p class="font-medium">Дополнительные функции: <span class="float-right">-</span></p>
+            <p class="font-medium">Оснащение: <span class="float-right">Гибкая подводка</span></p>
+            <p class="font-medium">Гарантия: <span class="float-right">4 года</span></p>
+            <p class="font-medium">Обьем, м3: <span class="float-right">0.11</span></p>
+            <p class="font-medium">Вес, кг: <span class="float-right">1.34</span></p>
+            <p class="font-medium">Ширина, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Глубина, м3: <span class="float-right">-</span></p>
+            <p class="font-medium">Материал изделия: <span class="float-right">-</span></p>
+          </div>
+          <div class="product__specifications-col1 shadow-2xl text-xs sm:text-sm p-5 mt-5">
+            <p class="font-medium">Высота, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Метод крепления: <span class="float-right">-</span></p>
+            <p class="font-medium">Ориентация: <span class="float-right">-</span></p>
+            <p class="font-medium">Состав комплекта: <span class="float-right">-</span></p>
+            <p class="font-medium">Поворотный: <span class="float-right">-</span></p>
+            <p class="font-medium">Подсветка: <span class="float-right">-</span></p>
+            <p class="font-medium">Фактура: <span class="float-right">-</span></p>
+            <p class="font-medium">Размер верхнего душа, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Размер лейки, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Количество режимов струи: <span class="float-right">-</span></p>
+            <p class="font-medium">Исполнение шланга <span class="float-right">-</span></p>
+            <p class="font-medium">Размер разметки, см: <span class="float-right">-</span></p>
+            <p class="font-medium">Тропический верхний душ: <span class="float-right">-</span></p>
+            <p class="font-medium">Излив для наполнения ванн: <span class="float-right">-</span></p>
+            <p class="font-medium">Ручной душ <span class="float-right">-</span></p>
+            <p class="font-medium">Защита от перекручивания: <span class="float-right">-</span></p>
+          </div>
+        </div>
+        <!-- /.product__specification-wrap -->
+      </div>
+      <!-- /.product__specifications -->
     </div>
     <!-- /.container -->
   </section>
