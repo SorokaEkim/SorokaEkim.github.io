@@ -236,8 +236,23 @@
           <div class="delivery__way mt-5">
             <h2 class="delivery__title text-2xl">2. Доставка</h2>
             <input type="text" placeholder="Адрес" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            <h2 class="delivery__title text-2xl mt-5">3. Способ получения</h2>
+            <label class="flex items-center mt-5">
+              <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="label__text text-xl text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Курьер</span>
+            </label>
+            <label class="flex items-center mt-2">
+              <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="label__text text-xl text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Пункт выдачи</span>
+            </label>
           </div>
-          <!-- /.delivery__waway -->
+          <!-- /.delivery__way -->
           <div class="delivery__payment mt-5 text-lg">
             Сумма заказа: <span class="total-sum text-3xl ml-5">1000000$</span>
           </div>
