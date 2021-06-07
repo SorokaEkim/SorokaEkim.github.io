@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.burger__line-first {
+  top: 0;
+}
+
+.burger__line-second, .burger__line-third {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line-fourth {
+  bottom: 0;
+}
+
+.burger__active .burger__line-first, .burger__active .burger__line-fourth {
+  opacity: 0;
+}
+
+.burger__active .burger__line-second {
+  transform: translateY(-50%) rotate(45deg)
+}
+
+.burger__active .burger__line-third {
+  transform: translateY(-50%) rotate(-45deg)
+}
+
+.header__burger-menu {
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.menu__active {
+  transform: translateX(0%);
+  transition: 0.5s;
+}
+
+/* Swiper */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.header__img {
+  width: 50%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery__block:hover:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2b5d8e;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+
+input:checked + svg {
+  display: block;
+}
+
+.accordion-item-content {
+  display: none;
+}
+
+.accordion-item-content::before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  background-color:#2b5d8e;
+  right: 2.5rem;
+  top: -5px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.accordion-item.show .accordion-item-content {
+  display: block;
+}
+
+.accordion-item.show .accordion-item-header {
+  background: #2b5d8e;
+  color: #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.noUi-connect {
+  background-color: #2b5d8e;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border-radius: 100%;
+  background-color: white;
+  border: 3px solid #2b5d8e;
+} 
+
+.noUi-horizontal .noUi-handle {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -10px;
+  cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -4px;
+}
+
+
+
+
