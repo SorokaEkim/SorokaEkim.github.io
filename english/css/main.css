@@ -85,16 +85,16 @@ img {
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat-Mediumitalic";
-  src: url("../fonts/Montserrat-Mediumitalic.woff2") format("woff2");
-  src: url("../fonts/Montserrat-Mediumitalic.woff") format("woff");
+  font-family: "Montserrat-Black";
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Black.woff") format("woff");
   font-weight: medium;
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat-Black";
-  src: url("../fonts/Montserrat-Black.woff2") format("woff2");
-  src: url("../fonts/Montserrat-Black.woff") format("woff");
+  font-family: "Montserrat-Italic";
+  src: url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2");
+  src: url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff");
   font-weight: medium;
   font-style: normal;
 }
@@ -157,7 +157,7 @@ img {
 .header__menu-link {
   position: relative;
   line-height: 1;
-  font-family: "Montserrat-Mediumitalic";
+  font-family: "Montserrat-Italic";
   color: #B9B9B9;
   text-decoration: none;
 }
@@ -506,7 +506,7 @@ img {
 }
 
 .title {
-  font-family: "Montserrat-Mediumitalic";
+  font-family: "Montserrat-Italic";
   font-size: 3.2rem;
   text-transform: uppercase;
 }
