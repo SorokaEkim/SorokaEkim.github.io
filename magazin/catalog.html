@@ -42,6 +42,15 @@
             <span class="header__number ml-1 hidden xl:block">89196774095</span>
           </a>       
           <!-- /.header__phone -->
+          <div class="header__register flex items-center">
+            <a href="#" class="header-register__svg hidden sm:flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
+            <a href="#" class="header__login ml-1 hidden 2xl:block">Войти/Регистрация</a>
+          </div>
+          <!-- /.header__login -->
         </div>
         <!-- /.header__contacts -->
       </div>
@@ -49,7 +58,7 @@
     </div>
     <!-- /.header-top -->
     <div class="header__menu py-5 text-xl relative shadow">
-      <div class="container mx-auto px-2 sm:px-10 xl:px-28 flex items-center justify-between ">
+      <div class="container mx-auto px-2 sm:px-10 xl:px-28 flex items-center justify-between">
         <div class="header__burger w-10 h-9 text-blue-450 lg:hidden relative">
           <span class="burger__line block w-full h-1.5 bg-blue-450 duration-200 absolute burger__line-first"></span>
           <span class="burger__line block w-full h-1.5 bg-blue-450 duration-200 absolute burger__line-second"></span>
@@ -76,6 +85,12 @@
         </div>
         <!-- /.header__nav -->
         <div class="header__navigations flex items-center text-blue-450">
+          <div class="header-register__svg mr-5 header__register2 text-blue-450 sm:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <!-- /.header-register__svg -->
           <button class="header__btn p-2 cursor-pointer ring-2 rounded-lg ring-blue-450 hover:bg-blue-450 hover:text-white focus:outline-none duration-100 hidden sm:block">Отправить заявку</button>
           <a href="tel:+89196774095" class="header__phone text-blue-450 sm:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1259,6 +1274,75 @@
     <!-- /.container -->
   </div>
   <!-- /.basket -->
+
+  <!-- Popups -->
+  <div class="popups fixed w-full h-full top-0 left-0 z-10 hidden">
+    <div class="popup-log h-full flex justify-center items-center">
+      <div class="popup-log__content p-10 rounded-lg text-center bg-blue-450 relative flex flex-col">
+        <a href="#" class="popup-log__close absolute top-2 right-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+        <h2 class="popup-log__title text-4xl text-white font-medium">Войти</h2>
+        <input type="text" placeholder="Ваш email" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <input type="text" placeholder="Пароль" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <label class="flex items-center mt-5">
+          <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-white bg-white rounded-lg ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="label__text text-xl text-white select-none ml-5">Запомнить меня</span>
+        </label>
+        <button class="header-main__btn text-blue-450 bg-white text-xl py-2 mt-5 border-2 border-white cursor-pointer rounded-lg hover:bg-blue-450 hover:text-white focus:outline-none duration-100">Войти</button>
+        <div class="popup-log__footer flex justify-between mt-5 text-white">
+          <a href="#" class="popup-log__password underline">Забыли пароль?</a>
+          <a href="#" class="popup-log__registred underline">Регистрация</a>
+        </div>
+        <!-- /.pop-up__footer -->
+      </div>
+      <!-- /.popup-log__content -->
+    </div>
+    <!-- /.popup-log -->
+    <div class="popup-reg flex justify-center items-center h-full">
+      <div class="popup-reg__content p-10 rounded-lg text-center bg-blue-450 relative flex flex-col">
+        <a href="#" class="popup-reg__close absolute top-2 right-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+        <h2 class="popup-reg__title text-4xl text-white font-medium">Регистрация</h2>
+        <input type="text" placeholder="Ваш email" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <button class="popup-reg__btn text-blue-450 bg-white text-xl py-2 mt-5 border-2 border-white cursor-pointer rounded-lg hover:bg-blue-450 hover:text-white focus:outline-none duration-100">Регистрация</button> 
+        <div class="popup-reg__footer flex justify-between mt-5 text-white">
+          <a href="#" class="popup-reg__password underline">Забыли пароль?</a>
+          <a href="#" class="popup-reg__login underline">Войти</a>
+        </div>
+      </div>
+      <!-- /.popup-log__content -->
+    </div>
+    <!-- /.popup-reg -->
+    <div class="popup-password flex justify-center items-center h-full">
+      <div class="popup-password__content p-10 rounded-lg text-center bg-blue-450 flex flex-col relative">
+        <a href="#" class="popup-password__close absolute top-2 right-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </a>
+        <h2 class="popup-password__title text-4xl text-white font-medium">Сбросить пароль</h2>
+        <p class="popup-password__text text-white text-left mt-5">Забыли свой пароль? Пожалуйста введите вашу электронную почту.<br> Вы получите на почте ссылку для создания нового пароля</p>
+        <input type="text" placeholder="Ваш email" class="mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:border-4 outline-none">
+        <button class="popup-reg__btn text-blue-450 bg-white text-xl py-2 mt-5 border-2 border-white cursor-pointer rounded-lg hover:bg-blue-450 hover:text-white focus:outline-none duration-100">Получить новый пароль</button>
+        <div class="popup-reg__footer flex justify-between mt-5 text-white">
+          <a href="#" class="popup-pas__registed underline">Регистрация</a>
+          <a href="#" class="popup-pas__login underline">Войти</a>
+        </div>
+      </div>
+      <!-- /.popup-password__content -->
+    </div>
+    <!-- /.popup-password -->
+  </div>
+  <!-- /.popups -->
     
   <script src="./js/nouislider.min.js"></script>
   <script src="./js/swiper-min.js"></script>

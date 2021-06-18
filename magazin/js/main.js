@@ -56,6 +56,103 @@ var swiper = new Swiper(".mySwiper_2", {
 }
 });
 
+// Open and close popup
+const popupMenu   = document.querySelector('.popups');
+      openPopup   = document.querySelector('.header__register');
+      openPopup2  = document.querySelector('.header__register2');
+      closePopup  = document.querySelector('.popup-log__close');
+      sections    = document.querySelectorAll('section')
+
+      popupLogMenu = document.querySelector('.popup-log');
+      popupRegMenu = document.querySelector('.popup-reg');
+      popupPasMenu = document.querySelector('.popup-password');
+
+      popupRegClose  = document.querySelector('.popup-reg__close');
+      popupPasClose  = document.querySelector('.popup-password__close');
+      popupRegOpen   = document.querySelector('.popup-reg__login');
+      popupPasOpen   = document.querySelector('.popup-reg__password');
+
+      openPopupReg = document.querySelector('.popup-log__registred');
+      openPopupPas = document.querySelector('.popup-log__password');
+
+      openPopupLog  = document.querySelector('.popup-pas__login');
+      openPopupReg2 = document.querySelector('.popup-pas__registed');
+      
+// Открытие блока с popups
+openPopup.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.add('opacity-20')
+  });
+};
+
+// Открытие блока с popups(мобильная версия)
+openPopup2.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.add('opacity-20')
+  });
+}; 
+
+// Закрытиe блока popups 
+closePopup.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.remove('opacity-20')
+  });
+}
+
+// Закрытиe блока popup, через блок "Регистрация"
+popupRegClose.onclick = function() {
+  popupLogMenu.classList.remove('hidden');
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.remove('opacity-20')
+  });
+}
+
+// Закрытие блока popup, через блок "Сброс пароля"
+popupPasClose.onclick = function() {
+  popupMenu.classList.add('hidden')
+  popupRegMenu.classList.remove('hidden')
+  popupLogMenu.classList.remove('hidden')
+  sections.forEach(element => {
+    element.classList.remove('opacity-20')
+  });
+}
+
+// Открытие блока "Регистрация" через блок "Войти"
+openPopupReg.onclick = function() {
+  popupLogMenu.classList.add('hidden');
+};
+
+// Открытие блока "Войти" через блок "Регистрация"
+popupRegOpen.onclick = function() {
+  popupLogMenu.classList.remove('hidden')
+}
+
+// Открытие блока "Сброс пароля" через блок "Войти"
+openPopupPas.onclick = function() {
+  popupLogMenu.classList.add('hidden')
+  popupRegMenu.classList.add('hidden')
+}
+
+// Открытие блока "Сброс пароля" через блок "Регистрация"
+popupPasOpen.onclick = function() {
+  popupRegMenu.classList.add('hidden')
+}
+
+// Открытие блока "Войти" через блок "Сброс пароля"
+openPopupLog.onclick = function() {
+  popupLogMenu.classList.remove('hidden')
+  popupRegMenu.classList.remove('hidden')
+}
+
+// Открытие блока "Регистрация" через блок "Сброс пароля"
+openPopupReg2.onclick = function() {
+  popupRegMenu.classList.remove('hidden')
+}
+
 // Счетчик товаров
 function addHandlers(count) {
   var minus = count.querySelector(".quanity-down");
@@ -222,3 +319,4 @@ if (rangeSlider) {
   })
 
 }
+
