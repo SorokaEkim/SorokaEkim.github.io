@@ -445,7 +445,9 @@
     color: $white
     text-align: center
   &__wrap
-    margin-top: 5.3rem  
+    margin-top: 5.3rem
+    +media(1280px)
+      margin-top: 16rem  
 .cart
   width: 100%
   border-radius: 2.5rem
@@ -460,12 +462,18 @@
       font-size: 1.8rem
       line-height: 2.2rem
       text-transform: uppercase
+      +media(1024px)
+        font-size: 2.4rem
+        line-height: 2.9rem
     &-description
       margin-top: 1rem
       text-align: left
       font-family: 'Montserrat-Medium' 
       font-size: 1.4rem
       line-height: 1.7rem
+      +media(1280px)
+        font-size: 1.8rem
+        line-height: 2.2rem
   &__content
     padding: 3rem
     border: 0.5rem solid $yellow
@@ -478,11 +486,16 @@
       line-height: 1.5rem
       font-family: 'Montserrat-Medium'
       text-align: left
+      +media(1280px)
+        font-size: 1.8rem
+        line-height: 2.2rem
       &::before
         position: absolute
         content: url(../images/exlaim.svg)
         top: 0.5rem
         left: -3rem
+        +media(570px)
+          top: -0.2rem 
       &:not(:first-child)
         margin-top: 2.3rem
     &-price
@@ -491,7 +504,11 @@
       font-size: 1.8rem
       line-height: 2.2rem
       font-family: 'Montserrat-Bold'
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
     &-btn
+      cursor: pointer
       margin-top: 1.8rem
       background-color: $yellow
       font-weight: bold
@@ -503,11 +520,20 @@
       border: none
       border-radius: 1.7rem
       padding: 2.3rem 5.2rem
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
       &:hover
         filter: drop-shadow(0px 0px 30px $yellow)
         transition: 0.4s
-          
 
+// Feedback
+.feedback
+  padding-top: 15rem
+  background-color: $bg-black
+  &__title
+    text-align: center
+    color: $white   
 // Burger-menu
 .burger-menu
   position: relative
@@ -520,7 +546,7 @@
     background-color: $white
     top: 0
     left: -32rem
-    transition: all 300ms
+    transition: all 300 ms
   &__wrap.show
     left: 0rem   
   &__close

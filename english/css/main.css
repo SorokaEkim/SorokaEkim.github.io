@@ -91,6 +91,33 @@ img {
   font-weight: medium;
   font-style: normal;
 }
+.container {
+  max-width: 1420px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: medium;
+  font-style: normal;
+}
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -119,6 +146,15 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.swiper-pagination {
+  display: block;
+}
+@media screen and (min-width: 1580px) {
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 .header {
@@ -854,6 +890,11 @@ img {
 .services__wrap {
   margin-top: 5.3rem;
 }
+@media screen and (min-width: 1280px) {
+  .services__wrap {
+    margin-top: 16rem;
+  }
+}
 
 .cart {
   width: 100%;
@@ -872,12 +913,24 @@ img {
   line-height: 2.2rem;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1024px) {
+  .cart__header-title {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
 .cart__header-description {
   margin-top: 1rem;
   text-align: left;
   font-family: "Montserrat-Medium";
   font-size: 1.4rem;
   line-height: 1.7rem;
+}
+@media screen and (min-width: 1280px) {
+  .cart__header-description {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
 }
 .cart__content {
   padding: 3rem;
@@ -893,11 +946,22 @@ img {
   font-family: "Montserrat-Medium";
   text-align: left;
 }
+@media screen and (min-width: 1280px) {
+  .cart__content-text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
 .cart__content-text::before {
   position: absolute;
   content: url(../images/exlaim.svg);
   top: 0.5rem;
   left: -3rem;
+}
+@media screen and (min-width: 570px) {
+  .cart__content-text::before {
+    top: -0.2rem;
+  }
 }
 .cart__content-text:not(:first-child) {
   margin-top: 2.3rem;
@@ -909,7 +973,14 @@ img {
   line-height: 2.2rem;
   font-family: "Montserrat-Bold";
 }
+@media screen and (min-width: 1280px) {
+  .cart__content-price {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
 .cart__content-btn {
+  cursor: pointer;
   margin-top: 1.8rem;
   background-color: #FFB800;
   font-weight: bold;
@@ -922,11 +993,26 @@ img {
   border-radius: 1.7rem;
   padding: 2.3rem 5.2rem;
 }
+@media screen and (min-width: 1280px) {
+  .cart__content-btn {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
 .cart__content-btn:hover {
   -webkit-filter: drop-shadow(0px 0px 30px #FFB800);
           filter: drop-shadow(0px 0px 30px #FFB800);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.feedback {
+  padding-top: 15rem;
+  background-color: #333333;
+}
+.feedback__title {
+  text-align: center;
+  color: #fff;
 }
 
 .burger-menu {
@@ -941,8 +1027,8 @@ img {
   background-color: #fff;
   top: 0;
   left: -32rem;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: all 300 ms;
+  transition: all 300 ms;
 }
 .burger-menu__wrap.show {
   left: 0rem;
