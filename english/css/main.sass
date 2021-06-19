@@ -443,7 +443,7 @@
   background-color: $bg-black
   &__title
     color: $white
-    text-align: center
+    text-align: left
   &__wrap
     margin-top: 5.3rem
     +media(1280px)
@@ -529,11 +529,64 @@
 
 // Feedback
 .feedback
-  padding-top: 15rem
+  padding-top: 10rem
   background-color: $bg-black
   &__title
-    text-align: center
-    color: $white   
+    text-align: left
+    color: $white
+  &__wrap
+    margin-top: 4.5rem    
+
+.review
+  padding: 1.7rem 3rem
+  background-color: $white
+  border-radius: 2.5rem
+  font-family: 'Montserrat-Medium'
+  &__header
+    display: flex
+    align-items: center
+  &__avatar
+    max-width: 5.5rem
+  &__contacts
+    margin-left: 0.8rem  
+  &__username
+    font-size: 1.4rem
+    line-height: 1.7rem 
+    text-align: left
+    font-family: 'Montserrat-Bold'
+  &__email
+    font-size: 1.2rem
+    line-height: 1.5rem
+    color: #828282
+  &__text
+    margin-top: 1.5rem
+    margin-bottom: 1rem
+    text-align: left
+    font-size: 1.2rem
+    line-height: 1.5rem
+  &__hidden-text
+    display: none
+  &__btn
+    cursor: pointer
+    margin-bottom: 2rem
+    text-align: left
+    font-family: 'Montserrat-Bold'
+    color: $black
+    text-decoration: none
+    position: relative
+    &-down
+      &::after
+        content: url('../images/arrow.svg')
+        position: absolute
+        margin-left: 1rem  
+    &-up
+      &::after
+        content: url('../images/arrow-up.svg')
+        position: absolute
+        margin-left: 1rem 
+.hidden
+  display: none             
+
 // Burger-menu
 .burger-menu
   position: relative
@@ -574,6 +627,12 @@
       text-decoration: underline
   &__link:not(:first-child)
     margin-top: 2rem
+
+  
+    
+
+
+
  
    
 

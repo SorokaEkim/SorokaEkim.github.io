@@ -885,7 +885,7 @@ img {
 }
 .services__title {
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .services__wrap {
   margin-top: 5.3rem;
@@ -1007,12 +1007,80 @@ img {
 }
 
 .feedback {
-  padding-top: 15rem;
+  padding-top: 10rem;
   background-color: #333333;
 }
 .feedback__title {
-  text-align: center;
+  text-align: left;
   color: #fff;
+}
+.feedback__wrap {
+  margin-top: 4.5rem;
+}
+
+.review {
+  padding: 1.7rem 3rem;
+  background-color: #fff;
+  border-radius: 2.5rem;
+  font-family: "Montserrat-Medium";
+}
+.review__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.review__avatar {
+  max-width: 5.5rem;
+}
+.review__contacts {
+  margin-left: 0.8rem;
+}
+.review__username {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-align: left;
+  font-family: "Montserrat-Bold";
+}
+.review__email {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #828282;
+}
+.review__text {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.review__hidden-text {
+  display: none;
+}
+.review__btn {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-family: "Montserrat-Bold";
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+.review__btn-down::after {
+  content: url("../images/arrow.svg");
+  position: absolute;
+  margin-left: 1rem;
+}
+.review__btn-up::after {
+  content: url("../images/arrow-up.svg");
+  position: absolute;
+  margin-left: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .burger-menu {
