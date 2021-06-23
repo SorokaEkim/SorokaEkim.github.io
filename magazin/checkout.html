@@ -699,7 +699,15 @@
     <!-- /.popup-password -->
   </div>
   <!-- /.popups -->
-    
+  <script>
+    openPopup3 = document.querySelector('.open-popup');
+    openPopup3.onclick = function() {
+      popupMenu.classList.toggle('hidden');
+      sections.forEach(element => {
+        element.classList.add('opacity-20')
+      });
+    };
+  </script>  
   <script src="./js/swiper-min.js"></script>
   <script src="./js/main.js"></script>
 </body>
