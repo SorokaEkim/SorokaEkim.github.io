@@ -236,37 +236,117 @@
     <div class="container mx-auto px-2 sm:px-10 xl:px-28 font-medium">
       <div class="delivery__wrap grid grid-cols-1">
         <div class="delivery__buyer mt-5">
-          <h2 class="delivery__title text-2xl">1. Покупатель</h2>
-          <input type="text" placeholder="Ваше имя" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
-          <input type="text" placeholder="Номер телефона" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
-          <input type="text" placeholder="Ваш email" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+          <h2 class="delivery__title text-xl lg:text-2xl">Шаг 1: Способ оформления заказа</h2>
+          <div class="delivery__bayer-wrap grid grid-cols-1 lg:grid-cols-2 mt-10 gap-x-10">
+            <div class="delivery__bayer-new">
+              <h3 class="delivery__bayer-title text-2xl lg:text-3xl">Новый покупатель</h3>
+              <p class="delivery__description text-lg mt-5">Опции оформления заказа:</p>
+              <label class="flex items-center mt-2">
+                <input type="checkbox" class="appearance-none h-4 w-4 lg:h-6 lg:w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-6 lg:w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="label__text text-sm lg:text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Регистрация</span>
+              </label>
+              <label class="flex items-center mt-1">
+                <input type="checkbox" class="appearance-none h-4 w-4 lg:h-6 lg:w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-6 lg:w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="label__text text-sm lg:text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Оформить заказ без реистрации</span>
+              </label>
+              <p class="delivery__description text-sm lg:text-lg mt-5">Создание учетной записи поможет делать покупки быстрее и удобне. Вы также сможете отслеживать статус
+                своего заказа, пользоваться Закладками, видеть свои предыдущие заказы или получить скидку как наш постоянный покупатель.
+              </p>
+            </div>
+            <!-- /.delivery__bayer-new -->
+            <div class="delivery__bayer-regular flex flex-col mt-10 lg:mt-0">
+              <h3 class="delivery__bayer-title text-2xl lg:text-3xl">Постоянный покупатель</h3>
+              <p class="delivery__description text-sm lg:text-lg mt-5">Я совершал здесь покупки ранее и регистрировался:</p>
+              <input type="text" placeholder="Ваш email" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Пароль" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">        
+              <p class="delivery__description open-popup cursor-pointer text-sm lg:text-lg mt-1 text-blue-450 hover:underline duration-100">Забыли пароль?</p>
+              <button class="text-2xl w-60 bg-blue-450 mx-auto lg:mx-0 rounded-lg p-2 mt-5 border-2 duration-100 text-white focus:outline-none hover:bg-white hover:text-blue-450 border-blue-450">Войти</button>
+            </div>
+            <!-- /.deliver__bayer-regular -->
+          </div>
+          <!-- /.delivery__bayer-wrap -->
         </div>
         <!-- /.delivery__buyer -->
-        <div class="delivery__way mt-5">
-          <h2 class="delivery__title text-2xl">2. Доставка</h2>
-          <input type="text" placeholder="Адрес" class="w-full md:w-2/3 border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
-          <h2 class="delivery__title text-2xl mt-5">3. Способ получения</h2>
-          <label class="flex items-center mt-5">
-            <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="label__text text-xl text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Курьер</span>
-          </label>
-          <label class="flex items-center mt-2">
-            <input type="checkbox" class="appearance-none h-8 w-8 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="label__text text-xl text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Пункт выдачи</span>
-          </label>
+        <div class="delivery__profile mt-10">
+          <h2 class="delivery__title text-xl lg:text-2xl">Шаг 2: Платежная информация</h2>
+          <div class="delivery__profile-wrap grid grid-cols-1 lg:grid-cols-2 mt-10 gap-x-10">
+            <div class="delivery__contacts">
+              <h3 class="delivery__contacts-title text-2xl lg:text-3xl">Контактные данные</h3>
+              <input type="text" placeholder="Имя" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Фамилия" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Email" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Телефон" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            </div>
+            <!-- /.delivery__contacts -->
+            <div class="delivery__address">
+              <h2 class="delivery__address-title text-2xl lg:text-3xl mt-5 lg:mt-0">Ваш адрес</h2>
+              <input type="text" placeholder="Компания" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Адрес-1" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Адрес-2" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Город" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Почтовый индекс" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Регион/Область" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            </div>
+            <!-- /.delivery__address -->
+          </div>
+          <!-- /.delivery__profile-wrap -->
+          <div class="delivery__shipping-address mt-10">
+            <h2 class="delivery__shipping-address-title text-xl lg:text-2xl">Шаг 3: Адрес доставки</h2>
+            <div class="delivery__shipping-address-wrap grid lg:grid-flow-col grid-cols-1 lg:grid-cols-2 lg:grid-rows-4 gap-x-10">
+              <input type="text" placeholder="Имя" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Фамилия" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Компания" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Город" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Адрес-1" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Адрес-2" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Почтовый индекс" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+              <input type="text" placeholder="Регион/Область" class="w-full border-2 border-blue-450 mt-5 px-3 py-2 placeholder-gray-400 text-xl rounded-lg focus:outline-none">
+            </div>
+            <!-- /.delivery__shipping-address-wrap -->
+          </div>
+          <!-- /.delivery__shipping-address -->
+          <div class="delivery__choice mt-10">
+            <h2 class="delivery__choice-title text-xl lg:text-2xl">Шаг 4: Способ доставки:</h2>
+            <p class="delivery__description text-sm lg:text-lg mt-5">Выберите удобный способ доставки для этого заказа</p>
+            <p class="delivery__description text-sm lg:text-lg mt-5">Вы можете добавить комментарий к своему заказу</p>
+            <textarea class="w-full border-blue-450 border-2 rounded-lg p-2 outline-none mt-5"></textarea>
+          </div>
+          <!-- /.delivery__choice -->
+          <div class="delivery__payment mt-10">
+            <h2 class="delivery__payment-title text-xl lg:text-2xl">Шаг 5: Способ оплаты:</h2>
+            <p class="delivery__description text-sm lg:text-lg mt-5">Выберите способ оплаты для этого заказа</p>
+            <label class="flex items-center mt-1">
+              <input type="checkbox" class="appearance-none h-4 w-4 lg:h-6 lg:w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-6 lg:w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="label__text text-sm lg:text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Оплата при получении</span>
+            </label>
+            <p class="delivery__payment text-sm lg:text-lg mt-5">Вы можете добавить комментарий к своему заказу</p>
+            <textarea class="w-full border-blue-450 border-2 rounded-lg p-2 outline-none mt-5"></textarea>
+            <label class="flex items-center mt-1">
+              <input type="checkbox" class="appearance-none h-4 w-4 lg:h-6 lg:w-6 border-2 border-blue-450 bg-white rounded-lg cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-6 lg:w-6 absolute hidden text-blue-450" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="label__text text-sm lg:text-lg cursor-pointer swiper-container-multirow-column select-none ml-5">Я прочитал(-а) <a href="#" class="text-blue-450 hover:underline">Условия соглашения</a> и согласен(-на) с условиями</span>
+            </label>
+          </div>
+          <!-- /.delivery__payment -->
+
         </div>
-        <!-- /.delivery__way -->
+        <!-- /.delivery__profile -->
         <div class="delivery__payment mt-5 text-lg">
           Сумма заказа: <span class="total-sum text-3xl ml-5">1000000$</span>
         </div>
         <!-- /.delivery__payment -->
-        <button class="text-2xl w-60 bg-blue-450 rounded-lg p-2 mt-5 border-2 duration-100 text-white focus:outline-none hover:bg-white hover:text-blue-450 hover:border-blue-450">Оплатить</button>
+        <button class="text-2xl mx-auto lg:mx-0 w-60 bg-blue-450 rounded-lg p-2 mt-5 border-2 duration-100 text-white focus:outline-none hover:bg-white hover:text-blue-450 border-blue-450">Оплатить</button>
       </div>
       <!-- /.delivery__wrap -->
     </div>  

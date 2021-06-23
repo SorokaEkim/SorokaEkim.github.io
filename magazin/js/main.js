@@ -77,9 +77,19 @@ const popupMenu   = document.querySelector('.popups');
 
       openPopupLog  = document.querySelector('.popup-pas__login');
       openPopupReg2 = document.querySelector('.popup-pas__registed');
+
+      openPopup2 = document.querySelector('.open-popup');
       
 // Открытие блока с popups
 openPopup.onclick = function() {
+  popupMenu.classList.toggle('hidden');
+  sections.forEach(element => {
+    element.classList.add('opacity-20')
+  });
+};
+
+// Открытие блока popups из блока "Доставка"
+openPopup2.onclick = function() {
   popupMenu.classList.toggle('hidden');
   sections.forEach(element => {
     element.classList.add('opacity-20')
