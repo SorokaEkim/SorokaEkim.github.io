@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.2 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.4 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -310,16 +310,6 @@ pre {
 button {
   background-color: transparent;
   background-image: none;
-}
-
-/**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- */
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
 }
 
 fieldset {
@@ -1048,6 +1038,11 @@ video {
   border-color: rgba(43, 93, 142, var(--tw-border-opacity));
 }
 
+.hover\:border-blue-450:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(43, 93, 142, var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -1574,6 +1569,10 @@ input[type=number] {
     display: none;
   }
 
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
   .sm\:w-1\/4 {
     width: 25%;
   }
@@ -1834,6 +1833,10 @@ input[type=number] {
 }
 
 @media (min-width: 1280px) {
+  .xl\:top-2 {
+    top: 0.5rem;
+  }
+
   .xl\:block {
     display: block;
   }
@@ -1862,6 +1865,11 @@ input[type=number] {
   .xl\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .xl\:text-lg {
@@ -1922,6 +1930,11 @@ input[type=number] {
 
   .\32xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .\32xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .\32xl\:text-xl {

@@ -209,6 +209,7 @@ buttonBasket.onclick = function() {
     element.classList.add('opacity-20')
   });
 };
+
 // Закрытие корзины
 closeBasket.onclick = function() {
   basketWindow.classList.add('hidden');
@@ -222,6 +223,32 @@ closeBasket.onclick = function() {
 closeBas.onclick = function() {
   body.classList.remove('overflow-hidden')
 }
+
+// Модальное окно при добавлении продукта в корзину
+const addProds = document.querySelectorAll(".product__basket");
+      modalProd = document.querySelector(".modal-prod");
+
+addProds.forEach(function(elem) {
+  elem.onclick = function(){
+    modalProd.classList.remove('hidden');
+    sections.forEach(element => {
+    element.classList.add('opacity-20');
+  });
+  }
+});
+
+// Закрытие модального окна с продуктом
+const closeModalProd  = document.querySelectorAll(".modal-prod__close");
+
+closeModalProd.forEach(function(elem){
+  elem.onclick = function(){
+    modalProd.classList.add("hidden");
+    sections.forEach(element => {
+      element.classList.remove('opacity-20');
+    });
+  }
+})
+
 
 // Вертикальное меню
 var accordion = (function (element) {
@@ -318,6 +345,6 @@ if (rangeSlider) {
       setRangeSlider(index, e.currentTarget.value);
     })
   })
-
 }
+
 
