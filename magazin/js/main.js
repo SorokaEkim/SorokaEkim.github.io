@@ -249,7 +249,6 @@ closeModalProd.forEach(function(elem){
   }
 })
 
-
 // Вертикальное меню
 var accordion = (function (element) {
   var _getItem = function (elements, className) { // функция для получения элемента с указанным классом
