@@ -443,7 +443,7 @@
   background-color: $bg-black
   &__title
     color: $white
-    text-align: left
+    text-align: center
   &__wrap
     margin-top: 5.3rem
     +media(1280px)
@@ -530,12 +530,13 @@
 // Feedback
 .feedback
   padding-top: 10rem
+  padding-bottom: 6rem
   background-color: $bg-black
   &__title
-    text-align: left
+    text-align: center
     color: $white
   &__wrap
-    margin-top: 4.5rem    
+    margin-top: 4.5rem   
 
 .review
   padding: 1.7rem 3rem
@@ -564,8 +565,11 @@
     text-align: left
     font-size: 1.2rem
     line-height: 1.5rem
-  &__hidden-text
-    display: none
+  &__text-hidden
+    display: none 
+  &__button
+    display: flex 
+    cursor: pointer 
   &__btn
     cursor: pointer
     margin-bottom: 2rem
@@ -574,19 +578,173 @@
     color: $black
     text-decoration: none
     position: relative
-    &-down
-      &::after
-        content: url('../images/arrow.svg')
-        position: absolute
-        margin-left: 1rem  
-    &-up
-      &::after
-        content: url('../images/arrow-up.svg')
-        position: absolute
-        margin-left: 1rem 
-.hidden
-  display: none             
+    font-size: 1.8rem
+    line-height: 2.2rem
+    outline: none 
+    border: none
+    background-color: $white
+  &__svg img
+    height: 2.5rem
 
+// Contacts
+.contacts
+  padding: 6rem 0rem
+  &__title
+    margin-bottom: 8rem
+  &__wrap
+    +media(1280px)
+      display: flex
+  &__text
+    margin-top: 3rem
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+    +media(1280px)
+      font-size: 2.4rem
+      line-height: 2.9rem
+  &__link
+    font-size: 2.2rem
+    line-height: 2.7rem
+    color: $yellow
+    font-family: 'Montserrat-Medium'
+    text-decoration: none
+    +media(1280px)
+      font-size: 3.6rem
+      line-height: 4rem
+  &__description
+    margin-top: 7rem
+    font-size: 2.2rem
+    line-height: 2.7rem
+    font-family: 'Montserrat-Medium'
+    +media(1280px)
+      font-size: 3.6rem
+      line-height: 4rem
+
+  &__form
+    margin-top: 5.5rem
+    background-color: $yellow
+    padding: 3rem
+    border-radius: 1.7rem
+    text-align: center
+    +media(1280px)
+      margin-top: 0rem
+      max-width: 578px
+      padding: 3.7rem 5.4rem
+    &-title
+      text-align: center
+      font-size: 2.2rem
+      line-height: 2.7rem
+      font-family: 'Montserrat-Bold'
+      +media(1280px)
+        font-size: 3.6rem
+        line-height: 4rem
+    &-input
+      width: 100%
+      font-family: 'Montserrat-Bold'
+      margin-top: 6rem
+      background-color: $yellow
+      outline: none
+      border: none
+      font-size: 1.8rem
+      line-height: 2.2rem
+      text-transform: uppercase
+      border-bottom: 1px solid rgba(0,0,0,0.5)
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
+      &::placeholder
+        color: $black
+        opacity: 0.5
+  &__label
+    margin-top: 3rem
+    display: flex
+    align-items: center
+  &__checkbox
+    display: none
+  &__checkbox-fake
+    cursor: pointer
+    display: block
+    min-width: 20px
+    height: 20px
+    border: 2px solid rgba(0,0,0,0.5)
+    position: relative
+  &__checkbox-text
+    text-align: left
+    margin-left: 1rem
+    font-size: 1.2rem
+    font-family: 'Montserrat-Medium'
+    color: rgba(0,0,0,0.5)
+    +media(1280px)
+      font-size: 1.4rem   
+  &__checkbox-fake::before
+    content: ""
+    position: absolute
+    display: block
+    width: 10px
+    height: 10px
+    transform: translate(-50%,-50%)
+    background-color: rgba(0,0,0,0.5)
+    top: 50%
+    left: 50%
+    border-radius: 50%
+    opacity: 0
+    transition: .2s
+  &__checkbox:checked + .contacts__checkbox-fake::before
+    opacity: 1
+  &__button
+    cursor: pointer
+    margin-top: 4rem
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+    padding: 2.6rem 4rem
+    background-color: $yellow
+    outline: none
+    border-radius: 3rem
+    border: 4px solid $black
+    +media(1280px)
+      font-size: 2.4rem
+      line-height: 2.9rem
+      padding: 3rem 10rem
+      margin-top: 5rem
+    &:hover
+      background-color: $black
+      color: $yellow
+      transition: 0.4s
+      
+// Footer
+.footer
+  padding: 5rem 0rem
+  background-color: $bg-black
+  &__wrap
+    +media(1280px)
+      display: flex
+      align-items: center
+  &__title
+    display: block
+    color: $white 
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+  &__description
+    +media(1280px)
+      width: 40%  
+  &__links
+    margin-top: 5rem
+    display: grid
+    grid-template-columns: 1fr 1fr
+    +media(1280px)
+      width: 60%
+      margin-top: 0
+      grid-template-columns: 1fr 1fr 1fr 
+  &__link
+    margin-top: 3rem
+    color: $white
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Medium'
+    text-decoration: none  
+      
 // Burger-menu
 .burger-menu
   position: relative
@@ -599,7 +757,7 @@
     background-color: $white
     top: 0
     left: -32rem
-    transition: all 300 ms
+    transition: all 0.6s
   &__wrap.show
     left: 0rem   
   &__close
@@ -627,18 +785,4 @@
       text-decoration: underline
   &__link:not(:first-child)
     margin-top: 2rem
-
-  
-    
-
-
-
- 
-   
-
-
-
- 
-   
-
 

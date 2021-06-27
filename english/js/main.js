@@ -17,7 +17,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   slidesPerGroup: 1,
   loop: true,
-  loopFillGroupWithBlank: true,
+  loopFillGroupWithBlank: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -45,23 +45,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-const openText = document.querySelector('.review__btn-down');
-      closeText = document.querySelector('.review__btn-up');
-      hiddenText = document.querySelector('.review__hidden-text');
-
-// Open feedback
-openText.onclick = function() {
-  hiddenText.classList.remove('review__hidden-text');
-  openText.classList.add('hidden');
-  closeText.classList.remove('hidden');
-};
-
-// Close feedback
-closeText.onclick = function() {
-  hiddenText.classList.add('review__hidden-text');
-  openText.classList.remove('hidden');
-  closeText.classList.add('hidden');
-}
 
 
 
