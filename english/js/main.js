@@ -8,7 +8,7 @@ open.onclick = function openMenu() {
 }
 
 close.onclick = function closeMenu() {
-  burgerMenu.classList.remove('show')
+  burgerMenu.classList.remove('show');
 }
 
 // Sviper Services
@@ -43,6 +43,22 @@ var swiper = new Swiper(".mySwiper", {
     }
   }  
 });
+
+// Navigations
+const anchors = document.querySelectorAll('a[href^="#"]')
+
+for(let anchor of anchors) {
+  anchor.addEventListener("click", function(e) {
+    burgerMenu.classList.remove('show');
+    e.preventDefault()
+    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+    document.querySelector(goto).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
+
 
 
 
