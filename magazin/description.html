@@ -74,7 +74,7 @@
         </div>
         <!-- /.header__burger-menu -->
         <a href="index.html" class="header__logo text-5xl hidden lg:block">
-          <img src="./images/logo/2.svg" alt="логотип">
+          <img src="./images/logo/2.png" alt="логотип">
         </a>
         <!-- /.header__logo -->
         <div class="header__navbar w-1/2 px-4 justify-between hidden lg:flex text-base xl:text-lg 2xl:text-xl">
@@ -138,7 +138,7 @@
       <div class="footer__wrap sm:grid sm:grid-cols-3 sm:gap-x-2 lg:gap-x-10 lg:grid-cols-4 xl:gap-x-14 2xl:grid-cols-5">
         <div class="footer__col-1 flex justify-center sm:text-left sm:items-center">
           <a href="index.html" class="footer__logo text-5xl text-white pr-2">
-            <img src="./images/logo/2-white.svg" alt="белый логотип">
+            <img src="./images/logo/2-white.png" alt="белый логотип">
           </a>
           <!-- /.footer__logo -->
         </div>
@@ -221,7 +221,7 @@
   <!-- /.footer -->
   
   <!-- Request -->
-  <div class="request fixed w-full h-full top-0 left-0 z-10 hidden">
+  <div class="request fixed w-full h-full top-0 left-0 z-10 opacity-0 -z-10">
     <div class="request__wrap h-full flex justify-center items-center">
       <div class="request__content p-10 rounded-lg text-center bg-blue-450 relative flex flex-col">
         <a href="#" class="request__close absolute top-2 right-2 text-white">
@@ -244,7 +244,7 @@
   <!-- /.request -->
 
   <!-- Modal-window -->
-  <div class="basket py-40 fixed w-full h-full top-0 left-0 z-10 hidden overflow-y-auto">
+  <div class="basket py-40 fixed w-full h-full top-0 left-0 -z-10 opacity-0 overflow-y-auto">
     <div class="container mx-auto pt-5 px-2 sm:px-10 xl:px-28">
       <div class="basket__wrap font-medium bg-white rounded-lg border-2 border-blue-450">
         <h2 class="basket__title text-5xl ml-1">Корзина</h2>
@@ -255,7 +255,7 @@
         <div class="basket__head-title">Итого</div>
       </div>
       <!-- /.basket__head -->
-      <div class="basket__wrap py-5 lg:shadow">
+      <div class="basket__content py-5 lg:shadow">
         <div class="basket__product grid grid-cols-2 lg:grid-cols-12 flex items-center mt-5 shadow-md rounded p-5 lg:p-0">
           <div class="basket__product-img col-span-1">
             <img src="./images/cart1.png" alt="смеситель">
@@ -388,12 +388,7 @@
       </div>
       <!-- /.basket__wrap -->
       <div class="basket__footer p-5 bg-blue-450 text-white grid lg:grid-cols-12 items-center">
-        <div class="basket__nav lg:col-span-10 flex items-center flex-col sm:flex-row">
-          <div class="basket__update text-white ml-3 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-            </svg>
-          </div>  
+        <div class="basket__nav lg:col-span-10 flex items-center flex-col sm:flex-row">  
           <a class="basket__footer-btn-close mt-4 sm:ml-4 sm:mt-0 text-xl p-2 border-2 border-white rounded-lg hover:bg-white hover:text-blue-450 duration-100 focus:outline-none cursor-pointer">Продолжить покупки</a>
           <a href="checkout.html" class="basket__footer-btn text-xl p-2 mt-4 sm:mt-0 sm:ml-4 border-2 border-white rounded-lg hover:bg-white hover:text-blue-450 duration-100 focus:outline-none cursor-pointer">Оформить заказ</a>
         </div>
