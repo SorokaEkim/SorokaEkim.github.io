@@ -481,6 +481,8 @@ img {
 }
 @media screen and (min-width: 414px) and (min-width: 768px) {
   .profile__photo img {
+    -o-object-fit: cover;
+       object-fit: cover;
     top: 4.5rem;
     width: 39.2rem;
     height: 58.7rem;
@@ -546,8 +548,8 @@ img {
 .profile__list {
   margin-top: 1.7rem;
   color: #fff;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
 }
 .profile__list li {
   position: relative;
@@ -557,7 +559,7 @@ img {
 .profile__list li:before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 0;
   width: 0.6rem;
   height: 0.6rem;
@@ -682,7 +684,7 @@ img {
 .stages__description-text {
   position: relative;
   margin-top: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   line-height: 119.1%;
 }
 
@@ -955,12 +957,12 @@ img {
 .cart__content-text::before {
   position: absolute;
   content: url(../images/exlaim.svg);
-  top: 0.5rem;
+  top: -0.1rem;
   left: -3rem;
 }
-@media screen and (min-width: 570px) {
+@media screen and (min-width: 1280px) {
   .cart__content-text::before {
-    top: -0.2rem;
+    top: 0.1rem;
   }
 }
 .cart__content-text:not(:first-child) {
@@ -980,9 +982,10 @@ img {
   }
 }
 .cart__content-btn {
+  margin-top: 1.8rem;
+  display: block;
   cursor: pointer;
   padding: 2rem 3rem;
-  margin-top: 1.8rem;
   background-color: #FFB800;
   font-weight: bold;
   font-size: 1.8rem;
@@ -992,6 +995,8 @@ img {
   outline: none;
   border: none;
   border-radius: 1.7rem;
+  text-decoration: none;
+  color: #000;
 }
 @media screen and (min-width: 414px) {
   .cart__content-btn {
@@ -1050,6 +1055,10 @@ img {
 .review__avatar {
   max-width: 5.5rem;
 }
+.review__avatar img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
 .review__contacts {
   margin-left: 0.8rem;
 }
@@ -1071,8 +1080,11 @@ img {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
-.review__text-hidden {
-  display: none;
+@media screen and (min-width: 1280px) {
+  .review__text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
 }
 .review__button {
   display: -webkit-box;
