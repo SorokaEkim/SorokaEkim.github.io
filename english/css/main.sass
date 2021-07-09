@@ -6,7 +6,7 @@
 .header
   padding-bottom: 9.6rem
   position: relaive
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bg-header.png)
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bg-header.webp)
   background-size: cover
   background-position: top center
   font-family: 'Montserrat-Medium'
@@ -621,6 +621,17 @@
     +media(1280px)
       font-size: 2.4rem
       line-height: 2.9rem
+  &__confidentially
+    margin-top: 2rem
+    font-family: 'Montserrat-Medium'
+    color: rgba(0, 0, 0, 0.47)
+    font-size: 1.6rem
+    line-height: 129.2%
+  &__rules
+    font-family: 'Montserrat-Bold'
+    &:hover
+      text-decoration: underline
+      cursor: pointer
   &__link
     font-size: 2.2rem
     line-height: 2.7rem
@@ -674,46 +685,10 @@
       &::placeholder
         color: $black
         opacity: 0.5
-  &__label
-    margin-top: 3rem
-    display: flex
-    align-items: center
-  &__checkbox
-    display: none
-  &__checkbox-fake
-    cursor: pointer
-    display: block
-    min-width: 20px
-    height: 20px
-    border: 2px solid rgba(0,0,0,0.5)
-    position: relative
-  &__checkbox-text
-    text-align: left
-    margin-left: 1rem
-    font-size: 1.2rem
-    font-family: 'Montserrat-Medium'
-    color: rgba(0,0,0,0.5)
-    +media(1280px)
-      font-size: 1.4rem   
-  &__checkbox-fake::before
-    content: ""
-    position: absolute
-    display: block
-    width: 10px
-    height: 10px
-    transform: translate(-50%,-50%)
-    background-color: rgba(0,0,0,0.5)
-    top: 50%
-    left: 50%
-    border-radius: 50%
-    opacity: 0
-    transition: .2s
-  &__checkbox:checked + .contacts__checkbox-fake::before
-    opacity: 1
   &__button
     cursor: pointer
     margin-top: 4rem
-    padding: 2rem 1rem
+    padding: 2rem 3rem
     font-size: 1.8rem
     line-height: 2.2rem
     font-family: 'Montserrat-Bold'

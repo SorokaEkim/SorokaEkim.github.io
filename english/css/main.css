@@ -64,6 +64,13 @@ img {
   border: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #FFB800 inset !important;
+}
+
 .container {
   max-width: 1420px;
   margin: 0 auto;
@@ -76,6 +83,7 @@ img {
   src: url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat-Medium";
@@ -83,6 +91,7 @@ img {
   src: url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: medium;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat-Black";
@@ -90,6 +99,7 @@ img {
   src: url("../fonts/Montserrat-Black.woff") format("woff");
   font-weight: medium;
   font-style: normal;
+  font-display: swap;
 }
 .container {
   max-width: 1420px;
@@ -103,6 +113,7 @@ img {
   src: url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat-Medium";
@@ -110,6 +121,7 @@ img {
   src: url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: medium;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat-Black";
@@ -117,6 +129,7 @@ img {
   src: url("../fonts/Montserrat-Black.woff") format("woff");
   font-weight: medium;
   font-style: normal;
+  font-display: swap;
 }
 .swiper-container {
   width: 100%;
@@ -156,8 +169,8 @@ img {
 .header {
   padding-bottom: 9.6rem;
   position: relaive;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/bg-header.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg-header.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/bg-header.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg-header.webp);
   background-size: cover;
   background-position: top center;
   font-family: "Montserrat-Medium";
@@ -1140,6 +1153,20 @@ img {
     line-height: 2.9rem;
   }
 }
+.contacts__confidentially {
+  margin-top: 2rem;
+  font-family: "Montserrat-Medium";
+  color: rgba(0, 0, 0, 0.47);
+  font-size: 1.6rem;
+  line-height: 129.2%;
+}
+.contacts__rules {
+  font-family: "Montserrat-Bold";
+}
+.contacts__rules:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .contacts__link {
   font-size: 2.2rem;
   line-height: 2.7rem;
@@ -1229,61 +1256,10 @@ img {
   color: #000;
   opacity: 0.5;
 }
-.contacts__label {
-  margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.contacts__checkbox {
-  display: none;
-}
-.contacts__checkbox-fake {
-  cursor: pointer;
-  display: block;
-  min-width: 20px;
-  height: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-.contacts__checkbox-text {
-  text-align: left;
-  margin-left: 1rem;
-  font-size: 1.2rem;
-  font-family: "Montserrat-Medium";
-  color: rgba(0, 0, 0, 0.5);
-}
-@media screen and (min-width: 1280px) {
-  .contacts__checkbox-text {
-    font-size: 1.4rem;
-  }
-}
-.contacts__checkbox-fake::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 10px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.contacts__checkbox:checked + .contacts__checkbox-fake::before {
-  opacity: 1;
-}
 .contacts__button {
   cursor: pointer;
   margin-top: 4rem;
-  padding: 2rem 1rem;
+  padding: 2rem 3rem;
   font-size: 1.8rem;
   line-height: 2.2rem;
   font-family: "Montserrat-Bold";
