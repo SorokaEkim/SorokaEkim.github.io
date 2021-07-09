@@ -1,0 +1,783 @@
+@import __base
+@import __settings
+@import __swiper
+
+// Section Header
+.header
+  padding-bottom: 9.6rem
+  position: relaive
+  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(../images/bg-header.webp)
+  background-size: cover
+  background-position: top center
+  font-family: 'Montserrat-Medium'
+  +media(1280px)
+    height: 100vh  
+  &__nav
+    padding-top: 3rem
+    display: flex
+    justify-content: space-between
+    +media(768px)
+      align-items: center
+  &__toggle
+    color: $white
+    width: 4.5rem
+    height: 4.5rem
+    +media(768px)
+      display: none
+  &__menu
+    display: none
+    font-size: 1.6rem
+    +media(768px)
+      display: flex
+    +media(1024px)
+      font-size: 1.8rem  
+  &__menu-link
+    position: relative
+    line-height: 1
+    font-family: 'Montserrat-Medium'
+    font-style: italic
+    color: $gray
+    text-decoration: none
+    &:after
+      display: block
+      position: absolute
+      left: 0
+      width: 0
+      height: 3px
+      background-color: #FFB800
+      content: ""
+      transition: width 0.3s ease-out
+    &:hover:after,
+    &:focus:after 
+      width: 100%  
+    &:hover
+      color: $white
+  &__menu-link:not(:last-child)
+    margin-right: 2rem
+    +media(1024px)
+      margin-right: 6rem
+  &__contacts
+    display: flex
+    align-items: center    
+  &__telegram
+    display: none
+    margin-right: 2rem
+    width: 4.5rem
+    +media(1024px)
+      display: block    
+  &__contact
+    align-items: center
+    display: flex
+    flex-direction: column
+    text-align: right
+  &__number
+    font-size: 1.4rem
+    color: $white
+    text-decoration: none
+    +media(768px)
+      font-size: 1.8rem
+  &__email
+    margin-top: 0.5rem
+    font-size: 1.2rem
+    color: $gray
+    text-decoration: none
+    +media(768px)
+      font-size: 1.4rem
+  &__text
+    width: 100%
+    +media(768px)
+      margin-bottom: 9.6rem
+      width: 70%
+    +media(1280px)
+      width: 60%     
+  &__title
+    margin-top: 8.6rem
+    font-size: 3.2rem
+    text-transform: uppercase
+    font-weight: bold
+    line-height: 4rem
+    color: $white
+    +media(768px)
+      font-size: 4.4rem
+      line-height: 5.8rem
+    +media(1280px)
+      font-size: 6.4rem
+      margin-top: 18.6rem
+      line-height: 7.8rem   
+    &-yellow
+      color: $yellow
+  &__subtitle
+    display: none
+    +media(768px)
+      display: block
+      margin-top: 2.5rem
+      font-size: 1.8rem
+      line-height: 3rem
+      color: $white
+      +media(1024px)
+        font-size: 2.4rem
+.btn-yellow
+  max-width: 57.6rem
+  text-align: center
+  padding: 2.5rem 3rem
+  display: none
+  cursor: pointer
+  border: none
+  outline: none
+  font-size: 1.4rem
+  text-decoration: none
+  text-transform: uppercase
+  color: $black
+  background-color: $yellow
+  border-radius: 3.5rem
+  font-family: 'Montserrat-Medium'
+  +media(768px)
+    display: block
+    font-size: 1.8rem
+  +media(1024px)
+    font-size: 2.4rem
+    padding: 3rem 4.5rem
+  &:hover
+    filter: drop-shadow(0px 0px 30px $yellow)
+    transition: 0.4s
+
+// Section Profile
+.profile
+  padding-top: 2rem
+  padding-bottom: 4.5rem
+  font-family: 'Montserrat-Medium'
+  background-color: $bg-black
+  +media(1280px)
+    padding-bottom: 19.5rem
+  &__subtitle
+    color: $white
+    font-size: 1.6rem
+    line-height: 2rem
+    +media(768px)
+      display: none
+  &__btn
+    max-width: 40rem
+    text-align: center
+    margin: 3rem auto
+    display: block
+    +media(768px)
+      display: none
+  &__title
+    text-align: center
+    margin-top: 7.6rem
+    color: $white
+    +media(1280px)
+      margin-top: 17.8rem
+  &__wrap
+    margin-top: 3.4rem
+    +media(1280px)
+      margin-top: 0rem
+      display: flex
+      justify-content: space-between    
+  &__photo
+    display: flex
+    justify-content: center
+    +media(414px)
+      position: relative
+      width: 32.6rem
+      height: 45.4rem
+      margin: 0 auto
+      +media(768px)
+        width: 44rem
+        height: 63.5rem
+      +media(1280px)
+        order: 1
+        margin: 0  
+      & img
+        position: absolute
+        left: 0
+        top: 4rem
+        z-index: 1
+        +media(768px)
+          object-fit: cover
+          top: 4.5rem
+          width: 39.2rem
+          height: 58.7rem 
+  &__frame
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    width: 27.6rem
+    height: 41.4rem
+    border: 2rem solid $yellow
+    +media(414px)
+      display: block
+    +media(768px)
+      width: 39.2rem
+      height: 58.7rem  
+  &__description
+    margin-top: 6rem
+    +media(1024px)
+      width: 90%
+      margin: 0 auto
+    +media(1280px)
+      margin: 0
+      width: 45%
+      margin-top: 6.6rem      
+  &__text
+    margin-top: 2.7rem
+    font-size: 2.2rem
+    line-height: 2.7rem
+    color: $white
+    font-weight: bold
+    line-height: 2.9rem
+    &-small
+      margin-top: 1.7rem
+      font-size: 1.4rem
+      line-height: 1.7rem
+      font-weight: normal
+      line-height: 2.2rem
+      +media(1280px)
+        margin-top: 2.5rem 
+        font-size: 1.8rem
+  &__list
+    margin-top: 1.7rem
+    color: $white
+    font-size: 2.2rem
+    line-height: 2.7rem 
+    & li
+      position: relative
+      margin-top: 1.7rem
+      padding-left: 2rem
+      &:before
+        content: ""
+        position: absolute
+        top: 10px
+        left: 0
+        width: 0.6rem
+        height: 0.6rem
+        border-radius: 50%
+        background: $yellow
+.title
+  font-family: 'Montserrat-Bold'
+  font-size: 3.2rem
+  text-transform: uppercase
+  font-style: italic
+  +media(1280px)
+    font-size: 4.8rem
+    font-weight: bold
+    text-align: left
+
+// Section Stages
+.stages
+  padding-top: 6.5rem
+  padding-bottom: 8.8rem
+  font-family: 'Montserrat-Medium'
+  background-color: $yellow
+  &__title
+    text-align: center
+    font-weight: 900
+    +media(1024px)
+      display: block
+  &__wrap
+    margin-top: 4rem
+    display: grid
+    grid-template-columns: 1fr
+    +media(1024px)
+      margin-top: 7rem
+      grid-template-columns: 1fr 1fr
+  &__block
+    +media(414px)
+      display: flex
+      &:not(:first-child)
+        margin-top: 20rem
+        +media(1024px)
+          margin-top:18rem
+      &:nth-child(odd)
+        +media(1024px)
+          margin-top: 2rem
+  &__number
+    margin-top: 3rem
+    position: relative
+    font-size: 9rem
+    font-family: 'Montserrat-Black'
+    +media(414px)
+      margin-top: 0rem
+    &::before
+      content: ""
+      position: absolute
+      top: 1rem
+      left: -2rem
+      width: 6rem
+      height: 3px
+      background: $black
+      transform: rotate(-45deg)
+    &-order
+      order: 1
+      +media(1024px)
+        order: 0
+  &__description
+    margin-top: 1rem
+    +media(414px)
+      margin-top: 7.5rem
+      margin-left: 2rem
+    +media(1024px)
+      margin-top: 0
+    &-title
+      font-family: 'Montserrat-Black'
+      font-size: 2.2rem
+      line-height: 119.1%
+      text-transform: uppercase
+    &-text
+      position: relative
+      margin-top: 1rem
+      font-size: 1.8rem
+      line-height: 119.1%
+.arrow-right:before
+  +media(414px)
+    content: url(../images/arrow-small-right.svg)
+    position: absolute
+    top: 6rem
+    left: -4rem
+    transform: rotate(-10deg)
+    +media(1024px)
+      top: 5rem
+      left: 10rem
+      transform: rotate(-60deg)
+    +media(1280px)
+      content: url(../images/arrow-big-right.svg)
+      top: 6rem
+      left: 5rem
+      transform: rotate(0deg)  
+.arrow-left:before
+  +media(414px)
+    content: url(../images/arrow-small-left.svg)
+    position: absolute
+    top: 6rem
+    right: -4rem
+    transform: rotate(0deg)
+    +media(1024px)
+      top: 17rem
+      left: -4rem
+      transform: rotate(50deg)
+    +media(1280px)
+      content: url(../images/arrow-big-left.svg)
+      top: 6rem
+      left: 8rem
+      transform: rotate(10deg)
+
+// Adventages
+.advantages
+  padding: 7rem 0
+  background-color: $bg-black
+  &__block
+    margin-top: 4rem
+    display: flex
+    flex-direction: column
+    +media(1024px)
+      flex-direction: row
+      align-items: center  
+  &__title
+    color: $white
+  &__subtitle
+    font-family: 'Montserrat-Bold'
+    color: $yellow
+    font-size: 2.2rem
+    line-height: 2.7rem
+    +media(1024px)
+      font-size: 2.4rem
+    +media(1280px)
+      font-size: 3.6rem  
+  &__description
+    margin-top: 1rem
+    font-size: 1.4rem
+    line-height: 1.7rem
+    color: $white
+    font-family: 'Montserrat-Medium'
+    +media(1024px)
+      margin-top: 1.3rem
+      font-size: 1.7rem
+      line-height: 2rem
+    +media(1280px)
+      font-size: 2.4rem
+      line-height: 2.9rem  
+  &__text
+    +media(1024px)
+      width: 40%
+    &-right
+      text-align: right
+      +media(1024px)
+        text-align: left
+        margin-left: auto  
+  &__image
+    margin-left: auto
+    position: relative
+    width: 19.6rem
+    height: 19.6rem
+    +media(1024px)
+      order: 1
+      width: 43.9rem
+      height: 43.9rem
+  &__img
+    bottom: 0
+    position: absolute
+    width: 18rem
+    height: 18rem
+    +media(1024px)
+      height: 40rem
+      width: 40rem
+  &__img-left
+    right: 0    
+  &__image-left
+    margin-left: 0
+    +media(1024px)
+      order: 0     
+  &__frame
+    position: absolute
+    top: 0
+    right: 0
+    border: 1rem solid $yellow
+    width: 18rem
+    height: 18rem
+    +media(1024px)
+      border: 2rem solid $yellow
+      width: 40rem
+      height: 40rem
+  &__frame-left
+    left: 0
+    
+// Services
+.services
+  padding: 7rem 0
+  background-color: $bg-black
+  &__title
+    color: $white
+    text-align: center
+  &__wrap
+    margin-top: 5.3rem
+    +media(1280px)
+      margin-top: 16rem  
+.cart
+  width: 100%
+  border-radius: 2.5rem
+  background-color: $bg-black
+  &__header
+    padding: 2rem
+    border-radius: 2.5rem 2.5rem 0 0
+    background-color: $yellow
+    &-title
+      text-align: left
+      font-family: 'Montserrat-Bold' 
+      font-size: 1.8rem
+      line-height: 2.2rem
+      text-transform: uppercase
+      +media(1024px)
+        font-size: 2.4rem
+        line-height: 2.9rem
+    &-description
+      margin-top: 1rem
+      text-align: left
+      font-family: 'Montserrat-Medium' 
+      font-size: 1.4rem
+      line-height: 1.7rem
+      +media(1280px)
+        font-size: 1.8rem
+        line-height: 2.2rem
+  &__content
+    padding: 3rem
+    border: 0.5rem solid $yellow
+    border-radius: 0 0 2.5rem 2.5rem
+    background-color: $white
+    &-text
+      margin-left: 1rem
+      position: relative
+      font-size: 1.2rem
+      line-height: 1.5rem
+      font-family: 'Montserrat-Medium'
+      text-align: left
+      +media(1280px)
+        font-size: 1.8rem
+        line-height: 2.2rem
+      &::before
+        position: absolute
+        content: url(../images/exlaim.svg)
+        top: -0.1rem
+        left: -3rem
+        +media(1280px)
+          top: 0.1rem
+      &:not(:first-child)
+        margin-top: 2.3rem
+    &-price
+      margin-top: 1.8rem
+      color: $yellow
+      font-size: 1.8rem
+      line-height: 2.2rem
+      font-family: 'Montserrat-Bold'
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
+    &-btn
+      margin-top: 1.8rem
+      display: block
+      cursor: pointer
+      padding: 2rem 3rem
+      background-color: $yellow
+      font-weight: bold
+      font-size: 1.8rem
+      line-height: 2.2rem
+      font-family: 'Montserrat-Bold'
+      text-transform: uppercase
+      outline: none
+      border: none
+      border-radius: 1.7rem
+      text-decoration: none
+      color: $black
+      +media(414px)
+        padding: 2.3rem 5.2rem
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
+      &:hover
+        filter: drop-shadow(0px 0px 30px $yellow)
+        transition: 0.4s
+
+// Feedback
+.feedback
+  padding: 6rem 0
+  background-color: $bg-black
+  +media(1280px)
+    padding: 22rem 0rem
+  &__title
+    text-align: center
+    color: $white
+  &__wrap
+    margin-top: 4.5rem
+    +media(1280px)
+      margin-top: 16rem    
+
+.review
+  padding: 1.7rem 3rem
+  background-color: $white
+  border-radius: 2.5rem
+  font-family: 'Montserrat-Medium'
+  &__header
+    display: flex
+    align-items: center
+  &__avatar
+    max-width: 5.5rem
+    & img
+      width: 5.5rem
+      height: 5.5rem
+  &__contacts
+    margin-left: 0.8rem  
+  &__username
+    font-size: 1.4rem
+    line-height: 1.7rem 
+    text-align: left
+    font-family: 'Montserrat-Bold'
+  &__email
+    font-size: 1.2rem
+    line-height: 1.5rem
+    color: #828282
+  &__text
+    margin-top: 1.5rem
+    margin-bottom: 1rem
+    text-align: left
+    font-size: 1.2rem
+    line-height: 1.5rem
+    +media(1280px)
+      font-size: 1.4rem
+      line-height: 1.7rem
+  &__button
+    display: flex 
+    cursor: pointer 
+  &__btn
+    cursor: pointer
+    margin-bottom: 2rem
+    text-align: left
+    font-family: 'Montserrat-Bold'
+    color: $black
+    text-decoration: none
+    position: relative
+    font-size: 1.8rem
+    line-height: 2.2rem
+    outline: none 
+    border: none
+    background-color: $white
+  &__svg img
+    height: 2.5rem
+   
+// Contacts
+.contacts
+  padding: 6rem 0rem
+  +media(1280px)
+    padding: 20rem 0rem
+  &__title
+    margin-bottom: 8rem
+  &__wrap
+    +media(1280px)
+      display: flex
+  &__text
+    margin-top: 3rem
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+    +media(1280px)
+      font-size: 2.4rem
+      line-height: 2.9rem
+  &__link
+    font-size: 2.2rem
+    line-height: 2.7rem
+    color: $yellow
+    font-family: 'Montserrat-Medium'
+    text-decoration: none
+    +media(1280px)
+      font-size: 3.6rem
+      line-height: 4rem
+  &__description
+    margin-top: 7rem
+    font-size: 2.2rem
+    line-height: 2.7rem
+    font-family: 'Montserrat-Medium'
+    +media(1280px)
+      font-size: 3.6rem
+      line-height: 4rem   
+  &__form
+    margin-top: 5.5rem
+    background-color: $yellow
+    padding: 3rem
+    border-radius: 1.7rem
+    text-align: center
+    +media(1280px)
+      margin-top: 0rem
+      max-width: 578px
+      padding: 3.7rem 5.4rem
+    &-title
+      text-align: center
+      font-size: 2.2rem
+      line-height: 2.7rem
+      font-family: 'Montserrat-Bold'
+      +media(1280px)
+        font-size: 3.6rem
+        line-height: 4rem
+    &-input
+      width: 100%
+      font-family: 'Montserrat-Bold'
+      margin-top: 6rem
+      background-color: $yellow
+      outline: none
+      border: none
+      font-size: 1.8rem
+      line-height: 2.2rem
+      text-transform: uppercase
+      border-bottom: 1px solid rgba(0,0,0,0.5)
+      +media(1280px)
+        font-size: 2.4rem
+        line-height: 2.9rem
+      &::placeholder
+        color: $black
+        opacity: 0.5
+    &-text
+      margin-top: 2rem
+      font-size: 1.6rem
+      color: rgba(0, 0, 0, 0.47)
+      font-family: 'Montserrat-Medium'
+    &-rules
+      font-family: 'Montserrat-Bold'
+      white-space: nowrap
+      &:hover
+        text-decoration: underline
+        cursor: pointer
+  &__button
+    cursor: pointer
+    margin-top: 4rem
+    padding: 2rem 3rem
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+    background-color: $yellow
+    outline: none
+    border-radius: 3rem
+    border: 4px solid $black
+    +media(414px)
+      padding: 2.6rem 4rem
+    +media(1280px)
+      font-size: 2.4rem
+      line-height: 2.9rem
+      padding: 3rem 10rem
+      margin-top: 5rem
+    &:hover
+      background-color: $black
+      color: $yellow
+      transition: 0.4s
+      
+// Footer
+.footer
+  padding: 5rem 0rem
+  background-color: $bg-black
+  &__wrap
+    +media(1280px)
+      display: flex
+      align-items: center
+  &__title
+    display: block
+    color: $white 
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Bold'
+  &__description
+    +media(1280px)
+      width: 40%  
+  &__links
+    margin-top: 5rem
+    display: grid
+    grid-template-columns: 1fr 1fr
+    +media(1280px)
+      width: 60%
+      margin-top: 0
+      grid-template-columns: 1fr 1fr 1fr 
+  &__link
+    margin-top: 3rem
+    color: $white
+    font-size: 1.8rem
+    line-height: 2.2rem
+    font-family: 'Montserrat-Medium'
+    text-decoration: none  
+      
+// Burger-menu
+.burger-menu
+  position: relative
+  z-index: 10
+  &__wrap
+    padding: 3rem 4rem
+    position: fixed
+    width: 32rem
+    height: 100%
+    background-color: $white
+    top: 0
+    left: -32rem
+    transition: all 0.6s
+  &__wrap.show
+    left: 0rem   
+  &__close
+    cursor: pointer
+    position: absolute
+    top: 0
+    right: 0
+    width: 4.5rem
+    height: 4.5rem
+    margin-top: 2rem
+    margin-right: 1rem
+  &__list
+    margin-top: 7rem
+    display: flex
+    flex-direction: column
+  &__title
+    font-size: 2.2rem
+    font-family: 'Montserrat-Bold'
+  &__link
+    font-size: 1.8rem
+    font-family: 'Montserrat-Medium'
+    text-decoration: none
+    color: $black
+    &:hover
+      text-decoration: underline
+  &__link:not(:first-child)
+    margin-top: 2rem
+   
