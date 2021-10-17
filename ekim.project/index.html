@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+</head> 
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="p">
+      <img src="./img/cat2.svg" alt="logo">
+    </div>
+  </div>
+  <!-- /.preloader -->
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav__logo">
+          <img src="./img/cat1.svg" alt="logo">
+          <p class="nav__logo-text">EKIM.PROJECT</p>
+        </a>
+        <!-- /.nav__logo -->
+        <div class="nav__menu">
+          <a class="nav__link" href="#">About</a>
+          <a class="nav__link" href="#">My skill</a>
+          <a class="nav__link" href="#">Portfolio</a>
+          <a class="nav__link" href="#">Contact</a>
+        </div>
+        <!-- /.nav__menu -->
+        <div class="nav__btn">
+          <div class="nav__btn-burger">
+          </div>
+          <!-- /.nav__btn-burger -->
+        </div>
+        <!-- /.nav__btn -->
+      </nav>
+      <!-- /.nav -->
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+  <!-- Content -->
+  <div class="content">
+    <div class="hero">
+      <div class="container">
+        <div class="hero__wrap">
+          <h1 class="hero__small-heading">Hi, my name is</h1>
+          <h2 class="hero__big-heading hero__big-heading-white">Maksim Ekimov.</h2>
+          <h2 class="hero__big-heading hero__big-heading-gray">I build things for the web.</h2>
+          <p class="hero__text">I'm a web developer who will help yoo to create a website of your dream.</p>
+          <button class="hero__button">Contact me</button>
+        </div>
+        <!-- /.hero_ -->
+        <wrap></wrap>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.hero -->
+  </div>
+
+  <!-- Burger-menu -->
+  <div class="burger-menu">
+    <div class="burger-menu__list">
+      <a href="#" class="burger-menu__link">About</a>
+      <a href="#" class="burger-menu__link">My skill</a>
+      <a href="#" class="burger-menu__link">Portfolio</a>
+      <a href="#" class="burger-menu__link">Contact</a>
+    </div>
+    <!-- /.burger-menu__list -->
+  </div>
+  <!-- /.burger-menu -->
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="./js/pace.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+  <script>
+    paceOptions = {
+    ajax: true,
+    document: true,
+    eventLag: false
+    };
+
+    Pace.on('done', function() {
+    $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+    $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+    TweenMax.from(".title", 2, {
+          delay: 1.8,
+              y: 10,
+              opacity: 0,
+              ease: Expo.easeInOut
+        })
+    });
+  </script>
+</body>
+</html>
