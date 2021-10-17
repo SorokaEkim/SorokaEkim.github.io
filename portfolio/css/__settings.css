@@ -1,0 +1,14 @@
+.container {
+  max-width: 180rem;
+  margin: 0 auto;
+  width: 85%;
+}
+
+@font-face {
+  font-family: 'RussoOne-Regular';
+  src: url("../fonts/RussoOne-Regular.woff2") format("woff2");
+  src: url("../fonts/RussoOne-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
