@@ -80,6 +80,57 @@ img {
   font-display: swap;
 }
 
+.container {
+  max-width: 180rem;
+  margin: 0 auto;
+  width: 85%;
+}
+
+@font-face {
+  font-family: 'RussoOne-Regular';
+  src: url("../fonts/RussoOne-Regular.woff2") format("woff2");
+  src: url("../fonts/RussoOne-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@-webkit-keyframes sideUp {
+  0% {
+    bottom: -100rem;
+  }
+  100% {
+    bottom: 0rem;
+  }
+}
+
+@-moz-keyframes sideUp {
+  0% {
+    bottom: -100rem;
+  }
+  100% {
+    bottom: 0rem;
+  }
+}
+
+@-ms-keyframes sideUp {
+  0% {
+    bottom: -100rem;
+  }
+  100% {
+    bottom: 0rem;
+  }
+}
+
+@keyframes sideUp {
+  0% {
+    bottom: -100rem;
+  }
+  100% {
+    bottom: 0rem;
+  }
+}
+
 .pace {
   pointer-events: none;
   user-select: none;
@@ -280,8 +331,12 @@ img {
   filter: blur(5px);
 }
 
+.hero {
+  height: 100vh;
+}
+
 .hero__wrap {
-  padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.76rem) * 16.6667)), 20rem);
+  padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 13.1034)), 20rem);
 }
 
 .hero__small-heading {
@@ -324,4 +379,85 @@ img {
 .hero__button:hover {
   background-color: rgba(100, 255, 218, 0.1);
   transition: .6s;
+}
+
+.left-side {
+  display: inline-block;
+  position: fixed;
+  bottom: 0rem;
+  animation-name: sideUp;
+  animation-duration: 6s;
+}
+
+.side-link {
+  padding: 0.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.side-link:hover {
+  transition-duration: .6s;
+  transform: translateY(-4px);
+}
+
+.contact-link svg {
+  fill: #ccd6f6;
+  transition: 0.6s;
+}
+
+.contact-link svg:hover {
+  fill: #64ffda;
+}
+
+.contact-link svg:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.left-side:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: #ccd6f6;
+}
+
+.right-side {
+  position: fixed;
+  bottom: 0;
+  right: 7%;
+  animation-name: sideUp;
+  animation-duration: 6s;
+}
+
+.right-side__email {
+  font-size: 1.5rem;
+  color: #ccd6f6;
+  writing-mode: vertical-rl;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.right-side__email:hover {
+  transition-duration: .6s;
+  transform: translateY(-4px);
+  transition: .6s;
+  color: #64ffda;
+}
+
+.right-side:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: #ccd6f6;
+}
+
+.title {
+  font-size: 3rem;
+  color: #ccd6f6;
+}
+
+.about__wrap {
+  padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 30.3448)), 45rem);
 }

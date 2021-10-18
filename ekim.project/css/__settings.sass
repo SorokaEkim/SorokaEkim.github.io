@@ -6,6 +6,16 @@
 =media($width)
   @media screen and (max-width: $width)
     @content 
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
   
 // Сolors
 
@@ -24,4 +34,3 @@ $gray: #ccd6f6
   font-weight: bold
   font-style: normal
   font-display: swap
-  

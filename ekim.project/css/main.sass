@@ -1,5 +1,6 @@
 @import __base
 @import __settings
+@import __anime
 
 // Preloader
 
@@ -73,6 +74,7 @@
       font-size: 1.5rem
       +media(768px)
         display: none
+
   &__menu
     +media(768px)
       display: none
@@ -160,8 +162,9 @@
 .content-blur
   filter: blur(5px)
 .hero
+  height: 100vh
   &__wrap
-    padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.76rem) * 16.6667)), 20rem)
+    padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 13.1034)), 20rem)
   &__small-heading
     font-size: 1.5rem
     color: $green
@@ -189,4 +192,68 @@
     border-radius: 6px
     &:hover
       background-color: rgba(100,255,218,0.1)
-      transition: .6s 
+      transition: .6s
+
+// CONTACTS //
+.left-side
+  display: inline-block  
+  position: fixed
+  bottom: 0rem
+  animation-name: sideUp
+  animation-duration: 6s
+.side-link
+  padding: 0.2rem
+  margin-bottom: 2.6rem
+  &:hover
+    transition-duration: .6s
+    transform: translateY(-4px)
+.contact-link svg
+  fill: $gray
+  transition: 0.6s
+  &:hover
+    fill: $green
+  &:not(:first-child)
+    margin-top: 2rem
+.left-side:after
+  content: ""
+  display: block
+  width: 1px
+  height: 90px
+  margin: 0px auto
+  background-color: $gray
+.right-side
+  position: fixed
+  bottom: 0
+  right: 7%
+  animation-name: sideUp
+  animation-duration: 6s
+  &__email
+    font-size: 1.5rem
+    color: $gray
+    writing-mode: vertical-rl
+    text-decoration: none
+    margin-bottom: 2rem
+    &:hover
+      transition-duration: .6s
+      transform: translateY(-4px)
+      transition: .6s
+      color: $green
+.right-side:after
+  content: ""
+  display: block
+  width: 1px
+  height: 90px
+  margin: 0px auto
+  background-color: $gray
+
+// ABOUT ME //
+
+.title
+  font-size: 3rem
+  color: $gray
+
+.about
+  &__wrap
+    padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 30.3448)), 45rem)
+
+    
