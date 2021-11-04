@@ -16,3 +16,20 @@ menuBtn.addEventListener('click', () => {
         menuOpen = false;
     }
 })
+
+// SWIPER //
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".jobs__swiper-right",
+    prevEl: ".jobs__swiper-left",
+  },
+  effect: 'cards'
+});

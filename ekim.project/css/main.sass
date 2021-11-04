@@ -162,9 +162,8 @@
 .content-blur
   filter: blur(5px)
 .hero
-  height: 100vh
   &__wrap
-    padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 13.1034)), 20rem)
+    padding: clamp(3rem, calc(3rem + ((1vw - 0.768rem) * 10.6007)), 15rem) clamp(1rem, calc(1rem + ((1vw - 0.64rem) * 15.0794)), 20rem)
   &__small-heading
     font-size: 1.5rem
     color: $green
@@ -179,6 +178,7 @@
     margin-top: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 0.6329)), 3rem)
     font-size: 1.5rem
     color: $gray
+    line-height: 3rem
   &__button
     margin-top: clamp(2rem, calc(2rem + ((1vw - 3.2rem) * -1.5385)), 4rem)
     cursor: pointer
@@ -201,6 +201,8 @@
   bottom: 0rem
   animation-name: sideUp
   animation-duration: 6s
+  +media(1024px)
+    display: none
 .side-link
   padding: 0.2rem
   margin-bottom: 2.6rem
@@ -227,6 +229,8 @@
   right: 7%
   animation-name: sideUp
   animation-duration: 6s
+  +media(1024px)
+    display: none
   &__email
     font-size: 1.5rem
     color: $gray
@@ -249,11 +253,132 @@
 // ABOUT ME //
 
 .title
-  font-size: 3rem
+  font-size: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 0.6329)), 3rem)
   color: $gray
+  &::after
+    content: ""
+    display: block
+    position: relative
+    left: 20rem
+    top: -1.5rem
+    width: clamp(10rem, calc(10rem + ((1vw - 0.64rem) * 15.873)), 30rem)
+    height: 1px
+    background-color: $gray
+    +media(1024px)
+      display: none
 
 .about
+  padding: clamp(5rem, calc(5rem + ((1vw - 0.64rem) * 7.9365)), 15rem) 0rem
   &__wrap
-    padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.45rem) * 30.3448)), 45rem)
+    padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.64rem) * 23.0159)), 30rem)
+  &__content
+    margin-top: 5rem
+    display: flex
+    justify-content: space-between
+    +media(640px)
+      display: block
+  &__text
+    margin-right: 5rem
+    font-size: 1.5rem
+    color: $gray
+    line-height: 3rem
+  &__image-wrap
+    position: relative
+    +media(640px)
+      text-align: center
+      margin-top: 5rem
+    &::after
+      content: ""
+      position: absolute
+      top: 2rem
+      left: 2.5rem
+      width: 100%
+      height: 100%
+      border: 2.5px solid $green
+      border-radius: 0.5rem
+      z-index: -1
+      +media(640px)
+        display: none
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $green
+      opacity: 0.4
+      border-radius: 0.5rem
+      +media(640px)
+        display: none
+    &:hover
+      &::after
+        transform: translateY(-1.5rem) translateX(-1.5rem)
+        transition: 0.6s
+      &::before
+        display: none
+    & img
+      border-radius: 0.5rem
+      +media(640px)
+        height: 40rem
+  &__skill
+    margin-top: 1rem
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+    &-item
+      font-size: 1.5rem
+      &::before
+        content: url(../img/arrow.svg)
+        margin-right: 1rem
 
-    
+// MY JOBS //
+.swiper-slide
+  border-radius: 1rem
+.jobs
+  padding: clamp(5rem, calc(5rem + ((1vw - 0.64rem) * 7.9365)), 15rem) 0
+  &__wrap
+    padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.64rem) * 30.9524)), 40rem)
+  &__swiper
+    position: relative
+    margin-top: 5rem
+    &-right
+      cursor: pointer
+      position: absolute
+      right: -10rem
+      top: 45%
+      +media(1024px)
+        display: none
+    &-left
+      cursor: pointer
+      position: absolute
+      top: 45%
+      left: -10rem
+      +media(1024px)
+        display: none
+
+// MY SERVICES //
+.services
+  padding: clamp(5rem, calc(5rem + ((1vw - 0.64rem) * 7.9365)), 15rem) 0rem
+  &__wrap
+    padding: 0 clamp(1rem, calc(1rem + ((1vw - 0.64rem) * 23.0159)), 30rem)
+  &__content
+    margin-top: 5rem
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    column-gap: 2rem
+    grid-row-gap: 2rem
+    +media(768px)
+      grid-template-columns: 1fr 1fr
+    +media(640px)
+      grid-template-columns: 1fr
+  &__block
+    padding: 2rem
+    border-radius: 0.5rem
+    background-color: $light-blue
+    box-shadow: 0 10px 30px -15px $dark-blue
+    &:hover
+      transition-duration: .4s
+      transform: translateY(-10px)
+      transition: .4s
+    &-title
+      margin-top: 3rem
+      font-size: 1.5rem
+      color: $gray
