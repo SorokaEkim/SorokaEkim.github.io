@@ -30,5 +30,6 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".jobs__swiper-right",
     prevEl: ".jobs__swiper-left",
   },
-  effect: 'cards',
+  effect: 'cube',
+  speed: 1000,
 });
