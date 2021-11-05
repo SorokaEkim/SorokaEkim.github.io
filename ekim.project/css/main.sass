@@ -382,3 +382,69 @@
       margin-top: 3rem
       font-size: 1.5rem
       color: $gray
+
+// FOOTER //
+.footer
+  padding-bottom: 5rem
+  &__wrap
+    width: 100%
+    display: flex
+    justify-content: center
+  &__logo
+    display: flex
+    align-items: center
+    font-size: 1.5rem
+    color: $green
+    &-text
+      margin-left: 2rem
+  &__contacts
+    display: none
+    margin-bottom: 5rem
+    width: 100%
+    justify-content: space-around
+    +media(1024px)
+      display: flex
+
+.arrow
+  cursor: pointer
+  margin: 2rem auto
+  width: 2rem
+  height: 2rem
+  left: 50%
+  top: 50%
+  transform: rotate(-45deg)
+  color: $green
+
+  &::before 
+    content: ''
+    width: 100%
+    height: 100%
+    border-width: 0.4rem 0.4rem 0 0
+    border-style: solid
+    border-color: $green
+    transition: .2s ease
+    display: block
+    transform-origin: 100% 0
+
+  &:after 
+    content: ''
+    float: left
+    position: relative
+    top: -100%
+    width: 100%
+    height: 100%
+    border-width: 0 0.4rem 0 0
+    border-style: solid
+    border-color: $green
+    transform-origin: 100% 0
+    transition: .2s ease
+  
+  &:hover::after 
+    transform: rotate(45deg)
+    border-color: $green
+    height: 140%
+	
+  &:hover::before 
+    border-color: $green
+    transform: scale(.8)
+

@@ -610,3 +610,76 @@ img {
   font-size: 1.5rem;
   color: #ccd6f6;
 }
+
+.footer {
+  padding-bottom: 5rem;
+}
+.footer__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #64ffda;
+}
+.footer__logo-text {
+  margin-left: 2rem;
+}
+.footer__contacts {
+  display: none;
+  margin-bottom: 5rem;
+  width: 100%;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1024px) {
+  .footer__contacts {
+    display: flex;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  margin: 2rem auto;
+  width: 2rem;
+  height: 2rem;
+  left: 50%;
+  top: 50%;
+  transform: rotate(-45deg);
+  color: #64ffda;
+}
+.arrow::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-width: 0.4rem 0.4rem 0 0;
+  border-style: solid;
+  border-color: #64ffda;
+  transition: 0.2s ease;
+  display: block;
+  transform-origin: 100% 0;
+}
+.arrow:after {
+  content: "";
+  float: left;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-width: 0 0.4rem 0 0;
+  border-style: solid;
+  border-color: #64ffda;
+  transform-origin: 100% 0;
+  transition: 0.2s ease;
+}
+.arrow:hover::after {
+  transform: rotate(45deg);
+  border-color: #64ffda;
+  height: 140%;
+}
+.arrow:hover::before {
+  border-color: #64ffda;
+  transform: scale(0.8);
+}
