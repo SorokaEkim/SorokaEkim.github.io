@@ -485,6 +485,7 @@ img {
 }
 
 .about {
+  margin-top: 5rem;
   padding: clamp(5rem, calc(5rem + ((1vw - 0.64rem) * 7.9365)), 15rem) 0rem;
 }
 
