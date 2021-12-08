@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./libs/swiper/swiers-min.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- MAIN -->
+  <section class="main">
+    <div class="container">
+      <div class="header">
+        <a href="#" class="header__logo">
+          <img src="./img/logo.svg" alt="logo">
+        </й>
+        <!-- /.header__logo -->
+        <div class="header__phone-wrap">
+          <a href="tel:88006004097" class="header__number">
+            <div class="header__phone-svg">
+              <img src="./img/phone.svg" alt="phone">
+            </div>
+            <!-- /.header__phone-svg -->
+            <span>8 800 600 40 97</span>
+          </a>
+          <p>Горячая линия</p>
+        </div>
+        <!-- /.header__phone -->
+      </div>
+      <!-- /.header -->
+      <div class="main__wrap">
+        <div class="main__description">
+          <div class="main__live">
+            <button class="main__live-button">Прямой эфир</button>
+            <div class="main__data">
+              <div class="main__data-svg">
+                <img src="./img/data.svg" alt="data">
+              </div>
+              <p class="main__data-text">19 ноября 16:00 мск</p>
+            </div>
+            <!-- /.main__data -->
+          </div>
+          <!-- /.main__live -->
+          <h1 class="main__title">Как сделать свои мечты реальностью</h1>
+          <div class="main__questions">
+            <div class="main__question">
+              <img src="./img/check.svg" alt="check">
+              <p>Как связаны умение мечтать и успех в жизни?</p>
+            </div>
+            <div class="main__question">
+              <img src="./img/check.svg" alt="check">
+              <p>Где брать ресурс для реализации своей мечты?</p>
+            </div>
+            <div class="main__question">
+              <img src="./img/check.svg" alt="check">
+              <p>Главные ошибки при постановке цели</p>
+            </div>
+            <div class="main__question">
+              <img src="./img/check.svg" alt="check">
+              <p>Мечты или планирование: как действовать, <br> чтобы получать желаемое?</p>
+            </div>
+          </div>
+          <!-- /.main__questions -->
+        </div>
+        <!-- /.main__description -->
+        <div class="main__swiper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrap">
+                  <div class="swiper-slide__image">
+                    <img src="./img/portret1.png" alt="portret">
+                    <button class="swiper-slide__btn">Ведущая эфира</button>
+                  </div>
+                  <div class="swiper-slide__text">
+                    <p class="swiper-slide__name">Нинель Горбачева</p>
+                    <span class="sriper-slide__proffession">Коуч ICF</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrap">
+                  <div class="swiper-slide__image">
+                    <img src="./img/portret2.png" alt="portret">
+                  </div>
+                  <div class="swiper-slide__text">
+                    <p class="swiper-slide__name">Нинель Горбачева</p>
+                    <span class="swiper-slide__proffession">Коуч ICF</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrap">
+                  <div class="swiper-slide__image">
+                    <img src="./img/portret3.png" alt="portret">
+                  </div>
+                  <div class="swiper-slide__text">
+                    <p class="swiper-slide__name">Нинель Горбачева</p>
+                    <span class="swiper-slide__proffession">Коуч ICF</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__wrap">
+                  <div class="swiper-slide__image">
+                    <img src="./img/portret4.png" alt="portret">
+                  </div>
+                  <div class="swiper-slide__text">
+                    <p class="swiper-slide__name">Нинель Горбачева</p>
+                    <span class="swiper-slide__proffession">Коуч ICF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button__next"><img src="./img/right.svg" alt="right-arrow"></div>
+          <div class="swiper-button__prev"><img src="./img/left.svg" alt="left-arrow"></div>
+        </div>
+        <!-- /.main__swiper -->
+      </div>
+      <!-- /.main__wrap -->
+      <button class="main__button">Забронировать место</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.main -->
+
+  <!-- POPUP MENU -->
+  <div class="popup-menu">
+    <div class="popup-menu__wrap">
+      <div class="popup-menu__close">
+        <img src="./img/close.svg" alt="close">
+      </div>
+      <form action="#" method="POST" class="popup-menu__form">
+        <h2 class="popup-menu__title">Участие бесплатное</h2>
+        <input placeholder="Ваш e-mail" class="popup-menu__email" name="user_email">
+        <input placeholder="Ваш телефон" class="popup-menu__phone" name="user_phone">
+        <div class="popup-menu__agreement">
+          <input type="checkbox" class="popup-menu__check" id="#">
+          <p class="popup-menu__text">Даю <span>согласие на обработку персональных данных</span></p>
+        </div>
+        <!-- /.popup-menu__agreement -->
+        <button class="popup-menu__button">Забронировать место</button>
+      </form>
+      <!-- /.popup-menu__form -->
+    </div>
+    <!-- /.popup-menu__wrap -->
+  </div>
+  <!-- /.popup-menu -->
+  <script src="./libs/swiper/swiper-min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
