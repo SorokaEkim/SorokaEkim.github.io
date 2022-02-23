@@ -1,0 +1,74 @@
+.container {
+  max-width: 128.3rem;
+  margin: 0 auto;
+  width: 85%;
+}
+
+@font-face {
+  font-family: 'TenorSans';
+  src: url("../fonts/TenorSans.woff2") format("woff2");
+  src: url("../fonts/TenorSans.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url("../fonts/NotoSans.woff2") format("woff2");
+  src: url("../fonts/NotoSans.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: url("../fonts/NotoSans-Bold.woff2") format("woff2");
+  src: url("../fonts/NotoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.text-blue {
+  color: #98cbed;
+}
+
+.btn-black {
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  font-family: "NotoSans-Bold";
+  text-decoration: none;
+  padding: 2.1rem 5.5rem;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background-color: #98cbed;
+  border: 2px solid #98cbed;
+  transition: .4s;
+}
+
+.btn-white {
+  margin-left: 4.5rem;
+  border: 2px solid #000;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-family: "NotoSans-Bold";
+  text-decoration: none;
+  padding: 2.1rem 5.5rem;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-white:hover {
+  border: 2px solid #fff;
+  color: #98cbed;
+  transition: .4s;
+}
