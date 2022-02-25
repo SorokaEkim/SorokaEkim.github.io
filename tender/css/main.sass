@@ -6,60 +6,76 @@
 .header
   position: relative
   &__menu
-    padding: 4rem 0 
+    padding: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem) 0 
     display: flex
+    justify-content: space-between
     align-items: center
+    +media(768px)
+      padding-bottom: 0
   &__logo
     font-size: 5rem
     font-family: "TenorSans"
     color: $black
     text-decoration: none
+    width: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 8.4416)), 23rem)
   &__nav
     display: flex
     align-items: center
     justify-content: space-between
     width: 100%
-    margin-left: 18rem
+    margin-left: 7rem
     font-family: "TenorSans"
+    +media(768px)
+      display: none
     &-link
-      font-size: 3rem
+      font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
       text-decoration: none
       color: $black
       &:hover
         color: $blue
         transition: 0.3s
   &__wrap
-    padding-bottom: 10.5rem
+    padding-bottom: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 3.5714)), 10.5rem)
   &__title
-    font-size: 7rem
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
     font-family: "NotoSans-Bold"
     font-weight: 900
-    line-height: 9.5rem
+    line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem)
     letter-spacing: 0.05em
+    +media(768px)
+      text-align: center
   &__description
-    margin-top: 6rem
-    font-size: 3rem
+    margin-top: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 2.9221)), 6rem)
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
     font-family: "TenorSans"
-    line-height: 3.5rem
+    line-height: clamp(1.7rem, calc(1.7rem + ((1vw - 0.36rem) * 1.1688)), 3.5rem)
     letter-spacing: 0.05em
     font-weight: normal
+    +media(768px)
+      text-align: center
   &__buttons
-    margin-top: 7rem
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 7rem)
+    +media(768px)
+      display: flex
+      justify-content: space-between
   &__advantages
-    margin-top: 14.5rem
+    margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 6.1688)), 14.5rem)
     display: flex
     align-items: center
+    +media(768px)
+      display: none
     &-block
-      cursor: pointer
+      user-select: none
+      opacity: 0
       border-radius: 0.5rem
-      padding: 4.5rem 0 4.5rem 4.5rem
+      padding: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem) 0 clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem) clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem)
       width: 36rem
       background-color: $white
+      transition: 0.6s ease
       box-shadow: 0px 0px 10px rgba(64, 108, 142, 0.4)
       &:not(:first-child)
-        margin-left: 7.5rem
+        margin-left: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 4.2208)), 7.5rem)
       &:hover
-        transition: 0.5s
         transform: scale(1.1)
         background-color: $blue
         color: $white
@@ -67,7 +83,7 @@
       &:hover .header__advantages-text::before
         background-color: $white
     &-text
-      font-size: 2.5rem
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2.5rem)
       font-family: "NotoSans"
       position: relative
       &::before
@@ -85,4 +101,13 @@
     position: absolute
     bottom: 0
     right: 0
-    
+    +media(768px)
+      display: none
+    & img
+      height: clamp(45rem, calc(45rem + ((1vw - 0.36rem) * 25.974)), 85rem)
+  &__mobile-img img
+    display: none
+    +media(768px)
+      display: block
+      width: 100%
+      margin-bottom: -4rem  

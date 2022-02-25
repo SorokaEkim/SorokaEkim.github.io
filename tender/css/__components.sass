@@ -3,15 +3,20 @@
 .text-blue
   color: $blue
 
+.br-none
+  +media(768px)
+    display: none
+
 .btn-black
   border: 2px solid $black
   border-radius: 0.5rem
   font-family: "NotoSans-Bold"
   text-decoration: none
-  padding: 2.1rem 5.5rem
-  font-size: 3rem
+  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem)
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
   letter-spacing: 0.05em
   background-color: $black
+  cursor: pointer
   color: $white
   &:hover
     background-color: $blue
@@ -19,18 +24,61 @@
     transition: .4s
   
 .btn-white
-  margin-left: 4.5rem
-  border: 2px solid $black
   cursor: pointer
+  margin-left: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 0.974)), 4.5rem)
+  border: 2px solid $black  
   border-radius: 0.5rem
   font-family: "NotoSans-Bold"
   text-decoration: none
-  padding: 2.1rem 5.5rem
-  font-size: 3rem
+  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem)
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
   letter-spacing: 0.05em
   background-color: $white
   color: $black
+  +media(768px)
+    margin-left: 0
   &:hover
     border: 2px solid $white
     color: $blue
     transition: .4s
+
+.header__burger
+    display: none
+    position: relative
+    justify-content: center
+    align-items: center
+    width: 4rem
+    height: 4rem
+    cursor: pointer
+    transition: all .5s ease-in-out
+    border: 0.3rem solid $black
+    +media(768px)
+      display: flex
+      z-index: 9
+      
+    &-btn
+      width: 2.2rem
+      height: 0.3rem
+      background-color: $black
+      border-radius: 0.5rem
+      transition: all .5s ease-in-out
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        width: 2.2rem
+        height: 0.3rem
+        background-color: $black
+        border-radius: 0.5rem
+        transition: all .5s ease-in-out
+      &::before
+        transform: translateY(-1rem)
+      &::after
+        transform: translateY(1rem)
+    &.open &-btn
+      transform: translateX(-40px)
+      background: transparent
+    &.open &-btn::before
+      transform: rotate(45deg) translate(28px, -28px)
+    &.open &-btn::after
+      transform: rotate(-45deg) translate(28px, 28px)
