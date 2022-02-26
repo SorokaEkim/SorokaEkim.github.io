@@ -1,5 +1,6 @@
 @import __base
 @import __settings
+@import __swiper
 @import __components
 
 // HEADER
@@ -34,6 +35,13 @@
       &:hover
         color: $blue
         transition: 0.3s
+  &__swiper
+    display: none
+    font-family: "NotoSans"
+    margin-top: 4rem
+    border-radius: 0.5rem
+    +media(768px)
+      display: block
   &__wrap
     padding-bottom: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 3.5714)), 10.5rem)
   &__title
@@ -58,6 +66,7 @@
     +media(768px)
       display: flex
       justify-content: space-between
+      padding: 1rem
   &__advantages
     margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 6.1688)), 14.5rem)
     display: flex
@@ -110,4 +119,16 @@
     +media(768px)
       display: block
       width: 100%
-      margin-bottom: -4rem  
+      margin-bottom: -4rem
+
+// ACQUAINTANCE
+.acquaintance
+  &__wrap
+    padding: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 1.2987)), 10rem) 0
+  &__title
+    text-align: center
+    font-family: "NotoSans-Bold"
+    text-transform: uppercase
+    font-weight: 900
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
+    line-height: 4rem

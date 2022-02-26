@@ -7,6 +7,9 @@
   +media(768px)
     display: none
 
+.content-blur
+  filter: blur(5px)
+
 .btn-black
   border: 2px solid $black
   border-radius: 0.5rem
@@ -54,7 +57,7 @@
     border: 0.3rem solid $black
     +media(768px)
       display: flex
-      z-index: 9
+      z-index: 150
       
     &-btn
       width: 2.2rem
@@ -82,3 +85,33 @@
       transform: rotate(45deg) translate(28px, -28px)
     &.open &-btn::after
       transform: rotate(-45deg) translate(28px, 28px)
+
+// Burger-menu
+.burger-nenu
+  position: relative
+
+.burger-menu__list
+  display: flex
+  flex-direction: column
+  padding: 20rem 4rem
+  position: fixed
+  width: 75%
+  height: 100%
+  background-color: #fff
+  top: 0rem
+  right: -75%
+  transition: all 0.6s
+  z-index: 100
+
+.burger-menu__list.show
+  right: 0
+  box-shadow: -6px 4px 8px 0px rgba(34, 60, 80, 0.2)
+
+.burger-menu__link
+  font-family: "NotoSans"
+  text-align: center
+  font-size: 2rem
+  text-decoration: none
+  color: #000
+  &:not(:first-child)
+      margin-top: 5rem

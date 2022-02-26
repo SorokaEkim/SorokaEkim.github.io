@@ -15,14 +15,23 @@ tl.to(".block-1", {duration: 0.2, opacity: 1})
 // Mobile Menu
 
 const menuBtn   = document.querySelector('.header__burger');
+const menuMobie = document.querySelector('.burger-menu__list');
 let menuOpen    = false;
 
 menuBtn.addEventListener('click', () => {
     if(!menuOpen) {
         menuBtn.classList.add('open');
+        menuMobie.classList.add('show');
         menuOpen = true;
     } else {
         menuBtn.classList.remove('open');
+        menuMobie.classList.remove('show');
         menuOpen = false;
     }
 })
+
+// Swiper
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 20,
+    loop: true
+  });
