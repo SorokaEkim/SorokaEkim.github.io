@@ -115,3 +115,25 @@
   color: #000
   &:not(:first-child)
       margin-top: 5rem
+
+.dot
+  display: block
+  width: 1.5rem
+  height: 1.5rem
+  background-color: $blue
+  border-radius: 50%
+  +media(1430px)
+    display: none
+.gradient
+  height: 45rem
+  z-index: 10
+  width: 100%
+  position: absolute
+  bottom: 0
+  background: -moz-linear-gradient(bottom, #fff 55%, rgba(125,185,232,0) 100%)
+  background: -webkit-linear-gradient(bottom, #fff 55%,rgba(125,185,232,0) 100%)
+  background: linear-gradient(to top, #fff 55%,rgba(125,185,232,0) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 )
+  +media(1024px)
+    height: 15rem
+    

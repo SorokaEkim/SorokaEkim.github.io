@@ -132,3 +132,102 @@
     font-weight: 900
     font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
     line-height: 4rem
+  &__movie
+    margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 6.4935)), 15rem)
+    width: 100%
+    display: flex
+    justify-content: center
+    position: relative
+  &__circle-big
+    position: relative
+    & svg
+      +media(1024px)
+        width: 32rem
+        height: 32rem
+  &__circle-small
+    position: absolute
+    top: 13.5rem
+    left: 13.5rem
+    +media(1024px)
+      top: 5rem
+      left: 5rem
+    & svg
+      +media(1024px)
+        width: 22rem
+        height: 22rem
+  &__dot1
+    position: absolute
+    top: 35rem
+  &__dot2
+    position: absolute
+    top: 15rem
+    left: 9rem
+  &__dot4
+    position: absolute
+    top: 15rem
+    right: 9rem
+  &__dot3
+    position: absolute
+    top: 3.3rem
+    left: 24rem
+  &__dot5
+    position: absolute
+    top: 35rem
+    right: 0
+  &__note
+    position: absolute
+    top: 20rem
+    left: 7.6rem
+    z-index: 50
+    +media(1024px)
+      top: 6rem
+      left: 0
+    &-img img
+      +media(1024px)
+        width: 31rem
+  &__description
+    position: absolute
+    top: 3.5rem
+    left: 0
+    display: flex
+    flex-direction: column
+    width: 100%
+    justify-content: space-between
+    +media(1430px)
+      display: none
+    &-mobile
+      display: none
+      +media(1430px)
+        padding: 0 2rem
+        margin-top: -15rem
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 4.5455)), 10rem)
+        row-gap: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.974)), 4rem)
+      +media(1024px)
+        margin-top: -2rem
+    &-top
+      display: flex
+      justify-content: center
+    &-bottom
+      margin-top: 4rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 67rem
+      row-gap: 20rem
+    &-text
+      color: $gray
+      line-height: 2rem
+      font-family: "NotoSans"
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
+      +media(1430px)
+        font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
+        z-index: 50
+        line-height: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.9481)), 4rem)
+  &__wrap-text
+    width: 33rem
+
+
+
+
+
