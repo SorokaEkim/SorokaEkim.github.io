@@ -712,13 +712,22 @@ img {
   top: 20rem;
   left: 7.6rem;
   z-index: 50;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 @media screen and (max-width: 1024px) {
   .acquaintance__note {
     top: 6rem;
-    left: 0;
+    left: 0.5rem;
   }
+}
+
+.acquaintance__note:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(0px -55px 250px #98CBED) drop-shadow(0px 0px 250px #98CBED);
+          filter: drop-shadow(0px -55px 250px #98CBED) drop-shadow(0px 0px 250px #98CBED);
 }
 
 @media screen and (max-width: 1024px) {
@@ -795,6 +804,7 @@ img {
 }
 
 .acquaintance__description-text {
+  position: relative;
   color: #aaa9aa;
   line-height: 2rem;
   font-family: "NotoSans";
@@ -806,6 +816,33 @@ img {
     font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem);
     z-index: 50;
     line-height: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.9481)), 4rem);
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .acquaintance__description-text::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #98cbed;
+    top: 0.5rem;
+    left: -1.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+}
+
+.acquaintance__btn {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 1430px) {
+  .acquaintance__btn {
+    margin-top: 4rem;
   }
 }
 
