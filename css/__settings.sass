@@ -1,0 +1,53 @@
+.container
+  max-width: 128.3rem
+  margin: 0 auto
+  width: 90%  
+
+=media($width)
+  @media screen and (max-width: $width)
+    @content 
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+  
+// Сolors
+
+// $dark-blue: #020c1b
+// $light-blue: #112240
+$blue: #98cbed
+$white: #fff
+$black: #000
+$gray: #aaa9aa
+
+// Fonts
+
+@font-face 
+  font-family: 'TenorSans'
+  src : url('../fonts/TenorSans.woff2') format('woff2')
+  src : url('../fonts/TenorSans.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+@font-face 
+  font-family: 'NotoSans'
+  src : url('../fonts/NotoSans.woff2') format('woff2')
+  src : url('../fonts/NotoSans.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+@font-face 
+  font-family: 'NotoSans-Bold'
+  src : url('../fonts/NotoSans-Bold.woff2') format('woff2')
+  src : url('../fonts/NotoSans-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
