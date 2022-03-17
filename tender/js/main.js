@@ -34,4 +34,4 @@ menuBtn.addEventListener('click', () => {
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     loop: true
-  });
+});

@@ -5,27 +5,16 @@
 }
 
 @font-face {
-  font-family: 'TenorSans';
-  src: url("../fonts/TenorSans.woff2") format("woff2");
-  src: url("../fonts/TenorSans.woff") format("woff");
+  font-family: 'CenturyGothic-Bold';
+  src: url("../fonts/CenturyGothic-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSans';
-  src: url("../fonts/NotoSans.woff2") format("woff2");
-  src: url("../fonts/NotoSans.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSans-Bold';
-  src: url("../fonts/NotoSans-Bold.woff2") format("woff2");
-  src: url("../fonts/NotoSans-Bold.woff") format("woff");
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -48,9 +37,9 @@
 .btn-black {
   border: 2px solid #000;
   border-radius: 0.5rem;
-  font-family: "NotoSans-Bold";
+  font-family: 'CenturyGothic-Bold';
   text-decoration: none;
-  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem);
+  padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem);
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
   letter-spacing: 0.05em;
   background-color: #000;
@@ -69,9 +58,9 @@
   margin-left: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 0.974)), 4.5rem);
   border: 2px solid #000;
   border-radius: 0.5rem;
-  font-family: "NotoSans-Bold";
+  font-family: 'CenturyGothic';
   text-decoration: none;
-  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem);
+  padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem);
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
   letter-spacing: 0.05em;
   background-color: #fff;
@@ -198,7 +187,7 @@
 }
 
 .gradient {
-  height: 45rem;
+  height: 40rem;
   z-index: 10;
   width: 100%;
   position: absolute;

@@ -5,6 +5,7 @@
 
 // HEADER
 .header
+  margin: 0 auto
   position: relative
   &__menu
     padding: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem) 0 
@@ -15,29 +16,26 @@
       padding-bottom: 0
   &__logo
     font-size: 5rem
-    font-family: "TenorSans"
     color: $black
     text-decoration: none
-    width: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 8.4416)), 23rem)
+    width: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 2.5974)), 9rem)
   &__nav
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: space-around
     width: 100%
     margin-left: 7rem
-    font-family: "TenorSans"
     +media(768px)
       display: none
     &-link
       font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
       text-decoration: none
       color: $black
+      transition: 0.3s
       &:hover
-        color: $blue
-        transition: 0.3s
+        color: $blue 
   &__swiper
     display: none
-    font-family: "NotoSans"
     margin-top: 4rem
     border-radius: 0.5rem
     +media(768px)
@@ -45,8 +43,8 @@
   &__wrap
     padding-bottom: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 3.5714)), 10.5rem)
   &__title
+    font-family: 'CenturyGothic-Bold'
     font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
-    font-family: "NotoSans-Bold"
     font-weight: 900
     line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem)
     letter-spacing: 0.05em
@@ -55,7 +53,6 @@
   &__description
     margin-top: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 2.9221)), 6rem)
     font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
-    font-family: "TenorSans"
     line-height: clamp(1.7rem, calc(1.7rem + ((1vw - 0.36rem) * 1.1688)), 3.5rem)
     letter-spacing: 0.05em
     font-weight: normal
@@ -92,8 +89,7 @@
       &:hover .header__advantages-text::before
         background-color: $white
     &-text
-      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2.5rem)
-      font-family: "NotoSans"
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2rem)
       position: relative
       &::before
         content: ''
@@ -129,8 +125,8 @@
     // flex-direction: column
     padding: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 1.2987)), 10rem) 0
   &__title
+    font-family: 'CenturyGothic-Bold'
     text-align: center
-    font-family: "NotoSans-Bold"
     text-transform: uppercase
     font-weight: 900
     font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
@@ -226,7 +222,6 @@
       position: relative
       color: $gray
       line-height: 2rem
-      font-family: "NotoSans"
       font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
       +media(1430px)
         font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
@@ -244,6 +239,7 @@
         height: 1rem
         border-radius: 50%
   &__btn
+    padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(3.5rem, calc(3.5rem + ((1vw - 0.32rem) * 2.5316)), 7.5rem)
     position: relative
     left: 50%
     transform: translate(-50%, 0)
@@ -252,7 +248,139 @@
   &__wrap-text
     width: 33rem
 
+// ACQUAINTANCE
+.advantages
+  background-image: url(../img/rectangle-bg.png)
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat  
+  &__wrap
+    text-align: center
+    padding-top: 10rem
+    padding-bottom: clamp(17rem, calc(17rem + ((1vw - 0.36rem) * 7.7922)), 29rem) 
+  &__title
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
+    color: $white
+    text-transform: uppercase
+    font-family: 'CenturyGothic-Bold'
+  &__description
+    margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 2.5974)), 5rem)
+    color: $white
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem)
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &:not(:first-child)
+      +media(1024px)
+        margin-top: 5rem
+      
+  &__items
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.2468)), 9rem)
+    display: flex
+    justify-content: space-between
+    +media(1023px)
+      flex-direction: column
+  &__item-image
+    position: relative
+    margin: 0 auto
+    background-color: $white
+    border-radius: 1.5rem
+    width: 22rem
+    height: 22rem
+    +media(1024px)
+      width: 15rem
+      height: 15rem
+  &__item-image img
+    cursor: pointer
+    transition: 0.6s
+    transform: scale(1.4)
+    &:hover
+      transform: scale(1.6)
+  &__aim img
+    lcursor: pointer
+    position: absolute
+    top: 1.3rem
+    left: -6.5rem
+    transition: 0.6s
+    transform: scale(1.4)
+    +media(1024px)
+      top: 1.2rem 
+      left: -4.3rem
+  &__item-title
+    margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem)
+  &__item-desc
+    margin-top: 2rem
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 0.6494)), 3rem)
+    color: $white    
 
-
-
-
+// PROGRAMM
+.program
+  &__wrap
+    padding-top: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 4.5455)), 15rem)
+    text-align: center
+  &__title
+    text-transform: uppercase
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+  &__scrollbar
+    text-align: left
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.8961)), 10rem)
+    overflow-y: auto
+    max-height: 75rem
+    background-color: $otherBlack
+    border-radius: 0.5rem
+    &::-webkit-scrollbar
+      width: 1.7rem
+    &::-webkit-scrollbar-track
+      border: 1px solid $blue
+      background: $white
+    &::-webkit-scrollbar-thumb
+      background: $blue
+      height: 17rem
+  &__item
+    padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 4.2208)), 8rem)
+    display: flex
+    color: $blue
+    &-value
+      font-size: clamp(13rem, calc(13rem + ((1vw - 0.36rem) * 11.039)), 30rem)
+    &-right
+      font-family: 'CenturyGothic-Bold'
+      display: flex
+      align-items: center
+    &-title
+      font-family: 'CenturyGothic-Bold'
+      font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem)
+      color: $blue
+      line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem)
+  &__desc
+    padding-left: 3rem
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 7rem)
+  &__desc-item
+    position: relative
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem)
+    color: $white
+    line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem)
+    &:not(:first-child)
+      margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem)
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      border-radius: 100%
+      width: 1rem
+      height: 1rem
+      top: 1.5rem
+      left: -3rem
+      background-color: $blue
+  &__result
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.9481)), 5rem)
+    color: $white
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
+  &__module
+    width: 100%
+    text-align: center
+    font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 2.2727)), 6rem)

@@ -37,6 +37,7 @@ html {
 
 body {
   line-height: 1;
+  font-family: 'CenturyGothic';
 }
 
 ol, ul {
@@ -71,27 +72,16 @@ img {
 }
 
 @font-face {
-  font-family: 'TenorSans';
-  src: url("../fonts/TenorSans.woff2") format("woff2");
-  src: url("../fonts/TenorSans.woff") format("woff");
+  font-family: 'CenturyGothic-Bold';
+  src: url("../fonts/CenturyGothic-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSans';
-  src: url("../fonts/NotoSans.woff2") format("woff2");
-  src: url("../fonts/NotoSans.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSans-Bold';
-  src: url("../fonts/NotoSans-Bold.woff2") format("woff2");
-  src: url("../fonts/NotoSans-Bold.woff") format("woff");
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -152,14 +142,6 @@ img {
   background-color: #98cbed;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .container {
   max-width: 128.3rem;
   margin: 0 auto;
@@ -167,27 +149,16 @@ img {
 }
 
 @font-face {
-  font-family: 'TenorSans';
-  src: url("../fonts/TenorSans.woff2") format("woff2");
-  src: url("../fonts/TenorSans.woff") format("woff");
+  font-family: 'CenturyGothic-Bold';
+  src: url("../fonts/CenturyGothic-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSans';
-  src: url("../fonts/NotoSans.woff2") format("woff2");
-  src: url("../fonts/NotoSans.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'NotoSans-Bold';
-  src: url("../fonts/NotoSans-Bold.woff2") format("woff2");
-  src: url("../fonts/NotoSans-Bold.woff") format("woff");
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -211,9 +182,9 @@ img {
 .btn-black {
   border: 2px solid #000;
   border-radius: 0.5rem;
-  font-family: "NotoSans-Bold";
+  font-family: 'CenturyGothic-Bold';
   text-decoration: none;
-  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem);
+  padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem);
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
   letter-spacing: 0.05em;
   background-color: #000;
@@ -233,9 +204,9 @@ img {
   margin-left: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 0.974)), 4.5rem);
   border: 2px solid #000;
   border-radius: 0.5rem;
-  font-family: "NotoSans-Bold";
+  font-family: 'CenturyGothic';
   text-decoration: none;
-  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem) clamp(2.2rem, calc(2.2rem + ((1vw - 0.36rem) * 2.2078)), 5.6rem);
+  padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem);
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
   letter-spacing: 0.05em;
   background-color: #fff;
@@ -384,7 +355,7 @@ img {
 }
 
 .gradient {
-  height: 45rem;
+  height: 40rem;
   z-index: 10;
   width: 100%;
   position: absolute;
@@ -401,6 +372,7 @@ img {
 }
 
 .header {
+  margin: 0 auto;
   position: relative;
 }
 
@@ -425,10 +397,9 @@ img {
 
 .header__logo {
   font-size: 5rem;
-  font-family: "TenorSans";
   color: #000;
   text-decoration: none;
-  width: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 8.4416)), 23rem);
+  width: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 2.5974)), 9rem);
 }
 
 .header__nav {
@@ -438,12 +409,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   margin-left: 7rem;
-  font-family: "TenorSans";
 }
 
 @media screen and (max-width: 768px) {
@@ -456,17 +425,16 @@ img {
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
   text-decoration: none;
   color: #000;
-}
-
-.header__nav-link:hover {
-  color: #98cbed;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
+.header__nav-link:hover {
+  color: #98cbed;
+}
+
 .header__swiper {
   display: none;
-  font-family: "NotoSans";
   margin-top: 4rem;
   border-radius: 0.5rem;
 }
@@ -482,8 +450,8 @@ img {
 }
 
 .header__title {
+  font-family: 'CenturyGothic-Bold';
   font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem);
-  font-family: "NotoSans-Bold";
   font-weight: 900;
   line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem);
   letter-spacing: 0.05em;
@@ -498,7 +466,6 @@ img {
 .header__description {
   margin-top: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 2.9221)), 6rem);
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
-  font-family: "TenorSans";
   line-height: clamp(1.7rem, calc(1.7rem + ((1vw - 0.36rem) * 1.1688)), 3.5rem);
   letter-spacing: 0.05em;
   font-weight: normal;
@@ -576,8 +543,7 @@ img {
 }
 
 .header__advantages-text {
-  font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2.5rem);
-  font-family: "NotoSans";
+  font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2rem);
   position: relative;
 }
 
@@ -627,8 +593,8 @@ img {
 }
 
 .acquaintance__title {
+  font-family: 'CenturyGothic-Bold';
   text-align: center;
-  font-family: "NotoSans-Bold";
   text-transform: uppercase;
   font-weight: 900;
   font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem);
@@ -807,7 +773,6 @@ img {
   position: relative;
   color: #aaa9aa;
   line-height: 2rem;
-  font-family: "NotoSans";
   font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem);
 }
 
@@ -834,6 +799,7 @@ img {
 }
 
 .acquaintance__btn {
+  padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(3.5rem, calc(3.5rem + ((1vw - 0.32rem) * 2.5316)), 7.5rem);
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -848,5 +814,232 @@ img {
 
 .acquaintance__wrap-text {
   width: 33rem;
+}
+
+.advantages {
+  background-image: url(../img/rectangle-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.advantages__wrap {
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: clamp(17rem, calc(17rem + ((1vw - 0.36rem) * 7.7922)), 29rem);
+}
+
+.advantages__title {
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'CenturyGothic-Bold';
+}
+
+.advantages__description {
+  margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 2.5974)), 5rem);
+  color: #fff;
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem);
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .advantages__item:not(:first-child) {
+    margin-top: 5rem;
+  }
+}
+
+.advantages__items {
+  margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.2468)), 9rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1023px) {
+  .advantages__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.advantages__item-image {
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  width: 22rem;
+  height: 22rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .advantages__item-image {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.advantages__item-image img {
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.advantages__item-image img:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+.advantages__aim img {
+  lcursor: pointer;
+  position: absolute;
+  top: 1.3rem;
+  left: -6.5rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+@media screen and (max-width: 1024px) {
+  .advantages__aim img {
+    top: 1.2rem;
+    left: -4.3rem;
+  }
+}
+
+.advantages__item-title {
+  margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem);
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem);
+}
+
+.advantages__item-desc {
+  margin-top: 2rem;
+  font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 0.6494)), 3rem);
+  color: #fff;
+}
+
+.program__wrap {
+  padding-top: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 4.5455)), 15rem);
+  text-align: center;
+}
+
+.program__title {
+  text-transform: uppercase;
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem);
+}
+
+.program__scrollbar {
+  text-align: left;
+  margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.8961)), 10rem);
+  overflow-y: auto;
+  max-height: 75rem;
+  background-color: #1a181c;
+  border-radius: 0.5rem;
+}
+
+.program__scrollbar::-webkit-scrollbar {
+  width: 1.7rem;
+}
+
+.program__scrollbar::-webkit-scrollbar-track {
+  border: 1px solid #98cbed;
+  background: #fff;
+}
+
+.program__scrollbar::-webkit-scrollbar-thumb {
+  background: #98cbed;
+  height: 17rem;
+}
+
+.program__item {
+  padding: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 4.2208)), 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #98cbed;
+}
+
+.program__item-value {
+  font-size: clamp(13rem, calc(13rem + ((1vw - 0.36rem) * 11.039)), 30rem);
+}
+
+.program__item-right {
+  font-family: 'CenturyGothic-Bold';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.program__item-title {
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem);
+  color: #98cbed;
+  line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem);
+}
+
+.program__desc {
+  padding-left: 3rem;
+  margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 7rem);
+}
+
+.program__desc-item {
+  position: relative;
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem);
+  color: #fff;
+  line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem);
+}
+
+.program__desc-item:not(:first-child) {
+  margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem);
+}
+
+.program__desc-item::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
+  top: 1.5rem;
+  left: -3rem;
+  background-color: #98cbed;
+}
+
+.program__result {
+  margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.9481)), 5rem);
+  color: #fff;
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
+}
+
+.program__module {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 2.2727)), 6rem);
 }
 /*# sourceMappingURL=main.css.map */
