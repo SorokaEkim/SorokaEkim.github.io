@@ -37,6 +37,16 @@
   align-items: center;
 }
 
+.swiper-slide__header {
+  padding: 4rem 1.8rem;
+  width: 100%;
+  font-family: 'CenturyGothic-Bold';
+  display: flex;
+  align-items: center;
+  color: #98cbed;
+  border-bottom: 1px solid #fff;
+}
+
 .swiper-slide__text {
   font-size: 2rem;
   line-height: 160%;

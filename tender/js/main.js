@@ -35,3 +35,11 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     loop: true
 });
+
+// Swiper2
+var swiper2 = new Swiper(".mySwiper2", {
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+});

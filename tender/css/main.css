@@ -124,6 +124,20 @@ img {
   align-items: center;
 }
 
+.swiper-slide__header {
+  padding: 4rem 1.8rem;
+  width: 100%;
+  font-family: 'CenturyGothic-Bold';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #98cbed;
+  border-bottom: 1px solid #fff;
+}
+
 .swiper-slide__text {
   font-size: 2rem;
   line-height: 160%;
@@ -1047,6 +1061,12 @@ img {
   height: 17rem;
 }
 
+@media screen and (max-width: 768px) {
+  .program__scrollbar {
+    display: none;
+  }
+}
+
 .program__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1055,6 +1075,8 @@ img {
 }
 
 .program__item-value {
+  font-family: 'CenturyGothic-Bold';
+  color: #98cbed;
   font-size: clamp(13rem, calc(13rem + ((1vw - 0.36rem) * 11.039)), 30rem);
 }
 
@@ -1075,10 +1097,17 @@ img {
 }
 
 .program__item-title {
-  font-family: 'CenturyGothic-Bold';
   font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem);
   color: #98cbed;
   line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem);
+}
+
+@media screen and (max-width: 768px) {
+  .program__item-title {
+    font-family: 'CenturyGothic-Bold';
+    margin-top: 4rem;
+    color: #fff;
+  }
 }
 
 .program__desc {
@@ -1109,6 +1138,13 @@ img {
   background-color: #98cbed;
 }
 
+@media screen and (max-width: 768px) {
+  .program__desc-item::before {
+    background-color: #fff;
+    top: 0.6rem;
+  }
+}
+
 .program__result {
   margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.9481)), 5rem);
   color: #fff;
@@ -1116,9 +1152,28 @@ img {
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem);
 }
 
+@media screen and (max-width: 768px) {
+  .program__result {
+    line-height: 20px;
+  }
+}
+
 .program__module {
   width: 100%;
   text-align: center;
   font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 2.2727)), 6rem);
+}
+
+.program__swiper {
+  display: none;
+  margin-top: 4rem;
+  background-color: #1a181c;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .program__swiper {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

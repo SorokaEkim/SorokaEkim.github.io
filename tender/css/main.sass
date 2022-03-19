@@ -344,10 +344,14 @@
     &::-webkit-scrollbar-thumb
       background: $blue
       height: 17rem
+    +media(768px)
+      display: none
   &__item
     display: flex
     color: $blue
     &-value
+      font-family: 'CenturyGothic-Bold'
+      color: $blue
       font-size: clamp(13rem, calc(13rem + ((1vw - 0.36rem) * 11.039)), 30rem)
     &-left
       padding: clamp(3.3rem, calc(3.3rem + ((1vw - 0.36rem) * 2.7273)), 7.5rem)
@@ -358,10 +362,13 @@
       display: flex
       align-items: center
     &-title
-      font-family: 'CenturyGothic-Bold'
       font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem)
       color: $blue
       line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem)
+      +media(768px)
+        font-family: 'CenturyGothic-Bold'
+        margin-top: 4rem 
+        color: $white
   &__desc
     padding-left: 3rem
     margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 6rem)
@@ -382,12 +389,24 @@
       top: 1.5rem
       left: -3rem
       background-color: $blue
+      +media(768px)
+        background-color: $white
+        top: 0.6rem
   &__result
     margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.9481)), 5rem)
     color: $white
     font-family: 'CenturyGothic-Bold'
     font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
+    +media(768px)
+      line-height: 20px
   &__module
     width: 100%
     text-align: center
     font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 2.2727)), 6rem)
+  &__swiper
+    display: none
+    margin-top: 4rem
+    background-color: $otherBlack
+    border-radius: 0.5rem
+    +media(768px)
+      display: block
