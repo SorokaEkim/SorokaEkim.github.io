@@ -66,7 +66,7 @@ img {
 }
 
 .container {
-  max-width: 128.3rem;
+  max-width: 140rem;
   margin: 0 auto;
   width: 90%;
 }
@@ -157,7 +157,7 @@ img {
 }
 
 .container {
-  max-width: 128.3rem;
+  max-width: 140rem;
   margin: 0 auto;
   width: 90%;
 }
@@ -194,6 +194,7 @@ img {
 }
 
 .btn-black {
+  text-align: center;
   border: 2px solid #000;
   border-radius: 0.5rem;
   font-family: 'CenturyGothic-Bold';
@@ -204,13 +205,13 @@ img {
   background-color: #000;
   cursor: pointer;
   color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .btn-black:hover {
   background-color: #98cbed;
   border: 2px solid #98cbed;
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
 .btn-white {
@@ -378,7 +379,7 @@ img {
   bottom: 0;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(55%, #fff), to(rgba(125, 185, 232, 0)));
   background: linear-gradient(to top, #fff 55%, rgba(125, 185, 232, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0);
 }
 
 @media screen and (max-width: 1024px) {
@@ -1030,6 +1031,7 @@ img {
 .program__wrap {
   padding-top: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 4.5455)), 15rem);
   text-align: center;
+  padding-bottom: 8rem;
 }
 
 .program__title {
@@ -1175,5 +1177,123 @@ img {
   .program__swiper {
     display: block;
   }
+}
+
+.rates {
+  position: relative;
+  background-image: url(../img/1back.svg);
+  background-size: cover;
+  background-attachment: local;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1300px) {
+  .rates {
+    background-image: url(../img/back.svg);
+  }
+}
+
+.rates__wrap {
+  padding-top: clamp(5.5rem, calc(5.5rem + ((1vw - 0.36rem) * 20.4545)), 37rem);
+}
+
+.rates__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem);
+  font-weight: 900;
+  line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem);
+  letter-spacing: 0.05em;
+}
+
+.rates__cards {
+  margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 1.6234)), 6.5rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .rates__cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.rates__card {
+  cursor: pointer;
+  padding-bottom: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem);
+  padding-right: 3.5rem;
+  padding-top: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem);
+  padding-left: 3rem;
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .rates__card {
+    margin-top: 5rem;
+  }
+}
+
+.rates__card-white {
+  background-color: #fff;
+}
+
+.rates__card-green {
+  background-color: #A8E4A0;
+}
+
+.rates__card-brown {
+  background-color: #C1A875;
+}
+
+.rates__card-blue {
+  background-color: #98cbed;
+}
+
+.rates__card-title {
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.3247)), 3rem);
+}
+
+.rates__card-price {
+  margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.3247)), 1.5rem);
+  font-family: 'CenturyGothic-Bold';
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem);
+}
+
+.rates__card-desc {
+  margin-top: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.6494)), 3.5rem);
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem);
+  line-height: 24px;
+}
+
+.rates__items {
+  padding-left: 3rem;
+}
+
+.rates__item {
+  position: relative;
+  margin-top: 3rem;
+  font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem);
+}
+
+.rates__item::before {
+  content: url(../img/ok.svg);
+  position: absolute;
+  top: 0.2rem;
+  left: -3rem;
+}
+
+.rates__btn {
+  margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 0.6494)), 5rem);
 }
 /*# sourceMappingURL=main.css.map */

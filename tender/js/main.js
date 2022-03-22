@@ -1,10 +1,11 @@
 // Animations
 
 // Header
+gsap.from(".header__btn-right", {duration: 1.1, x:500});
+gsap.from(".header__btn-left", {duration: 1.1, x:-500});
 gsap.from(".header__description", {duration: 1, y:400});
 gsap.from(".header__title", {duration: 1, opacity: 0, delay: 1});
-gsap.from(".header__btn-left", {duration: 1.1, x:-500});
-gsap.from(".header__btn-right", {duration: 1.1, x:500});
+
 
 let tl = gsap.timeline({delay: 1.2});
 

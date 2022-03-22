@@ -325,6 +325,7 @@
   &__wrap
     padding-top: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 4.5455)), 15rem)
     text-align: center
+    padding-bottom: 8rem
   &__title
     text-transform: uppercase
     font-family: 'CenturyGothic-Bold'
@@ -410,3 +411,77 @@
     border-radius: 0.5rem
     +media(768px)
       display: block
+
+// rates
+.rates
+  position: relative
+  background-image: url(../img/1back.svg)
+  background-size: cover
+  background-attachment: local
+  background-position: top center
+  background-repeat: no-repeat
+  +media(1300px)
+    background-image: url(../img/back.svg)
+  &__wrap
+    padding-top: clamp(5.5rem, calc(5.5rem + ((1vw - 0.36rem) * 20.4545)), 37rem)
+  &__title
+    text-align: center
+    text-transform: uppercase
+    color: $white
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+    font-weight: 900
+    line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem)
+    letter-spacing: 0.05em
+  &__cards
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 1.6234)), 6.5rem)
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 4rem
+    +media(1300px)
+      grid-template-columns: repeat(1, 1fr)
+
+  &__card
+    cursor: pointer
+    padding-bottom: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem)
+    padding-right: 3.5rem
+    padding-top: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem)
+    padding-left: 3rem
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7)
+    border-radius: 0.5rem
+    +media(1300px)
+      margin-top: 5rem
+    &-white
+      background-color: $white
+    &-green
+      background-color: #A8E4A0
+    &-brown
+      background-color: #C1A875
+    &-blue
+      background-color: $blue
+    &-title
+      font-family: 'CenturyGothic-Bold'
+      font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.3247)), 3rem)
+    &-price
+      margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.3247)), 1.5rem)
+      font-family: 'CenturyGothic-Bold'
+      font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem)
+    &-desc
+      margin-top: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.6494)), 3.5rem)
+      font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem)
+      line-height: 24px
+  &__items
+    padding-left: 3rem
+  &__item
+    position: relative
+    margin-top: 3rem
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem)
+    &::before
+      content: url(../img/ok.svg)
+      position: absolute
+      top: 0.2rem
+      left: -3rem
+  &__btn
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 0.6494)), 5rem)
+       
+    

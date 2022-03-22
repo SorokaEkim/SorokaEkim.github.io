@@ -11,6 +11,7 @@
   filter: blur(5px)
 
 .btn-black
+  text-align: center
   border: 2px solid $black
   border-radius: 0.5rem
   font-family: 'CenturyGothic-Bold'
@@ -21,10 +22,10 @@
   background-color: $black
   cursor: pointer
   color: $white
+  transition: .4s
   &:hover
     background-color: $blue
     border: 2px solid $blue
-    transition: .4s
   
 .btn-white
   cursor: pointer
@@ -134,7 +135,7 @@
   background: -moz-linear-gradient(bottom, #fff 55%, #ffffff00 100%)
   background: -webkit-linear-gradient(bottom, #fff 55%,#ffffff00 100%)
   background: linear-gradient(to top, #fff 55%,rgba(125,185,232,0) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 )
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0)
   +media(1024px)
     height: 15rem
 .big-ellipse
