@@ -423,6 +423,7 @@
   +media(1300px)
     background-image: url(../img/back.svg)
   &__wrap
+    position: relative
     padding-top: clamp(5.5rem, calc(5.5rem + ((1vw - 0.36rem) * 20.4545)), 37rem)
   &__title
     text-align: center
@@ -442,6 +443,8 @@
       grid-template-columns: repeat(1, 1fr)
 
   &__card
+    overflow: hidden
+    position: relative
     cursor: pointer
     padding-bottom: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem)
     padding-right: 3.5rem
@@ -449,6 +452,20 @@
     padding-left: 3rem
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7)
     border-radius: 0.5rem
+    &::before
+      content: ''
+      position: absolute
+      width: 8rem
+      height: 100%
+      top: 0
+      right: -5rem
+      background: radial-gradient(20.84% 20.84% at 54.65% 59.29%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(179.92deg, rgba(255, 255, 255, 0.05) -0.01%, rgba(255, 255, 255, 0) 99.13%)
+      transform: translateX(85rem) skewX(45deg)
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05), inset 0px 0px 17px #FFFFFF
+      transition: 0.5s
+    &:hover
+      &:before
+        animation: move-light 0.5s
     +media(1300px)
       margin-top: 5rem
     &-white
@@ -483,5 +500,49 @@
       left: -3rem
   &__btn
     margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 0.6494)), 5rem)
-       
-    
+  &__hero
+    margin-top: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 2.5974)), 14rem)
+    &-img
+      margin-right: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 5.8442)), 10rem)
+      position: relative 
+      display: flex
+      justify-content: center
+      & img
+        z-index: 10
+  &__triangle1
+    z-index: 10
+    bottom: 0
+    position: absolute
+    border: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 4.5455)), 12rem) solid transparent
+    border-left: clamp(20rem, calc(20rem + ((1vw - 0.36rem) * 51.9481)), 100rem) solid $white
+    border-bottom: 0px solid $white
+    display: block
+    width: 0
+    height: 0
+  &__triangle2
+    z-index: 10
+    bottom: 0
+    right: 0
+    position: absolute
+    border: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 4.5455)), 12rem) solid transparent
+    border-right: clamp(20rem, calc(20rem + ((1vw - 0.36rem) * 51.9481)), 100rem) solid $white
+    border-bottom: 0px solid $white
+    display: block
+    width: 0
+    height: 0
+
+.resume
+  &__block
+    position: relative
+  &__svg
+    z-index: 100
+    position: absolute
+    top: -10rem
+    left: 0rem
+    width: 100%
+    background-image: url(../img/big-rectangle.svg)
+    +media(680px)
+      top: -2rem
+    & svg
+      width: 100%
+      height: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 24.026)), 47rem)
