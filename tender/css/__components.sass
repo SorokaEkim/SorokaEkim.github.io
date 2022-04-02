@@ -47,45 +47,45 @@
     transition: .4s
 
 .header__burger
-    display: none
-    position: relative
-    justify-content: center
-    align-items: center
-    width: 4rem
-    height: 4rem
-    cursor: pointer
+  display: none
+  position: relative
+  justify-content: center
+  align-items: center
+  width: 4rem
+  height: 4rem
+  cursor: pointer
+  transition: all .5s ease-in-out
+  border: 0.3rem solid $black
+  +media(768px)
+    display: flex
+    z-index: 150
+    
+  &-btn
+    width: 2.2rem
+    height: 0.3rem
+    background-color: $black
+    border-radius: 0.5rem
     transition: all .5s ease-in-out
-    border: 0.3rem solid $black
-    +media(768px)
-      display: flex
-      z-index: 150
-      
-    &-btn
+    &::before,
+    &::after
+      content: ''
+      position: absolute
       width: 2.2rem
       height: 0.3rem
       background-color: $black
       border-radius: 0.5rem
       transition: all .5s ease-in-out
-      &::before,
-      &::after
-        content: ''
-        position: absolute
-        width: 2.2rem
-        height: 0.3rem
-        background-color: $black
-        border-radius: 0.5rem
-        transition: all .5s ease-in-out
-      &::before
-        transform: translateY(-1rem)
-      &::after
-        transform: translateY(1rem)
-    &.open &-btn
-      transform: translateX(-40px)
-      background: transparent
-    &.open &-btn::before
-      transform: rotate(45deg) translate(28px, -28px)
-    &.open &-btn::after
-      transform: rotate(-45deg) translate(28px, 28px)
+    &::before
+      transform: translateY(-1rem)
+    &::after
+      transform: translateY(1rem)
+  &.open &-btn
+    transform: translateX(-40px)
+    background: transparent
+  &.open &-btn::before
+    transform: rotate(45deg) translate(28px, -28px)
+  &.open &-btn::after
+    transform: rotate(-45deg) translate(28px, 28px)
 
 // Burger-menu
 .burger-nenu
@@ -182,7 +182,7 @@
   padding: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2.5rem) 2rem
   position: absolute
   top: clamp(6rem, calc(6rem + ((1vw - 0.36rem) * 13.6364)), 27rem)
-  left: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 21.4286)), 35rem)
+  left: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 18.8312)), 30rem)
   width: 45rem
   background: $blue
   -webkit-transform: skew(25deg)
@@ -198,14 +198,14 @@
   +media(500px)
     width: 20rem
   +media(390px)
-    width: 18rem
+    width: 20rem
   &__name
     font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
     transform: skew(-25deg)
     text-transform: uppercase
     color: $white
   &__telegram
-    margin-top: rem
+    margin-top: 0.5rem
     color: $white
     font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
     display: flex
@@ -214,6 +214,9 @@
     & svg
       margin-right: 0.5rem
       fill: $white
+      +media(640px)
+        width: 15px
+        height: 15px
 .parallelogram2
   z-index: 10
   border-radius: 1rem
@@ -236,5 +239,15 @@
     transform: translateX(85rem) skewX(45deg)
   100%
     transform: translateX(-200rem) skewX(45deg)
-    
 
+@keyframes move-right
+  0%
+    transform: translateX(-60rem)
+  100%
+    transform: translateX(0rem)
+
+@keyframes move-left
+  0%
+    transform: translateX(60rem)
+  100%
+    transform: translateX(0rem)

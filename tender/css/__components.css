@@ -273,7 +273,7 @@
   padding: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2.5rem) 2rem;
   position: absolute;
   top: clamp(6rem, calc(6rem + ((1vw - 0.36rem) * 13.6364)), 27rem);
-  left: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 21.4286)), 35rem);
+  left: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 18.8312)), 30rem);
   width: 45rem;
   background: #98cbed;
   -webkit-transform: skew(25deg);
@@ -308,7 +308,7 @@
 
 @media screen and (max-width: 390px) {
   .parallelogram1 {
-    width: 18rem;
+    width: 20rem;
   }
 }
 
@@ -320,7 +320,7 @@
 }
 
 .parallelogram1__telegram {
-  margin-top: rem;
+  margin-top: 0.5rem;
   color: #fff;
   font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem);
   display: flex;
@@ -331,6 +331,13 @@
 .parallelogram1__telegram svg {
   margin-right: 0.5rem;
   fill: #fff;
+}
+
+@media screen and (max-width: 640px) {
+  .parallelogram1__telegram svg {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .parallelogram2 {
@@ -360,5 +367,23 @@
   }
   100% {
     transform: translateX(-200rem) skewX(45deg);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-60rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(60rem);
+  }
+  100% {
+    transform: translateX(0rem);
   }
 }
