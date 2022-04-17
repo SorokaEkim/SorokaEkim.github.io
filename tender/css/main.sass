@@ -1,0 +1,851 @@
+@import __base
+@import __settings
+@import __swiper
+@import __components
+
+// HEADER
+.header
+  margin: 0 auto
+  position: relative
+  &__menu
+    padding: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem) 0 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +media(768px)
+      padding-bottom: 0
+  &__logo
+    font-size: 5rem
+    color: $black
+    text-decoration: none
+    width: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 2.5974)), 9rem)
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    width: 100%
+    margin-left: 7rem
+    +media(768px)
+      display: none
+    &-link
+      font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
+      text-decoration: none
+      color: $black
+      transition: 0.3s
+      &:hover
+        color: $blue 
+  &__swiper
+    display: none
+    margin-top: 4rem
+    border-radius: 0.5rem
+    +media(768px)
+      display: block
+  &__wrap
+    padding-bottom: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 3.5714)), 10.5rem)
+  &__title
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+    font-weight: 900
+    line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem)
+    letter-spacing: 0.05em
+    +media(768px)
+      text-align: center
+  &__description
+    margin-top: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 2.9221)), 6rem)
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
+    line-height: clamp(1.7rem, calc(1.7rem + ((1vw - 0.36rem) * 1.1688)), 3.5rem)
+    letter-spacing: 0.05em
+    font-weight: normal
+    +media(768px)
+      text-align: center
+  &__buttons
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 7rem)
+    +media(768px)
+      display: flex
+      justify-content: space-between
+      padding: 1rem
+  &__advantages
+    margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 6.1688)), 14.5rem)
+    display: flex
+    align-items: center
+    +media(768px)
+      display: none
+    &-block
+      user-select: none
+      opacity: 0
+      border-radius: 0.5rem
+      padding: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem) 0 clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem) clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem)
+      width: 36rem
+      background-color: $white
+      transition: 0.6s ease
+      box-shadow: 0px 0px 10px rgba(64, 108, 142, 0.4)
+      &:not(:first-child)
+        margin-left: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 4.2208)), 7.5rem)
+      &:hover
+        transform: scale(1.1)
+        background-color: $blue
+        color: $white
+        box-shadow: 0px 0px 10px rgba(64, 108, 142, 0.4)
+      &:hover .header__advantages-text::before
+        background-color: $white
+    &-text
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.974)), 2rem)
+      position: relative
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 1rem
+        left: -2rem
+        width: 0.7rem
+        height: 0.7rem
+        border-radius: 50%
+        background-color: $blue
+  &__image
+    z-index: -10
+    position: absolute
+    bottom: 0
+    right: 0
+    +media(768px)
+      display: none
+    & img
+      height: clamp(40rem, calc(40rem + ((1vw - 0.36rem) * 33.7662)), 92rem)
+  &__mobile-img img
+    display: none
+    +media(768px)
+      display: block
+      width: 100%
+      margin-bottom: -4rem
+  &__btn-left
+    animation: move-right 1.5s
+  &__btn-right
+    animation: move-left 1.5s
+
+// ACQUAINTANCE
+.acquaintance
+  &__wrap
+    // display: flex
+    // justify-content: center
+    // flex-direction: column
+    padding: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 1.2987)), 10rem) 0
+  &__title
+    font-family: 'CenturyGothic-Bold'
+    text-align: center
+    text-transform: uppercase
+    font-weight: 900
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
+    line-height: 4rem
+  &__movie
+    margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 6.4935)), 15rem)
+    width: 100%
+    display: flex
+    justify-content: center
+    position: relative
+  &__circle-big
+    position: relative
+    & svg
+      +media(1024px)
+        width: 32rem
+        height: 32rem
+  &__circle-small
+    position: absolute
+    top: 13.5rem
+    left: 13.5rem
+    +media(1024px)
+      top: 5rem
+      left: 5rem
+    & svg
+      +media(1024px)
+        width: 22rem
+        height: 22rem
+  &__dot1
+    position: absolute
+    top: 35rem
+  &__dot2
+    position: absolute
+    top: 15rem
+    left: 9rem
+  &__dot4
+    position: absolute
+    top: 15rem
+    right: 9rem
+  &__dot3
+    position: absolute
+    top: 3.3rem
+    left: 24rem
+  &__dot5
+    position: absolute
+    top: 35rem
+    right: 0
+  &__note
+    position: absolute
+    top: 20rem
+    left: 7.6rem
+    z-index: 50
+    transition: 0.6s
+    +media(1024px)
+      top: 6rem
+      left: 0.5rem
+    &:hover
+      transform: scale(1.1) 
+      filter: drop-shadow(0px -55px 250px #98CBED) drop-shadow(0px 0px 250px #98CBED)
+    &-img img
+      +media(1024px)
+        width: 31rem
+  &__description
+    position: absolute
+    top: 3.5rem
+    left: 0
+    display: flex
+    flex-direction: column
+    width: 100%
+    justify-content: space-between
+    +media(1430px)
+      display: none
+    &-mobile
+      display: none
+      +media(1430px)
+        padding: 0 2rem
+        margin-top: -15rem
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 4.5455)), 10rem)
+        row-gap: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.974)), 4rem)
+      +media(1024px)
+        margin-top: -2rem
+    &-top
+      display: flex
+      justify-content: center
+    &-bottom
+      margin-top: 4rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 67rem
+      row-gap: 20rem
+    &-text
+      position: relative
+      color: $gray
+      line-height: 2rem
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
+      +media(1430px)
+        font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
+        z-index: 50
+        line-height: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.9481)), 4rem)
+    &-text::before
+      +media(1430px)
+        content: ''
+        position: absolute
+        display: block
+        background-color: $blue
+        top: 0.5rem
+        left: -1.5rem
+        width: 1rem
+        height: 1rem
+        border-radius: 50%
+  &__btn
+    z-index: 10
+    padding: clamp(1rem, calc(1rem + ((1vw - 0.32rem) * 0.6329)), 2rem) clamp(3.5rem, calc(3.5rem + ((1vw - 0.32rem) * 2.5316)), 7.5rem)
+    position: relative
+    left: 50%
+    transform: translate(-50%, -11rem)
+    +media(1430px)
+      margin-top: 4rem
+      transform: translate(-50%, 0)
+  &__wrap-text
+    width: 33rem
+
+// ACQUAINTANCE
+.advantages
+  position: relative
+  background-image: url(../img/rectangle-bg.png)
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat  
+  &__wrap
+    text-align: center
+    padding-top: 10rem
+    padding-bottom: clamp(17rem, calc(17rem + ((1vw - 0.36rem) * 7.7922)), 29rem) 
+  &__title
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.9481)), 6rem)
+    color: $white
+    text-transform: uppercase
+    font-family: 'CenturyGothic-Bold'
+  &__description
+    margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 2.5974)), 5rem)
+    color: $white
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem)
+  &__item
+    z-index: 10
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &:not(:first-child)
+      +media(1024px)
+        margin-top: 5rem
+      
+  &__items
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.2468)), 9rem)
+    display: flex
+    justify-content: space-between
+    +media(1023px)
+      flex-direction: column
+  &__item-image
+    position: relative
+    margin: 0 auto
+    background-color: $white
+    border-radius: 1.5rem
+    width: 22rem
+    height: 22rem
+    +media(1024px)
+      width: 15rem
+      height: 15rem
+  &__item-image img
+    cursor: pointer
+    transition: 0.6s
+    transform: scale(1.4)
+    &:hover
+      transform: scale(1.6)
+  &__aim img
+    lcursor: pointer
+    position: absolute
+    top: 1.3rem
+    left: -6.5rem
+    transition: 0.6s
+    transform: scale(1.4)
+    +media(1024px)
+      top: 1.2rem 
+      left: -4.3rem
+  &__item-title
+    margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem)
+  &__item-desc
+    margin-top: 2rem
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 0.6494)), 3rem)
+    color: $white    
+
+// PROGRAMM
+.program
+  &__wrap
+    padding-top: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 4.5455)), 15rem)
+    text-align: center
+    padding-bottom: 8rem
+  &__title
+    text-transform: uppercase
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+  &__scrollbar
+    cursor: pointer
+    text-align: left
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 3.8961)), 10rem)
+    overflow-y: auto
+    max-height: clamp(56rem, calc(56rem + ((1vw - 0.36rem) * 12.3377)), 75rem)
+    background-color: $otherBlack
+    border-radius: 0.5rem
+    &::-webkit-scrollbar
+      width: 1.7rem
+    &::-webkit-scrollbar-track
+      border: 1px solid $blue
+      background: $white
+    &::-webkit-scrollbar-thumb
+      background: $blue
+      height: 17rem
+    +media(768px)
+      display: none
+  &__item
+    display: flex
+    color: $blue
+    &-value
+      font-family: 'CenturyGothic-Bold'
+      color: $blue
+      font-size: clamp(13rem, calc(13rem + ((1vw - 0.36rem) * 11.039)), 30rem)
+    &-left
+      padding: clamp(3.3rem, calc(3.3rem + ((1vw - 0.36rem) * 2.7273)), 7.5rem)
+      border-right: 1px solid #FCFCFE
+    &-right
+      padding: 5rem
+      font-family: 'CenturyGothic-Bold'
+      display: flex
+      align-items: center
+    &-title
+      font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem)
+      color: $blue
+      line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem)
+      +media(768px)
+        font-family: 'CenturyGothic-Bold'
+        margin-top: 4rem 
+        color: $white
+  &__desc
+    padding-left: 3rem
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 3.2468)), 6rem)
+  &__desc-item
+    position: relative
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.2987)), 3.5rem)
+    color: $white
+    line-height: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.6234)), 4.3rem)
+    &:not(:first-child)
+      margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 3rem)
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      border-radius: 100%
+      width: 1rem
+      height: 1rem
+      top: 1.5rem
+      left: -3rem
+      background-color: $blue
+      +media(768px)
+        background-color: $white
+        top: 0.6rem
+  &__result
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.9481)), 5rem)
+    color: $white
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.974)), 3rem)
+    +media(768px)
+      line-height: 20px
+  &__module
+    width: 100%
+    text-align: center
+    font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 2.2727)), 6rem)
+  &__swiper
+    display: none
+    margin-top: 4rem
+    background-color: $otherBlack
+    border-radius: 0.5rem
+    +media(768px)
+      display: block
+
+// rates
+.rates
+  position: relative
+  background-image: url(../img/1back.svg)
+  background-size: cover
+  background-attachment: local
+  background-position: top center
+  background-repeat: no-repeat
+  +media(1300px)
+    background-image: url(../img/back.svg)
+  &__wrap
+    position: relative
+    padding-top: clamp(5.5rem, calc(5.5rem + ((1vw - 0.36rem) * 20.4545)), 37rem)
+  &__title
+    text-align: center
+    text-transform: uppercase
+    color: $white
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+    font-weight: 900
+    line-height: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 3.1818)), 8.5rem)
+    letter-spacing: 0.05em
+  &__cards
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 1.6234)), 6.5rem)
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 4rem
+    +media(1300px)
+      grid-template-columns: repeat(1, 1fr)
+  &__button
+    width: 100%
+    display: flex
+    justify-content: center
+    padding-bottom: 7rem
+    +media(680px)
+      margin-top: -6rem
+  &__btn-mobile
+    display: none
+    font-family: 'CenturyGothic-Bold'
+    padding: 1.5rem 3.8rem
+    font-size: 2rem
+    border: none
+    border-radius: 0.5rem
+    cursor: pointer
+    box-shadow: 0px 4px 11px rgba(139, 185, 216, 0.5)
+    color: $white
+    z-index: 10
+    transition: .4s
+    background: radial-gradient(23% 158.4% at 78.89% 56%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50.74% 364.95% at 32.44% 32.56%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.06) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(97.34deg, rgba(152, 203, 237, 0.56) 0%, rgba(152, 203, 237, 0.42) 100%)
+    +media(1300px)
+      display: block
+    &:hover
+      background-color: $blue
+
+  &__card
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    padding-bottom: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem)
+    padding-right: 3.5rem
+    padding-top: clamp(4.5rem, calc(4.5rem + ((1vw - 0.36rem) * 0.6494)), 5.5rem)
+    padding-left: 3rem
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7)
+    border-radius: 0.5rem
+    transition: 0.5s 
+    &:hover
+      box-shadow: none
+    &::before
+      content: ''
+      position: absolute
+      width: 8rem
+      height: 100%
+      top: 0
+      right: -5rem
+      background: radial-gradient(20.84% 20.84% at 54.65% 59.29%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(179.92deg, rgba(255, 255, 255, 0.05) -0.01%, rgba(255, 255, 255, 0) 99.13%)
+      transform: translateX(85rem) skewX(45deg)
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05), inset 0px 0px 17px #FFFFFF
+      transition: 0.5s
+    &:hover
+      &:before
+        animation: move-light 1s
+    +media(1300px)
+      margin-top: 5rem
+    &-white
+      background-color: $white
+    &-green
+      background-color: #A8E4A0
+    &-brown
+      background: linear-gradient(0deg, #C1A875, #C1A875), radial-gradient(49.84% 37.62% at 49.84% 37.62%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(20.07deg, #576265 3.45%, #9EA1A1 20.6%, #848B8A 48.87%, #576265 58.14%, #576265 72.97%, #757A7B 84.56%, #576265 92.44%)
+      background-blend-mode: color, overlay, normal
+    &-blue
+      background-color: $blue
+    &-title
+      font-family: 'CenturyGothic-Bold'
+      font-size: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.3247)), 3rem)
+    &-price
+      margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.3247)), 1.5rem)
+      font-family: 'CenturyGothic-Bold'
+      font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.2987)), 5rem)
+    &-desc
+      margin-top: clamp(2.5rem, calc(2.5rem + ((1vw - 0.36rem) * 0.6494)), 3.5rem)
+      font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem)
+      line-height: 24px
+  &__items
+    padding-left: 3rem
+  &__item
+    position: relative
+    margin-top: 3rem
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem)
+    &::before
+      content: url(../img/ok.svg)
+      position: absolute
+      top: 0.2rem
+      left: -3rem
+    &-other
+      &::before
+        content: url(../img/ok-other.svg)
+        position: absolute
+        top: 0.2rem
+        left: -3rem
+    &-other-white
+      &::before
+        content: url(../img/ok-white.svg)
+        position: absolute
+        top: 0.2rem
+        left: -3rem
+  &__btn
+    margin-top: clamp(4rem, calc(4rem + ((1vw - 0.36rem) * 0.6494)), 5rem)
+  &__hero
+    margin-top: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 2.5974)), 14rem)
+    &-img
+      margin-right: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 5.8442)), 10rem)
+      position: relative 
+      display: flex
+      justify-content: center
+      +media(1300px)
+        margin-right: 0
+      & picture
+        z-index: 10
+  &__triangle1
+    z-index: 10
+    bottom: -1px
+    position: absolute
+    border: 25rem solid transparent
+    border-left: clamp(50rem, calc(50rem + ((1vw - 0.36rem) * 51.9481)), 130rem) solid $white
+    border-bottom: 0px solid $white
+    display: block
+    width: 0
+    height: 0
+    +media(1300px)
+      display: none
+      
+  &__triangle2
+    z-index: 10
+    bottom: -1px
+    right: 0
+    position: absolute
+    border: 25rem solid transparent
+    border-right: clamp(50rem, calc(50rem + ((1vw - 0.36rem) * 51.9481)), 130rem) solid $white
+    border-bottom: 0px solid $white
+    display: block
+    width: 0
+    height: 0
+    +media(1300px)
+      display: none
+.resume
+  padding-bottom: clamp(8.5rem, calc(8.5rem + ((1vw - 0.36rem) * 13.961)), 30rem)
+  +media(1300px)
+    display: none
+  &__block
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    row-gap: 100rem
+    transform: translateY(-10rem)
+    z-index: 100
+  &__left
+    width: clamp(12rem, calc(12rem + ((1vw - 0.36rem) * 24.6753)), 50rem)
+    display: flex
+    flex-direction: column
+    margin-left: 20rem
+    +media(900px)
+      margin-left: 15rem
+    +media(740px)
+      margin-left: 10rem
+  &__right
+    width: clamp(12rem, calc(12rem + ((1vw - 0.36rem) * 24.6753)), 50rem)
+    display: flex
+    flex-direction: column
+  &__item
+    margin-left: 5rem
+    font-family: 'CenturyGothic-Bold'
+    z-index: 101 
+    display: flex
+    align-items: center
+    +media(1400px)
+      font-family: 'CenturyGothic'
+
+    &-number
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      color: $white
+      font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 5.8442)), 10rem)
+    &-text
+      margin-left: 1rem
+      font-size: clamp(10px, calc(0.625rem + ((1vw - 3.6px) * 0.974)), 25px)
+  &__svg
+    z-index: 100
+    position: absolute
+    top: -6rem
+    left: 0rem
+    width: 100%
+    & svg
+      width: 100%
+      height: clamp(10rem, calc(10rem + ((1vw - 0.36rem) * 24.026)), 47rem)
+
+// APPLICATION
+.application
+  position: relative
+  padding-bottom: clamp(8rem, calc(8rem + ((1vw - 0.36rem) * 14.2857)), 30rem)
+  +media(1300px)
+    padding-top: 7rem
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 86rem
+    background-color: $otherBlack
+    z-index: -10
+    +media(1750px)
+      display: none
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    +media(1750px)
+      grid-template-columns: repeat(1, 1fr)
+  &__title
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 1.1688)), 4.8rem)
+  &__form
+    margin-top: clamp(5rem, calc(5rem + ((1vw - 0.36rem) * 2.9221)), 9.5rem)
+  &__error
+    font-size: clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 0.7792)), 3rem)
+  &__inputs
+    margin-top: clamp(3.8rem, calc(3.8rem + ((1vw - 0.36rem) * 2.2727)), 7.3rem)
+    display: flex
+    flex-direction: column
+  &__input-box
+    position: relative
+    width: 100%
+    &:not(:first-child)
+      margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.6234)), 4.5rem)
+  &__label
+    opacity: 0
+    padding: 0.5rem
+    background-color: $white
+    font-family: 'CenturyGothic'
+    font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.36rem) * 0.8442)), 2.5rem)
+    position: absolute
+    left: 5rem
+    top: -1.5rem
+    z-index: 10
+    color: $black
+    transition: 0.2s
+    +media(680px)
+      top: -1.1rem
+  &__input
+    font-family: 'CenturyGothic'
+    font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.36rem) * 0.8442)), 2.5rem)
+    width: 100%
+    outline: none
+    border: 0.4rem solid $gray
+    border-radius: 0.5rem
+    padding: 3rem 3rem
+    background: transparent
+    &:focus + .application__label
+      opacity: 1
+    &:focus::placeholder
+      color: transparent
+    &:focus
+      border: 0.4rem solid $blue
+    &::placeholder
+      font-family: 'CenturyGothic'
+      font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.36rem) * 0.8442)), 2.5rem)
+
+  &__btn
+    margin-top: clamp(3rem, calc(3rem + ((1vw - 0.36rem) * 2.5974)), 7rem)
+  &__agreement
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
+    color: $gray
+    margin-top: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 0.6494)), 2rem)
+    &-link
+      transition: 0.4s
+      color: $gray
+      text-decoration: underline
+      &:hover
+        color: $blue
+
+// FOOTER
+.footer
+  padding-top: clamp(2.4rem, calc(2.4rem + ((1vw - 0.36rem) * 4.9351)), 10rem)
+  background-color: $otherBlack
+  &__wrap
+    display: grid
+    column-gap: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 2.5974)), 5rem)
+    grid-template-columns: repeat(4, 1fr)
+    +media(1300px)
+      grid-template-columns: repeat(1, 1fr)
+
+  &__title
+    letter-spacing: 0.05em
+    font-family: 'CenturyGothic-Bold'
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 0.6494)), 3rem)
+    color: $white
+    & span
+      font-family: 'CenturyGothic'
+      font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.36rem) * 0.5195)), 2rem)
+  &__text
+    letter-spacing: 0.05em
+    margin-top: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 0.9091)), 3.4rem)
+    color: $white
+    font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.36rem) * 0.1948)), 1.5rem)
+  &__social
+    margin-top: clamp(3.6rem, calc(3.6rem + ((1vw - 0.36rem) * 1.2987)), 5.6rem)
+    &-item:not(:first-child)
+      margin-left: clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 1.2987)), 4rem)
+  &__vk
+    display: inline-block
+    background: url(../img/vk.svg) no-repeat
+    width: 5rem
+    height: 5rem
+    transition: .4s
+    &:hover
+      cursor: pointer
+      background: url(../img/раз.svg) no-repeat
+      width: 5rem
+      height: 5rem
+    &:active
+      cursor: pointer
+      background: url(../img/два.svg) no-repeat
+      width: 5rem
+      height: 5rem
+  &__telegram
+    display: inline-block
+    background: url(../img/telegram.svg) no-repeat
+    width: 5rem
+    height: 5rem
+    transition: .4s
+    &:hover
+      cursor: pointer
+      background: url(../img/два.svg) no-repeat
+      width: 5rem
+      height: 5rem
+    &:active
+      cursor: pointer
+      background: url(../img/два.svg) no-repeat
+      width: 5rem
+      height: 5rem
+  &__youtube
+    display: inline-block
+    background: url(../img/youtube.svg) no-repeat
+    width: 5rem
+    height: 5rem
+    transition: .4s
+    &:hover
+      cursor: pointer
+      background: url(../img/youtube1.svg) no-repeat
+      width: 5rem
+      height: 5rem
+    &:active
+      cursor: pointer
+      background: url(../img/два.svg) no-repeat
+      width: 5rem
+      height: 5rem
+  &__address
+    margin-top: 5.6rem
+    color: $white
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.1948)), 1.8rem)
+    letter-spacing: 0.05e
+    +media(1024px)
+      color: $gray
+  &__title-item
+    margin-bottom: 4rem
+    font-family: 'CenturyGothic-Bold'
+    color: $white
+    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 0.3247)), 2rem)
+  &__link
+    font-size: 1.8rem
+    color: $white
+    text-decoration: none
+    transition: 0.4s
+    &:hover
+      color: $blue
+    &:not(:first-child)
+      margin-top: 3rem
+  &__hr
+    margin-top: 11rem
+    height: 1px
+    border: none
+    background-color: $gray
+  &__label
+    padding: 2.5rem 0
+    width: 100%
+    display: flex
+    justify-content: center
+    font-size: 1.8rem
+    color: $gray
+  .col__wrap
+    margin-left: clamp(1rem, calc(1rem + ((1vw - 0.36rem) * 5.8442)), 10rem)
+    display: flex
+    flex-direction: column
+  .col-mobile
+    +media(1300px)
+      display: none
+  .col-1
+    display: none
+    +media(1300px)
+      display: block
+      margin-top: 3rem
+      display: flex
+      flex-direction: column
+  .col-2
+    display: none
+    +media(1300px)
+      display: block
+      margin-top: 3rem
+      display: flex
+      flex-direction: column
+  .footer__link-col2
+    font-size: 1.3rem
+    color: $gray
+
+      
