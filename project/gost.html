@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+</head>
+<body class="flex flex-col justify-between min-h-screen">
+  <!-- HEADER -->
+  <header class="border-b border-regul-blue xl:border-none fixed xl:relative w-full top-0 left-0 bg-white xl:bg-transparent z-40">
+    <div class="container 2xl">
+      <nav class="py-[14px]">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xlpy-2.5 text-lg text-regal-blue">
+
+          <!-- LOGO -->
+          <div class="flex items-center">
+            <a href="https://flowbite.com" class="flex items-center">
+              <img src="./img/logo.png" class="h-5 xl:h-[54px]" alt="Logo" />
+            </a>
+            <span class="ml-[28px] hidden xl:block leading-tight font-medium">Ассоциация производителей <br>
+              строительных материалов, оборудования и сырья
+            </span>
+          </div>
+          
+          <!-- BURGER-BUTTOn -->
+          <button class="flex justify-center items-center" type="button" data-drawer-target="drawer-disable-body-scrolling" data-drawer-show="drawer-disable-body-scrolling" data-drawer-body-scrolling="false" aria-controls="drawer-disable-body-scrolling" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="xl:hidden w-4 h-4 sm:w-5 sm:h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>            
+          </button>
+
+          <!-- Contacts -->
+          <div class="item-center hidden xl:flex">
+            <div class="hidden xl:flex items-center mr-4">
+              <div class="mr-[50px] font-medium">
+                <span class="header-span">T:</span> 
+                <a href="tel:8(800)8888888" class="ml-0.5 text-lg text-regal-blue hover:underline">8 (800) 888 88 88</a>
+              </div>
+              <div class="font-medium">
+                <span class="header-span">E:</span> 
+                <a href="mailto:pcm@mail.ru" class="ml-0.5 text-lg text-regal-blue hover:underline">pcm@mail.ru</a>
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              <a href="#">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg fill="#fff" id="Flat" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M231.25586,31.73635a15.96358,15.96358,0,0,0-16.29-2.76758L30.40869,101.47365a15.99988,15.99988,0,0,0,2.7124,30.58106L80,141.43069V199.9844a15.99415,15.99415,0,0,0,27.31348,11.31347L133.25684,185.355l39.376,34.65088a15.86863,15.86863,0,0,0,10.51709,4.00293,16.15443,16.15443,0,0,0,4.96338-.78711,15.86491,15.86491,0,0,0,10.68457-11.65332L236.41162,47.43557A15.96073,15.96073,0,0,0,231.25586,31.73635ZM86.146,126.34279l-49.88526-9.977L175.94238,61.4905ZM96,199.97658V152.56887l25.21973,22.1936Zm87.20215,8.01758L100.81006,135.4883l118.645-85.687Z"/>
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="17" height="17" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+      <nav class="hidden xl:flex bg-gradient-to-r from-brown-start to-brown-end z-10" >
+        <div class="px-[90px] py-3 flex justify-between mx-auto w-full ">
+            <div class="flex items-center">
+    
+              <!-- Navigation -->
+              <ul class="flex flex-row mt-0 mr-6 space-x-8 text-lg text-black uppercase xl:gap-x-[40px] 2xl:gap-x-[80px] 2xl:text-lg">
+                  <li>
+                      <a href="#" class="header_link font-black text-gray-900 dark:text-white hover:underline" aria-current="page">О нас</a>
+                  </li>
+    
+                  <li class="dropdown inline-block relative ">
+                    <a href="#" class="flex items-center peer header_link font-black text-gray-900 dark:text-white hover:underline">
+                      <span>Новости</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                      </svg>                        
+                    </a>
+                    <ul class="dropdown-menu absolute  hidden text-white pt-1 w-[200px] bg-regal-blue rounded">
+                        <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 1</a></li>
+                        <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 2</a></li>
+                    </ul>
+                  </li>
+    
+                  <li class="dropdown inline-block relative ">
+                    <a href="#" class="flex items-center peer header_link font-black text-gray-900 dark:text-white hover:underline">
+                      <span>Материалы</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                      </svg>                        
+                    </a>
+                    <ul class="dropdown-menu absolute  hidden text-white pt-1 w-[200px] bg-regal-blue rounded">
+                        <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 1</a></li>
+                        <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 2</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                      <a href="#" class="header_link font-black text-gray-900 dark:text-white hover:underline">Контакты</a>
+                  </li>
+              </ul>
+    
+            </div>
+            <!-- SEArch -->
+            <div class="relative hidden xl:block w-[390px]">
+              <div class="absolute inset-y-1 left-0 flex items-center pl-1 pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>                
+              </div>
+              <input type="text" id="search-navbar" class="block w-full pl-6 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-50">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <main class="grow">
+
+    <!-- BREADCRUMP -->
+    <section class="pt-[50px] xl:pt-[0px]">
+        <div class="container">
+            <nav class="flex mt-[25px]" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="#" class="text-10px xl:text-18px hover:text-regal-blue duration-500">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-brown-start w-2 h-2 xl:w-4 xl:h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                              
+                        <a href="#" class="text-10px xl:text-18px hover:text-regal-blue ml-1 md:ml-2 duration-500">
+                            Проекты
+                        </a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 xl:w-4 xl:h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                            <a href="#" class="text-10px xl:text-18px hover:text-regal-blue ml-1 md:ml-2 duration-500">
+                                ГОСТЫ
+                            </a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!-- BREADCRUMP -->
+
+    <section>
+        <div class="container">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-[35px] py-[40px] border-b border-gray-400">
+                <div>
+                    <h2 class="text-16px xl:text-25px">СанПиН 2.2.3.1384-03</h2>
+                    <p class="xl:10px xl:text-18px mt-2">
+                        Гигиенические требования к организации <br>
+                        строительного производства и строительных работ
+                    </p>
+
+                    <a href="" class="flex items-center mt-[20px] hover:text-regal-blue hover:underline">
+                        <div href="">
+                            <img src="./img/document.png" alt="document">
+                        </div>
+
+                        <span class="text-16px xl:text-25px header-span ml-[25px]">Скачать документ</span>
+                    </a>
+                </div>
+                
+                <div class="mt-4 xl:mt-[0px]">
+                    <h2 class="text-16px xl:text-25px">Документы на эту тему</h2>
+                    <ul class="text-10px xl:text-18px space-y-2 mt-2">
+                        <li><a href="" class="hover:underline hover:text-regal-blue">СНиП 31-03-2001</a></li>
+                        <li><a href="" class="hover:underline hover:text-regal-blue">СНиП 31-03-2001</a></li>
+                        <li><a href="" class="hover:underline hover:text-regal-blue">СНиП 31-03-2001</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="py-[20px] xl:pt-[60px]">
+                <h2 class="text-18px xl:text-25px">Текст документа</h2>
+                <div class="text-10px xl:text-18px mt-2 xl:mt-4">
+                    Постановление Главного государственного санитарного врача РФ от 11 июня 2003 г. N 141
+                    "О введении в действие санитарных правил и нормативов СанПиН 2.2.3.1384-03"
+
+                    На основании Федерального закона "О санитарно-эпидемиологическом благополучии населения" от 30 марта 1999 г. N 52-ФЗ
+                    (Собрание законодательства Российской Федерации, 1999, N 14, ст.1650) и Положения о государственном санитарно-эпидемиологическом 
+                    нормировании, утвержденного постановлением Правительства Российской Федерации от 24 июля 2000 г. N 554 (Собрание законодательства 
+                    Российской Федерации, 2000, N 31, ст.3295) постановляю:
+
+                    Ввести в действие с 30 июня 2003 года Санитарно-эпидемиологические правила и нормативы "Гигиенические требования 
+                    к организации строительного производства и строительных работ. СанПиН 2.2.3.1384-03", утвержденные Главным государственным
+                    санитарным врачом Российской Федерации 11 июня 2003 г.
+
+                    I. Область применения и общие требования
+                    1.1. Настоящие санитарно-эпидемиологические правила и нормативы (далее - Санитарные правила) разработаны на основании
+                    Федерального закона "О санитарно-эпидемиологическом благополучии населения" от 30 марта 1999 г. N 52-ФЗ (Собрание
+                    законодательства Российской Федерации, 1999, N 14, ст.1650), Положения о государственном санитарно-эпидемиологическом 
+                    нормировании, утвержденном постановлением Правительства Российской Федерации от 24 июля 2000 года N 554 (Собрание 
+                    законодательства Российской Федерации, 2000, N 31, ст.3295), Федерального закона "Об основах охраны труда в Российской 
+                    Федерации" от 17 июля 1999 г. N 181-ФЗ (Собрание законодательства Российской Федерации, 1999, N 29, ст.3702).
+
+                    1.2. Санитарные правила предназначены для обеспечения создания оптимальных условий труда и трудового процесса при 
+                    организации и проведении строительных работ, снижения риска нарушения здоровья работающих, а также населения, 
+                    проживающего в зоне влияния строительного производства.
+
+                    1.3. Санитарные правила устанавливают гигиенические требования к строительному производству и организации строительных работ,
+                    отдельным видам строительных работ, условиям труда и организации трудового процесса, организации работ на открытой территории 
+                    в холодный период года и в условиях нагревающего микроклимата, вахтово-экспедиционному методу строительства, профилактическим 
+                    мерам и охране окружающей среды, а также требования к проведению контроля за их выполнением. и средств предупреждения
+                    и защиты от воздействия вредных производственных факторов.
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[url('../src/img/bg-footer.png')] bg-cover bg-no-repeat xl:mt-[80px]">
+    <div class="container">
+      <div class="py-[20px] xl:py-[36px] flex flex-col xl:flex-row">
+        <div class="xl:w-[580px] xl:pr-[82px]">
+          <a href="">
+            <img src="./img/footer_logo.png" alt="Logo">
+          </a>
+
+          <div class="text-white mt-4 xl:mt-[40px] flex flex-col">
+            <span class="uppercase">Узнайте первыми</span>  
+            <span>о новосятх ассоциации и ее участников, <br>
+              темах прямых эфиров
+            </span>
+          </div>
+
+          <div class="mt-[46px] flex items-center w-full"> 
+            <input type="email" placeholder="E-mail" id="name" name="name" class="xl:w-[295px] lg:mt-[0px] h-[40px] xl:h-[57px] bg-regal-blue border-2 border-white text-white focus:ring-white focus:border-white block w-full placeholder:text-white" required>
+            <button type="submit" class="w-[205px] flex justify-center items-center bg-white hover:bg-regal-blue hover:text-white duration-300 hover:border-2 text-regal-blue font-extrabold h-[40px] xl:h-[57px]">Подписаться</button>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col justify-between w-full xl:pl-[82px] xl:border-l-2 mt-4">
+          <div class="flex flex-col sm:flex-row justify-between">
+            <div>
+              <ul class="text-white uppercase space-y-2">
+                <li><a href="" class="hover:underline">О нас</a></li>
+                <li><a href="" class="hover:underline">Новости</a></li>
+                <li><a href="" class="hover:underline">Материалы</a></li>
+                <li><a href="" class="hover:underline">Контакты</a></li>
+              </ul>
+            </div>
+
+            <div class="space-y-2 mt-4 xl:mt-[0px]">
+              <div class="mr-[50px] font-medium">
+                <span class="header-span text-white">T:</span> 
+                <a href="tel:8(800)8888888" class="ml-0.5 text-lg text-white hover:underline">8 (800) 888 88 88</a>
+              </div>
+              <div class="font-medium">
+                <span class="header-span text-white">E:</span> 
+                <a href="mailto:pcm@mail.ru" class="ml-0.5 text-lg text-white hover:underline">pcm@mail.ru</a>
+              </div>
+              <div class="font-medium">
+                <span class="header-span text-white">А:</span> 
+                <span href="" class="ml-0.5 text-lg text-white">Москва ул. Семенова</span>
+              </div>
+            </div>
+
+            <div class="flex gap-x-3 mt-4 xl:mt-[0px]">
+              <a href="#">
+                <div class="text-regal-blue bg-white hover:bg-gray-200 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg fill="#01305f" id="Flat" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M231.25586,31.73635a15.96358,15.96358,0,0,0-16.29-2.76758L30.40869,101.47365a15.99988,15.99988,0,0,0,2.7124,30.58106L80,141.43069V199.9844a15.99415,15.99415,0,0,0,27.31348,11.31347L133.25684,185.355l39.376,34.65088a15.86863,15.86863,0,0,0,10.51709,4.00293,16.15443,16.15443,0,0,0,4.96338-.78711,15.86491,15.86491,0,0,0,10.68457-11.65332L236.41162,47.43557A15.96073,15.96073,0,0,0,231.25586,31.73635ZM86.146,126.34279l-49.88526-9.977L175.94238,61.4905ZM96,199.97658V152.56887l25.21973,22.1936Zm87.20215,8.01758L100.81006,135.4883l118.645-85.687Z"/>
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div class="text-regal-blue bg-white hover:bg-gray-200 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#01305f" width="17" height="17" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-[46px] w-full flex items-center justify-end"> 
+            <div class="w-full">
+              <input type="text" class="w-full lg:mt-[0px] h-[40px] xl:h-[57px] bg-regal-blue border-2 border-white text-white focus:ring-white focus:border-white block placeholder:text-white" required>
+            </div>
+            <button type="submit" class="w-[205px] xl:w-[300px] flex justify-center items-center hover:bg-regal-blue hover:text-white duration-300 hover:border-2 bg-white text-regal-blue font-extrabold h-[40px] xl:h-[57px]">Поиск</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+  <!-- MOBILE MENU -->
+  <div id="drawer-disable-body-scrolling" class="mobile_menu fixed z-50 border-r-2 border-regul-blue h-full p-2 overflow-y-auto bg-white w-[300px] transition-transform -translate-x-full" aria-labelledby="drawer-disable-body-scrolling-label">
+    <button type="button" data-drawer-hide="drawer-disable-body-scrolling" aria-controls="drawer-disable-body-scrolling" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-[16px] right-[8px] inline-flex items-cente">
+        <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="py-4 overflow-y-auto">
+        <ul class="">
+          <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="ml-3">О нас</span>
+              </a>
+          </li>
+          <li>
+              <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example-1" data-collapse-toggle="dropdown-example-1">
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Новости</span>
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <ul id="dropdown-example-1" class="hidden py-2 space-y-2">
+                    <li>
+                      <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Ссылка 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Ссылка 2</a>
+                    </li>
+              </ul>
+          </li>
+
+          <li>
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example-2" data-collapse-toggle="dropdown-example-2">
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap">Материалы</span>
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <ul id="dropdown-example-2" class="hidden py-2 space-y-2">
+                  <li>
+                    <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Ссылка 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Ссылка 2</a>
+                  </li>
+            </ul>
+        </li>
+
+        <li>
+          <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <span class="ml-3">Контакты</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="font-medium text-sm ml-4 mt-2">
+        <span class="header-span">E:</span> 
+        <a href="mailto:pcm@mail.ru" class="ml-0.5 text-md text-regal-blue hover:underline">pcm@mail.ru</a>
+      </div>
+      <div class="font-medium ml-4">
+        <span class="header-span">T:</span> 
+        <a href="tel:8(800)8888888" class="ml-0.5 text-md text-regal-blue hover:underline">8 (800) 888 88 88</a>
+      </div>
+
+      <div class="flex gap-x-3 ml-4 mt-2">
+        <a href="#">
+          <div class="text-white bg-regal-blue w-[30px] h-[30px] rounded-full flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+          </div>
+        </a>
+        <a href="#">
+          <div class="text-white bg-regal-blue w-[30px] h-[30px] rounded-full flex justify-center items-center">
+            <svg fill="#fff" id="Flat" width="15px" height="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+              <path d="M231.25586,31.73635a15.96358,15.96358,0,0,0-16.29-2.76758L30.40869,101.47365a15.99988,15.99988,0,0,0,2.7124,30.58106L80,141.43069V199.9844a15.99415,15.99415,0,0,0,27.31348,11.31347L133.25684,185.355l39.376,34.65088a15.86863,15.86863,0,0,0,10.51709,4.00293,16.15443,16.15443,0,0,0,4.96338-.78711,15.86491,15.86491,0,0,0,10.68457-11.65332L236.41162,47.43557A15.96073,15.96073,0,0,0,231.25586,31.73635ZM86.146,126.34279l-49.88526-9.977L175.94238,61.4905ZM96,199.97658V152.56887l25.21973,22.1936Zm87.20215,8.01758L100.81006,135.4883l118.645-85.687Z"/>
+            </svg>
+          </div>
+        </a>
+        <a href="#">
+          <div class="text-white bg-regal-blue w-[30px] h-[30px] rounded-full flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="15" height="15" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Search -->
+      <div class="relative ml-4 mt-4">
+        <div class="absolute inset-y-1 left-0 flex items-center pl-1 pointer-events-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 sm:w-4 sm:h-4 text-gray-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>                
+        </div>
+        <input type="text" id="search-navbar" class="group h-[30px] block w-full pl-6 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-50">
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  <script type="module">
+    import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.esm.js";
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="./flowbite.js"></script>
+</body>
+</html>

@@ -6,8 +6,7 @@
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 </head>
-<body>
-
+<body class="flex flex-col justify-between min-h-screen">
   <!-- HEADER -->
   <header class="border-b border-regul-blue xl:border-none fixed xl:relative w-full top-0 left-0 bg-white xl:bg-transparent z-40">
     <div class="container 2xl">
@@ -45,21 +44,21 @@
             </div>
             <div class="flex gap-x-3">
               <a href="#">
-                <div class="text-white bg-regal-blue w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                 </div>
               </a>
               <a href="#">
-                <div class="text-white bg-regal-blue w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
                   <svg fill="#fff" id="Flat" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                     <path d="M231.25586,31.73635a15.96358,15.96358,0,0,0-16.29-2.76758L30.40869,101.47365a15.99988,15.99988,0,0,0,2.7124,30.58106L80,141.43069V199.9844a15.99415,15.99415,0,0,0,27.31348,11.31347L133.25684,185.355l39.376,34.65088a15.86863,15.86863,0,0,0,10.51709,4.00293,16.15443,16.15443,0,0,0,4.96338-.78711,15.86491,15.86491,0,0,0,10.68457-11.65332L236.41162,47.43557A15.96073,15.96073,0,0,0,231.25586,31.73635ZM86.146,126.34279l-49.88526-9.977L175.94238,61.4905ZM96,199.97658V152.56887l25.21973,22.1936Zm87.20215,8.01758L100.81006,135.4883l118.645-85.687Z"/>
                   </svg>
                 </div>
               </a>
               <a href="#">
-                <div class="text-white bg-regal-blue w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                <div class="text-white bg-regal-blue hover:bg-blue-800 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="17" height="17" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </div>
               </a>
@@ -79,13 +78,13 @@
                   </li>
     
                   <li class="dropdown inline-block relative ">
-                    <a href="#" class="flex items-center peer header_link font-black text-gray-900 dark:text-white hover:underline">
+                    <a href="#" class="flex items-center peer header_link font-black text-gray-900 hover:underline">
                       <span>Новости</span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                       </svg>                        
                     </a>
-                    <ul class="dropdown-menu absolute -left-4 hidden text-black pt-1 w-[200px] bg-white rounded">
+                    <ul class="dropdown-menu absolute  hidden text-white pt-1 w-[200px] bg-regal-blue rounded">
                       <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 1</a></li>
                       <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 2</a></li>
                     </ul>
@@ -98,7 +97,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                       </svg>                        
                     </a>
-                    <ul class="dropdown-menu absolute -left-4 hidden text-black pt-1 w-[200px] bg-white rounded">
+                    <ul class="dropdown-menu absolute  hidden text-white pt-1 w-[200px] bg-regal-blue rounded">
                       <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 1</a></li>
                       <li class=""><a class="py-2 px-4 block hover:underline" href="#">Ссылка 2</a></li>
                     </ul>
@@ -116,7 +115,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-400">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>                
-                <span class="sr-only">Search icon</span>
               </div>
               <input type="text" id="search-navbar" class="block w-full pl-6 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-50">
             </div>
@@ -127,7 +125,7 @@
   </header>
   <!-- /HEADER -->
 
-  <main>
+  <main class="grow">
 
     <!-- HERO -->
     <section class="bg-[url('../src/img/hero.png')] bg-cover bg-no-repeat xl:-mt-[37px] z-0">
@@ -135,7 +133,7 @@
         <div class="flex-col pl-[30px] pt-[190px] pb-[107px] xl:pl-[90px]">
           <h1 class="uppercase leading-tight text-titlemobile xl:text-title font-bold">Стань новым <br> участником  ассоциации</h1>
           <p class="mt-[30px] mb-[97px] xl:text-25px leading-tight opacity-70">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Natus, accusamus.</p>
-          <a href="#" class="hero-btn px-4 py-2 xl:px-[60px] xl:py-[27px] hover:from-white hover:to-white bg-gradient-to-r from-brown-start to-brown-end text-black">
+          <a href="#" class="hero-btn px-4 py-2 xl:px-[60px] xl:py-[27px] hover:text-white bg-gradient-to-r duration-500 from-brown-start to-brown-end text-black">
             Подать заявку
           </a>
         </div>
@@ -177,7 +175,7 @@
                   </ul>
 
                   <div class="flex items-center"> 
-                    <a class="about-link text-10px xl:text-16px text-regal-blue uppercase" href="">Подробнее</a>
+                    <a class="about-link text-10px xl:text-16px text-regal-blue uppercase animate-pulse" href="">Подробнее</a>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 xl:w-4 xl:h-4 text-regal-blue">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>                    
@@ -207,7 +205,7 @@
 
             <div>
               <input type="tel" placeholder="Телефон" id="phone" name="phone" class="mt-[30px] lg:mt-[0px] h-[40px] xl:h-[57px] rounded-none bg-white border border-transparent text-gray-900 focus:ring-brown-start focus:border-brown-start block w-full" required>
-              <button type="submit" class="mt-[30px] bg-gradient-to-r from-brown-start to-brown-end w-full h-[40px] xl:h-[57px] text-18px hover:from-white hover:to-white">Подать заявку</button>
+              <button type="submit" class="mt-[30px] bg-gradient-to-r from-brown-start to-brown-end w-full h-[40px] xl:h-[57px] text-18px hover:text-white duration-500">Подать заявку</button>
             </div>
           </div>
         </form>
@@ -239,7 +237,9 @@
             <div class="xl:w-[400px] ml-[0px] xl:ml-[35px] mt-[20px] xl:mt-[0px]">
               <div class="text-18px xl:text-25px">
                 <h2 class="">Прямой эфир</h2>
-                <h2 class="leading-tight mt-[10px] xl:mt-[28px]">Сложно сказать, почему <br> некоторые особенности <br> так сложно решить</h2>
+                <a href="">
+                  <h2 class="leading-tight mt-[10px] xl:mt-[28px] hover:underline">Сложно сказать, почему <br> некоторые особенности <br> так сложно решить</h2>
+                </a>
               </div>
               <p class="text-16px xl:text-18px leading-tight mt-[25px]">Ассоциация создана в 2022 году в целях 
                 производителей строительных материалов, 
@@ -435,9 +435,9 @@
             </div>
 
           </div>
-          <div class="col-span-2 grid gap-x-[35px] mt-4 xl:mt-[0px]">
+          <div class="col-span-2 grid gap-x-[35px] mt-4 xl:mt-[0px] divide-y divide-slate-200">
 
-            <div href="" class="grid grid-cols-1 sm:grid-cols-2 gap-x-[35px] pb-[30px] border-b">
+            <div href="" class="grid grid-cols-1 sm:grid-cols-2 gap-x-[35px] pb-[30px]">
 
               <a href="" class="h-[206px] w-full sm:hidden">
                 <img src="./img/news_5.png" alt="" class="h-full w-full">
@@ -459,7 +459,7 @@
               </a>
             </div>
 
-            <div href="" class="grid grid-cols-1 sm:grid-cols-2 gap-x-[35px] py-[30px] border-b">
+            <div href="" class="grid grid-cols-1 sm:grid-cols-2 gap-x-[35px] py-[30px]">
 
               <a href="" class="h-[206px] w-full sm:hidden">
                 <img src="./img/news_5.png" alt="" class="h-full w-full">
@@ -526,7 +526,7 @@
 
             <div>
               <input type="tel" placeholder="Телефон" id="phone" name="phone" class="mt-[30px] lg:mt-[0px] h-[40px] xl:h-[57px] rounded-none bg-white border border-transparent text-gray-900 focus:ring-brown-start focus:border-brown-start block w-full" required>
-              <button type="submit" class="mt-[30px] bg-gradient-to-r from-brown-start to-brown-end w-full h-[40px] xl:h-[57px] text-18px hover:from-white hover:to-white">Подать заявку</button>
+              <button type="submit" class="mt-[30px] bg-gradient-to-r from-brown-start to-brown-end w-full h-[40px] xl:h-[57px] text-18px hover:text-white duration-500">Подать заявку</button>
             </div>
           </div>
         </form>
@@ -534,6 +534,89 @@
     </section>
     <!-- /REQUEST -->
   </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[url('../src/img/bg-footer.png')] bg-cover bg-no-repeat">
+    <div class="container">
+      <div class="py-[20px] xl:py-[36px] flex flex-col xl:flex-row">
+        <div class="xl:w-[580px] xl:pr-[82px]">
+          <a href="">
+            <img src="./img/footer_logo.png" alt="Logo">
+          </a>
+
+          <div class="text-white mt-4 xl:mt-[40px] flex flex-col">
+            <span class="uppercase">Узнайте первыми</span>  
+            <span>о новосятх ассоциации и ее участников, <br>
+              темах прямых эфиров
+            </span>
+          </div>
+
+          <div class="mt-[46px] flex items-center w-full"> 
+            <input type="email" placeholder="E-mail" id="name" name="name" class="xl:w-[295px] lg:mt-[0px] h-[40px] xl:h-[57px] bg-regal-blue border-2 border-white text-white focus:ring-white focus:border-white block w-full placeholder:text-white" required>
+            <button type="submit" class="w-[205px] flex justify-center items-center bg-white hover:bg-regal-blue hover:text-white duration-300 hover:border-2 text-regal-blue font-extrabold h-[40px] xl:h-[57px]">Подписаться</button>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col justify-between w-full xl:pl-[82px] xl:border-l-2 mt-4">
+          <div class="flex flex-col sm:flex-row justify-between">
+            <div>
+              <ul class="text-white uppercase space-y-2">
+                <li><a href="" class="hover:underline">О нас</a></li>
+                <li><a href="" class="hover:underline">Новости</a></li>
+                <li><a href="" class="hover:underline">Материалы</a></li>
+                <li><a href="" class="hover:underline">Контакты</a></li>
+              </ul>
+            </div>
+
+            <div class="space-y-2 mt-4 xl:mt-[0px]">
+              <div class="mr-[50px] font-medium">
+                <span class="header-span text-white">T:</span> 
+                <a href="tel:8(800)8888888" class="ml-0.5 text-lg text-white hover:underline">8 (800) 888 88 88</a>
+              </div>
+              <div class="font-medium">
+                <span class="header-span text-white">E:</span> 
+                <a href="mailto:pcm@mail.ru" class="ml-0.5 text-lg text-white hover:underline">pcm@mail.ru</a>
+              </div>
+              <div class="font-medium">
+                <span class="header-span text-white">А:</span> 
+                <span href="" class="ml-0.5 text-lg text-white">Москва ул. Семенова</span>
+              </div>
+            </div>
+
+            <div class="flex gap-x-3 mt-4 xl:mt-[0px]">
+              <a href="#">
+                <div class="text-regal-blue bg-white hover:bg-gray-200 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg fill="#01305f" id="Flat" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M231.25586,31.73635a15.96358,15.96358,0,0,0-16.29-2.76758L30.40869,101.47365a15.99988,15.99988,0,0,0,2.7124,30.58106L80,141.43069V199.9844a15.99415,15.99415,0,0,0,27.31348,11.31347L133.25684,185.355l39.376,34.65088a15.86863,15.86863,0,0,0,10.51709,4.00293,16.15443,16.15443,0,0,0,4.96338-.78711,15.86491,15.86491,0,0,0,10.68457-11.65332L236.41162,47.43557A15.96073,15.96073,0,0,0,231.25586,31.73635ZM86.146,126.34279l-49.88526-9.977L175.94238,61.4905ZM96,199.97658V152.56887l25.21973,22.1936Zm87.20215,8.01758L100.81006,135.4883l118.645-85.687Z"/>
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div class="text-regal-blue bg-white hover:bg-gray-200 duration-500 w-[34px] h-[34px] rounded-full flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#01305f" width="17" height="17" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-[46px] w-full flex items-center justify-end"> 
+            <div class="w-full">
+              <input type="text" class="w-full lg:mt-[0px] h-[40px] xl:h-[57px] bg-regal-blue border-2 border-white text-white focus:ring-white focus:border-white block placeholder:text-white" required>
+            </div>
+            <button type="submit" class="w-[205px] xl:w-[300px] flex justify-center items-center hover:bg-regal-blue hover:text-white duration-300 hover:border-2 bg-white text-regal-blue font-extrabold h-[40px] xl:h-[57px]">Поиск</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+    </div>
+  </footer>
+  <!-- /FOOTER -->
 
   <!-- MOBILE MENU -->
   <div id="drawer-disable-body-scrolling" class="mobile_menu fixed z-50 border-r-2 border-regul-blue h-full p-2 overflow-y-auto bg-white w-[300px] transition-transform -translate-x-full" aria-labelledby="drawer-disable-body-scrolling-label">
@@ -622,24 +705,10 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>                
         </div>
-        <input type="text" id="search-navbar" class="h-[30px] block w-full pl-6 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-50">
+        <input type="text" id="search-navbar" class="group h-[30px] block w-full pl-6 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-50">
       </div>
 
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-          <div>
-            <div></div>
-            <div></div>
-          </div>
-
-          <div>
-
-          </div>
-
-        </div>
-      </footer>
-      <!-- /FOOTER -->
+      
 
     </div>
   </div>
