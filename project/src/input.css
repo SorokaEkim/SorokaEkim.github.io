@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Montserrat-Regular;
+  }
+
+  .header-span {
+    font-family: Montserrat-Bold;
+  }
+
+  h1,h2,button,.about-value,.about-link {
+    font-family: Montserrat-Bold;
+    /* line-height: 50px; */
+  }
+
+  .hero-btn {
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+  }
+
+  .header_link {
+    font-family: Montserrat-Bold;
+  }
+
+  .header_telegram {
+    fill: #fff;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+  }
+
+  .mobile_menu {
+    top:0;
+  }
+
+  .telegram-svg {
+    fill: #d3d3d3;
+  }
+  
+  .icon:hover .telegram-svg {
+    fill:#01305f;
+    transition: 0.5s;
+  }
+
+  .card-video:hover .card-shadow{
+    opacity: 0;
+  }
+
+  .card-shadow {
+    background: linear-gradient(to top, rgb(0, 0, 0, 100%), rgb(0, 0, 0, 40%), rgb(255, 255, 255, 1%));
+    transition: opacity 0.6s;
+    
+  }
+
+  @font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../src/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../src/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../src/fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../src/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+}
+
