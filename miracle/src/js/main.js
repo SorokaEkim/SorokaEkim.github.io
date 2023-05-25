@@ -1,3 +1,4 @@
+
 // TYPED.JS Набор текста
 let typed = new Typed('#typed', { // Тут id того блока, в которм будет анимация
     stringsElement: '#typed-strings', // Тут id блока из которого берем строки для анимации
@@ -165,3 +166,6 @@ let closeTab = function () {
 
 tab();
 closeTab();
+
+
+$('.js-modal-btn').on('click', ()=>$('.js-modal').arcticmodal());
