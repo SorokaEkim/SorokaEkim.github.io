@@ -1,0 +1,2088 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> 
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<body class="flex flex-col justify-between min-h-screen">
+
+    <!-- MENU -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1050] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="leftTopModal"
+        tabindex="-1"
+        aria-labelledby="leftTopModalLabel"
+        aria-hidden="true">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none absolute lg:h-auto w-full translate-x-[-100%] opacity-0 transition-all duration-300 ease-in-out">
+            <div class="flex pointer-events-auto w-full">
+
+                <!-- Для телефонов -->
+                <div class="w-full lg:hidden">
+                    <div class=" max-w-[400px] bg-blue-dark h-screen overflow-auto">
+
+                        <div class="flex justify-between items-center pr-[20px]">
+                            <div class="flex items-center py-[15px]">
+                                <div class="pr-[15px] cursor-pointer ml-[20px]"
+                                    data-te-modal-dismiss
+                                    aria-label="Close">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-10 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+    
+                                <a href="" class="">
+                                    <div class=""><img class="w-[195px] h-[36px]" src="./img/imin-logo-white.svg" alt="logo"></div>
+                                </a>
+                            </div>
+    
+                            <div class="flex items-center">
+                                <button class="mobile-search-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                    </svg>
+                                </button>
+                                
+                                <button class="text-white ml-3 font-muller"
+                                    data-te-toggle="modal"
+                                    data-te-target="#exampleModal"
+                                    data-te-ripple-init
+                                    data-te-ripple-color="light"
+                                >
+                                    RU
+                                </button>
+
+                                <form class="fixed top-0 bg-white left-0 w-full hidden mobile-search-body" action="">
+                                    <div class="relative">
+                                        <input type="search" class="h-[70px] w-full outline-none border-none text-[20px] font-nunito px-[30px]" placeholder="Поиск...">
+                                        
+                                        <button type="submit" class="absolute right-[10px] top-[25px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                            </svg>
+                                        </button>
+                                        <div class="mobile-search-close absolute top-[20px] right-[50px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="w-[200%] flex">
+                            <ul class="text-white text-[20px] w-[100%] font-nunito px-[30px] tabs__nav tabs-nav transition duration-300 ease-in-out">
+
+                                <li class="py-[20px]">
+                                    <a
+                                        class="tabs-nav__item is-active hover:opacity-60 duration-300 flex items-center w-full justify-between"
+                                        data-tab-name="tab-1"
+                                        >Грждансто и ВНЖ
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>   
+                                    </a>
+                                </li>
+
+                                <li class="py-[20px]">
+                                    <a
+                                        class="tabs-nav__item hover:opacity-60 duration-300 flex items-center w-full justify-between"
+                                        data-tab-name="tab-2"
+                                        >Компания
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>   
+                                    </a>
+                                </li>
+
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Контакты</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка1</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка2</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка3</a></li>
+                            </ul>
+                            <div class="tabs__content bg-gray-light w-[100%] transition duration-300 ease-in-out h-screen font-nunito">
+                                <div class="tab tab-1 hidden">
+                                    <div class="menu_close flex items-center px-[20px] py-[25px] font-bold text-[20px] border-b">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-8">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                        </svg>
+                                        <span>Гражданство</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 px-[20px] py-[25px]">
+                                        <div>
+                                            <div class="text-[18px] font-bold">Европа</div>
+                                            <ul class="text-[16px] mt-4 space-y-3">
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="text-[18px] font-bold">Другие страны</div>
+                                            <ul class="text-[16px] mt-4 space-y-3">
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="menu_close flex items-center px-[20px] py-[25px] font-bold text-[20px] border-b">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-8">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                        </svg>
+                                        <span>Вид на жительство</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 px-[20px] py-[25px]">
+                                        <div class="col-span-2">
+                                            <div class="text-[18px] font-bold">Европа</div>
+                                            <ul class="text-[16px] mt-4 gap-y-3 grid grid-cols-2">
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="mt-3">
+                                            <div class="text-[18px] font-bold">Америка</div>
+                                            <ul class="text-[16px] mt-4 space-y-3">
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="text-[18px] font-bold">Другие страны</div>
+                                            <ul class="text-[16px] mt-4 space-y-3">
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                                <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                            </ul>
+                                        </div>    
+                                    </div>
+                                </div>
+
+                                
+                                <div class="tab tab-2 hidden">
+                                    <div class="menu_close flex items-center px-[20px] py-[25px] font-bold text-[20px] border-b">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-8">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                        </svg>
+                                        <span>Компания</span>
+                                    </div>
+                                    <ul class="text-[16px] space-y-3 px-[20px] py-[35px] border-b border-gray">
+                                        <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                        <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                        <li><a class="text-[16px] hover:text-blue duration-300 hover:underline-offset-8" href="">Страна</a></li>
+                                    </ul>
+                                    <div class="py-[35px] px-[20px]">
+                                        <div class="h-[50px] flex items-center font-nunito">
+                                            <img class="h-[50px]" src="./img/IMC-Logo-Member.jpg" alt="">
+                                            <div class="ml-4 leading-tight">
+                                                Miracle - <br> участник IMC
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Для Десктоп -->
+                <div class="w-full hidden lg:block bg-blue-dark">
+                    <div class="flex bg-blue-dark">
+                        <div class="w-1/1 lg:w-1/4 flex items-center py-[15px]">
+                            <div class="pr-[15px] cursor-pointer ml-[20px]"
+                            data-te-modal-dismiss
+                            aria-label="Close">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-10 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <a href="" class="">
+                                <div class=""><img class="w-[195px] h-[36px]" src="./img/imin-logo-white.svg" alt="logo"></div>
+                            </a>
+                        </div>
+
+                        <div class="w-3/4 h-full hidden lg:flex">
+                            <form action="" class="w-full h-full">
+                                <div class="flex relative bg-white">
+                                    <input type="search" class="w-full h-[70px] outline-none pl-[20px] pr-[100px] font-nunito text-[20px] focus:shadow-input-search">
+                                    <button type="submit" class="absolute right-0 top-[20px] px-[20px] flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-light flex">
+                        <div class="w-full lg:w-1/4 bg-blue-dark py-[50px]">
+                            <ul class="text-white text-[20px] font-nunito px-[10px] container-tabs ml-[20px]"
+                                role="tablist"
+                                data-te-nav-ref
+                            >
+                                <li class="py-[20px]">
+                                    <a
+                                        class="hover:opacity-60 duration-300 flex items-center w-full justify-between"
+                                        href="#tabs-home03"
+                                        data-te-toggle="pill"
+                                        data-te-target="#tabs-home03"
+                                        data-te-nav-active
+                                        role="tab"
+                                        aria-controls="tabs-home03"
+                                        aria-selected="true"
+                                        >Грждансто и ВНЖ
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                          
+                                    </a>
+                                </li>
+
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Сравнение программ</a></li>
+
+                                <li class="py-[20px]">
+                                    <a
+                                        class="hover:opacity-60 duration-300 flex items-center w-full justify-between"
+                                        href="#tabs-profile03"
+                                        data-te-toggle="pill"
+                                        data-te-target="#tabs-profile03"
+                                        role="tab"
+                                        aria-controls="tabs-profile03"
+                                        aria-selected="false"
+                                    >Компания
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    </a>
+                                </li>
+
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Контакты</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка1</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка2</a></li>
+                                <li class="py-[20px]"><a class="hover:opacity-60 duration-300" href="">Ссылка3</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="container--content w-1/1 lg:block lg:w-3/4 p-[60px] font-nunito">
+                            <div class="absolute right-[20px] bottom-[20px]">
+                                <button class="bg-btn-yellow hover:opacity-50 text-[18px] font-nunito duration-300 w-[320px] py-4"
+                                data-te-toggle="modal"
+                                data-te-target="#exampleModalFullscreen"
+                                data-te-ripple-init
+                                data-te-ripple-color="light">
+                                    Получить консльтацию
+                                </button>
+                            </div>
+                            <div
+                                class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+                                id="tabs-home03"
+                                role="tabpanel"
+                                aria-labelledby="tabs-home-tab03"
+                                data-te-tab-active>
+                                <div class="grid grid-cols-2 gap-x-[70px]">
+                                    <div>
+                                        <div class="text-[20px] font-bold border-b pb-[20px]">
+                                            Гражданство
+                                        </div>
+                                        <div class="grid grid-cols-2 text-[18px] mt-3">
+                                            <div>
+                                                <div class="font-bold">Европа</div>
+                                                <ul class="space-y-3 mt-3">
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold">Другие страны</div>
+                                                <ul class="space-y-3 mt-3">
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="text-[20px] font-bold border-b pb-[20px]">
+                                            Вид на жительство
+                                        </div>
+                                        <div class="grid grid-cols-3 text-[18px] mt-3">
+                                            <div>
+                                                <div class="font-bold">Европа</div>
+                                                <ul class="space-y-3 mt-3">
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold">Америка</div>
+                                                <ul class="space-y-3 mt-3">
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold">Другие страны</div>
+                                                <ul class="space-y-3 mt-3">
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                    <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+                                id="tabs-profile03"
+                                role="tabpanel"
+                                aria-labelledby="tabs-profile-tab03">
+                                    <div class="grid grid-cols-2 gap-x-[70px]">
+                                        <div>
+                                            <div class="text-[20px] font-bold border-b pb-[20px]">
+                                                Компания
+                                            </div>
+                                            <ul class="grid grid-cols-2 text-[18px] mt-3">
+                                                <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                                <li><a href="" class="duration-500 border-b border-blue border-opacity-0 hover:border-opacity-100 hover:text-blue underline-offset-8">Ссылка</a></li>
+                                            </г>
+                                        </div>
+
+                                        <div>
+                                            <div class="text-[16px] lg:text-[18px]">
+                                                <ul class="space-y-[20px]">
+                                                    <li class="font-nunito">
+                                                        <div>
+                                                            <b>Москва, Россия</b><br> 
+                                                            127572, Москва, ул. Угличская, 12
+                                                        </div>
+                                                        <a href="tel:1212314123" class="underline underline-offset-4">12341234121</a>
+                                                    </li>
+                    
+                                                    <li class="font-nunito">
+                                                        <div>
+                                                            <b>Москва, Россия</b><br> 
+                                                            127572, Москва, ул. Угличская, 12
+                                                        </div>
+                                                        <a href="tel:1212314123" class="underline underline-offset-4">12341234121</a>
+                                                    </li>
+                                                </ul>
+                                                <a href="" class="text-blue flex items-center font-nunito mt-4">Все офисы
+                                                    <svg class="w-[14px] h-[14px] ml-2 fill-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                                    </svg>
+                                                </a>
+
+                                                <div class="hidden mt-[20px] lg:flex text-[20px] space-x-4">
+                                                    <a href="" class="group flex items-center duration-300 transition-all">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                                        <span class="ml-2 border-b border-black duration-500 border-opacity-0 group-hover:border-opacity-100">WhatsApp</span>    
+                                                    </a>
+                                                    <a href="" class="group flex items-center duration-300 transition-all">
+                                                        <svg width="24px" height="24px" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                                        <span class="ml-2 border-b border-black duration-500 border-opacity-0 group-hover:border-opacity-100">Telegram</span>    
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full flex lg:justify-start mt-[100px] pb-[30px]">
+                                        <div class="h-[50px] flex items-center font-nunito">
+                                            <img class="h-[50px]" src="./img/IMC-Logo-Member.jpg" alt="">
+                                            <div class="ml-4 leading-tight">
+                                                Miracle - <br> участник IMC
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="fixed z-[100] bg-white w-full" id="navbar">
+        <div class="max-w-full">
+            <nav class="nav flex justify-between w-full items-center py-[15px] px-[20px]">
+
+                <div class="flex items-center">
+                    <div class="text-gray-400 pr-[15px] cursor-pointer"
+                    data-te-toggle="modal"
+                    data-te-target="#leftTopModal"
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+    
+                    <a href="" class="">
+                        <div class=""><img class="w-[195px] h-[36px]" src="./img/mini-logo.svg" alt="logo"></div>
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-4 nav-items">
+
+                    <ul class="hidden 2xl:flex space-x-[135px] mr-[100px] items-center text-[18px]">
+                        <li><a href="" class="border-b border-white hover:border-blue hover:text-blue duration-500 font-muller">Гражданство и ВНЖ</a></li>
+                        <li><a href="" class="border-b border-white hover:border-blue hover:text-blue duration-500 font-muller">Визы</a></li>
+                        <li><a href="" class="border-b border-white hover:border-blue hover:text-blue duration-500 font-muller">Счета и карты</a></li>
+                        <li><a href="" class="border-b border-white hover:border-blue hover:text-blue duration-500 font-muller">О нас</a></li>
+                        <li><a href="" class="border-b border-white hover:border-blue hover:text-blue duration-500 font-muller">Контакты</a></li>
+                    </ul>
+
+                    <div class="2xl:hidden mobile-search-btn-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </div>
+
+                    <a href="" class="hidden sm:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    </a>
+
+                    <a href="" class="hidden sm:flex">
+                        <svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                    </a>
+
+                    <a href="" class="ml-2 text-gray font-muller"
+                    data-te-toggle="modal"
+                    data-te-target="#exampleModal"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    >RU</a>
+                </div>
+            </nav>
+        </div>
+        <div class="absolute top-0 left-0 w-full mobile-search-body-2 hidden">
+            <form action="" class="w-full">
+                <div class="w-full relative">
+                    <input type="search" class="bg-white h-[72px] w-full outline-none focus:shadow-input-search duration-300 border-b border-gray-light font-nunito text-[20px] px-[30px]" placeholder="Поиск">
+                    <button type="submit" class="top-[20px] right-[25px] absolute">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button>
+                    <div class="mobile-search-close-2 absolute top-[20px] right-[70px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <!-- /HEADER -->
+
+    <div class="page overflow-hidden grow">
+        <!-- MAIN -->
+        <section>
+            <div class="container max-w-[1230px]">
+                <div class="relative py-[150px]">
+                    <div class="">
+                        <div class="lg:hidden">
+                            <img src="./img/main_banner.png" alt="banner">
+                        </div>
+    
+                        <div class="w-1/1 lg:w-1/2">
+                            <h1 class="min-h-[200px] text-[36px] md:text-[70px] font-nunito font-bold leading-tight">
+                                <div id="typed-strings">
+                                    <span>Пасопорт или ВНЖ в Европе</span>
+                                    <span>Релокация и запус бизневса в ОАЭ</span>
+                                </div>
+                                
+                                <div class="text-typing">
+                                    <span id="typed"></span>
+                                </div>
+                            </h1>
+                        
+                            <div class="font-nunito text-[30px] leading-tight">
+                                <p>
+                                    Успешно помогаем гражданам России и <br>
+                                    СНГ получить визы, ВНЖ и паспорта<br>
+                                    Евросоюза
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="w-1/1 mt-[50px] space-y-[20px] md:flex md:items-center md:space-y-0 md:space-x-[20px] lg:w-1/2">
+                            <a href="" class="py-4 bg-blue text-white hover:opacity-90 duration-300 text-[18px] w-full flex items-center justify-center font-nunito">
+                                Выбрать паспорт
+                            </a>
+                            <a href="" class="py-4 bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-full flex items-center justify-center font-nunito border"
+                                data-te-toggle="modal"
+                                data-te-target="#exampleModalFullscreen"
+                                data-te-ripple-init
+                                data-te-ripple-color="light">
+                                Отсавить заявку
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="absolute top-[75px] -right-[450px] hidden lg:flex">
+                        <img class="w-[1000px] h-auto" src="./img/main_banner.png" alt="banner">
+                    </div>
+                </div>
+
+                <div>
+                    <ul class="font-nunito text-[20px] space-y-[20px] lg:flex lg:space-y-[0px] lg:justify-between">
+                        <li class="pt-[20px] relative cursor-pointer group">
+                            <span class="absolute top-0 left-0 h-[3px] w-[25px] group-hover:w-[60px] duration-300 bg-blue-pail"></span>
+                            <p>Лицензированный<br>
+                            агент госпрограмм
+                            </p>
+                        </li>
+                        <li class="pt-[20px] relative cursor-pointer group">
+                            <span class="absolute top-0 left-0 h-[3px] w-[25px] group-hover:w-[60px] duration-300 bg-blue-pail"></span>
+                            <p>Лицензированный<br>
+                            агент госпрограмм
+                            </p>
+                        </li>
+                        <li class="pt-[20px] relative cursor-pointer group">
+                            <span class="absolute top-0 left-0 h-[3px] w-[25px] group-hover:w-[60px] duration-300 bg-blue-pail"></span>
+                            <p>Лицензированный<br>
+                            агент госпрограмм
+                            </p>
+                        </li>
+                        <li class="pt-[20px] relative cursor-pointer group">
+                            <span class="absolute top-0 left-0 h-[3px] w-[25px] group-hover:w-[60px] duration-300 bg-blue-pail"></span>
+                            <p>Лицензированный<br>
+                            агент госпрограмм
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /MAIN -->
+
+        <!-- HERO -->
+        <section class="font-nunito py-[100px]">
+            <div class="container max-w-[1230px]">
+                <div class="lg:flex lg:space-x-[50px]">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-[26px] lg:text-[46px] font-bold">Я Алексей Невзоров</h2>
+                        <div class="mt-[23px] text-[18px] lg:text-[24px] font-muller">
+                            <p>
+                                Мне, как международному предпринимателю, всегда было важно иметь свободу перемещений, возможность жить и зарабатывать в любой стране мира невзирая на границы и визовые ограничения. И мне это удалось. Став космополитом, я увидел свою миссию в том, чтобы помогать другим людям, обретать свободу – и я основал эмиграционный центр.
+
+                                Мы оформляем визы во все страны мира, готовим документы на гражданство и ВНЖ, оказываем юридическую поддержку.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative hidden lg:flex lg:w-1/2 bg-cover bg-center bg-no-repeat aspect-square" style="background-image:url('./img/hero.jpg')">
+                        <div class="absolute bottom-[20px] left-[20px]">
+                            <a href="#" class="uppercase text-gray flex items-center hover:text-black font-muller cursor-pointer text-[20px] duration-300 group">
+                                <svg class="mr-[5px] fill-gray duration-300 group-hover:fill-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                Подробнее обо мне
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[50px] lg:hidden relative lg:mt-[0px] lg:w-1/2 bg-cover bg-center bg-no-repeat aspect-square" style="background-image:url('./img/hero.jpg')">
+                <div class="absolute bottom-[20px] left-[20px]">
+                    <a href="" class="uppercase text-gray flex items-center group cursor-pointer">
+                        <svg class="mr-[5px] fill-gray" xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Подробнее обо мне
+                    </a>  
+                </div>
+            </div>
+        </section>
+        <!-- /HERO -->
+
+        <!-- ADVENTAGES -->
+        <section>
+            <div class="container max-w-[1230px]">
+                <div class="py-[50px]"> 
+                    <ul class="row-match-height font-muller relative lg:grid grid-cols-2 lg:gap-[25px] 
+                    before:hidden lg:before:block before:absolute before:w-[455px] before:h-[455px] before:bg-[#EDF6FD] before:-z-10 before:blur-100 before:-left-[200px] before:-top-[150px] before:opacity-100
+                    after:hidden lg:after:block after:absolute after:w-[455px] after:h-[455px] after:bg-[#EDF6FD] after:-z-10 after:blur-100 after:-right-[200px] after:-top-[150px] after:opacity-100"
+                    >
+                        <li class="h-full">
+                            <div class="py-[30px] border-t lg:border lg:p-[40px] lg:pb-[60px] border-gray-border bg-white">
+                                <h3 class="text-[20px] font-bold">1. Законность</h3> <br> 
+                                <p class="text-[18px] md:text-[20px]">
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="h-full">
+                            <div class="py-[30px] border-t lg:border lg:p-[40px] lg:pb-[60px] border-gray-border bg-white">
+                                <h3 class="text-[20px] font-bold">1. Законность</h3> <br> 
+                                <p class="text-[18px] md:text-[20px]">
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="h-full">
+                            <div class="py-[30px] border-t lg:border lg:p-[40px] lg:pb-[60px] border-gray-border bg-white">
+                                <h3 class="text-[20px] font-bold">1. Законность</h3> <br> 
+                                <p class="text-[18px] md:text-[20px]">
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis?
+                                </p>
+                            </div>
+                        </li>
+                        <li class="h-full">
+                            <div class="py-[30px] border-t lg:border lg:p-[40px] lg:pb-[60px] border-gray-border bg-white">
+                                <h3 class="text-[20px] font-bold">1. Законность</h3> <br> 
+                                <p class="text-[18px] md:text-[20px]">
+                                    Осуществляем помощь в получении визы, ВНЖ и гражданства 
+                                    на законном основании, в рамках действующих правовых норм.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-center mt-[50px]">
+                        <a href="" class="py-4 bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                            О компании
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /ADVENTAGES -->
+
+        <!-- PROGRAMMS -->
+        <section>
+            <div class="container max-w-[1230px]">
+                <div class="font-nunito pb-[60px]">
+                    <div>
+                        <h2 class="text-[26px] lg:text-[36px] font-bold">Программы гражданства</h2>
+                    </div>
+
+                    <!-- Для десктопа таблицей -->
+                    <div class="hidden lg:block mt-[36px] lg:mt-[60px]">
+                        <table class="table-auto w-full">
+                            <thead class="border-b border-black pb-[20px]">
+                                <tr class="text-[18px]">
+                                  <th class="text-start pb-[15px]">Страна</th>
+                                  <th class="text-start pb-[15px]">Стоимость</th>
+                                  <th class="text-start pb-[15px]">Срок получения</th>
+                                  <th class="text-start pb-[15px]">Преимущества</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody class="w-full font-muller">
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="flex justify-center">
+                            <a href="" class="mt-[50px] py-4 bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                                Все программы гражданства
+                                <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Мобилная -->
+                    <div class="mt-[36px] lg:hidden">
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="" class="mt-[50px] py-4 bg-white lg:hidden text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                            Все программы гражданства
+                            <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="font-nunito pb-[60px]">
+                    <div>
+                        <h2 class="text-[26px] lg:text-[36px] font-bold">Вид на жительство</h2>
+                    </div>
+
+                    <div class="hidden lg:block mt-[36px] lg:mt-[60px]">
+                        <table class="table-auto w-full">
+                            <thead class="border-b border-black pb-[20px]">
+                                <tr class="text-[18px]">
+                                  <th class="text-start pb-[15px]">Страна</th>
+                                  <th class="text-start pb-[15px]">Стоимость</th>
+                                  <th class="text-start pb-[15px]">Срок получения</th>
+                                  <th class="text-start pb-[15px]">Преимущества</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody class="w-full font-muller">
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr onclick="window.location.href=''; return false" class="text-start hover:bg-gray-light duration-300 border-b border-black сursor-pointer" style="cursor: pointer;">
+                                    <td class="pt-[20px] pb-[40px] pl-4">
+                                        <div class="flex">
+                                            <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            <div class="ml-[20px] text-[14px]">
+                                                <b class="text-[18px]">Болгария</b><br>
+                                                Второе гражданство
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-bold -mt-[20px]">
+                                            от $12500 
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <div class="text-[18px] font-light -mt-[20px]">
+                                            14-18 месяцев
+                                        </div>
+                                    </td>
+                                    <td class="pt-[20px] pb-[40px]">
+                                        <ul class="tetx-[16px] mt-[20px]">
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg clip-rule="evenodd" class="w-[10px] h-[10px] mr-2" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm0 1.5c-4.69 0-8.498 3.808-8.498 8.498s3.808 8.497 8.498 8.497 8.497-3.807 8.497-8.497-3.807-8.498-8.497-8.498z" fill-rule="nonzero"/></svg>
+                                                Знание языка не требуется
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="flex justify-center">
+                            <a href="" class="mt-[50px] py-4 bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                                Все программы ВНЖ
+                                <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Мобилная -->
+                    <div class="mt-[36px] lg:hidden">
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                        <a href="" class="block border-t py-[20px]">
+                            <div class="flex justify-between items-start">
+                                <div class="flex">
+                                    <div class="w-[55px] h-[34px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                    <div class="ml-[20px] text-[14px]">
+                                        <b class="text-[18px]">Болгария</b><br>
+                                        Второе гражданство
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <table class="table-auto w-full mt-[20px]">
+                                <tbody>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Стоимость</span></td>
+                                    <td class="py-[10px]><span class="text-[16px] font-muller">от $12500</span></td>
+                                  </tr>
+                                  <tr class="border-t border-gray-border">
+                                    <td class="py-[10px]"><span class="text-[20px] font-bold">Срок получения</span></td>
+                                    <td class="py-[10px]"><span class="text-[16px] font-muller">8 месяцев</span></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="" class="mt-[50px] py-4 lg:hidden bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                            Все программы ВНЖ
+                            <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /PROGRAMMS -->
+
+        <!-- PARTNERS -->
+        <section class="py-[100px]">
+            <div class="container max-w-[1230px] font-nunito">
+                <div>
+                    <h2 class="font-bold text-[26px] lg:text-[46px]">О нас пишут</h2>
+                </div>
+                <div class="mt-[25px] grid grid-cols-2 lg:grid-cols-4 gap-[20px]">
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="border border-gray-border p-6 lg:p-10 hover:shadow-partners duration-300">
+                            <img src="./img/forbes.webp" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- /PARTNERS -->
+
+        <!-- REVIEWS -->
+        <section>
+            <div class="container max-w-[1230px] font-nunito">
+                <div class="py-[100px]">
+                    <div class="lg:flex lg:justify-between items-center">
+                        <h2 class="font-bold text-[26px] lg:text-[46px]">Отзывы</h2>
+                        <div class="font-muller text-[18px] lg:text-[24px]">
+                            <p>Они же получили гражданство или ВНЖ</p>
+                        </div>
+                    </div>
+
+                    <!-- slider -->
+                    <div class="swiper mySwiper mt-[40px]">
+                        <div class="swiper-wrapper slider-match-height">
+
+                            <div class="swiper-slide" data-fancybox data-src="#reviews-0">
+                                <div class="block">
+                                    <div class="font-muller hover:bg-gray-light duration-300 cursor-pointer item relative text-start border border-gray-border p-[20px] pb-[100px] rounded-t-[30px] rounded-br-[30px]">
+                                        <div class="flex justify-between">
+                                            <div class="">
+                                                <div class="text-[19px] font-bold">
+                                                    Кондратюк Михаил и <br> Белогубова София
+                                                </div>
+                                                <div class="text-[18px] lg:text-[14px]">
+                                                    Получили гражданство Румынии
+                                                </div>
+                                            </div>
+                                            <div class="relative w-[60px] h-[60px] rounded-full bg-cover bg-center bg-no-repeat" style="background-image:url('./img/mini-avatar.jpg')">
+                                                <div class="absolute -bottom-2 right-0 w-[34px] h-[19px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Видео -->
+                                        <div class="flex justify-center items-center mt-[50px] w-full aspect-3/2 bg-cover bg-center bg-no-repeat" style="background-image:url('./img/video.jpg')">
+                                            <div class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[64px] h-[64px] text-white">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="" class="absolute bottom-[20px] left-[20px] text-[16px] underline flex items-center">Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                                            </svg>   
+                                        </a>
+                                    </div>  
+                                </div>
+
+                                <div id="reviews-0" style="display:none;max-width:1000px; border-radius: 30px 30px 30px 0px; padding-bottom: 100px;">
+                                    <div class="font-muller">
+                                        <div class="flex justify-between">
+                                            <div class="">
+                                                <div class="text-[19px] font-bold">
+                                                    Кондратюк Михаил и <br> Белогубова София
+                                                </div>
+                                                <div class="text-[18px] lg:text-[14px]">
+                                                    Получили гражданство Румынии
+                                                </div>
+                                            </div>
+                                            <div class="relative w-[60px] h-[60px] rounded-full bg-cover bg-center bg-no-repeat" style="background-image:url('./img/mini-avatar.jpg')">
+                                                <div class="absolute -bottom-2 right-0 w-[34px] h-[19px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="mt-[50px] aspect-square relative w-full overflow-hidden"
+                                            style="padding-top: 42.857143%">
+                                            <iframe
+                                                class="embed-responsive-item absolute bottom-0 left-0 right-0 top-0 h-full w-full"
+                                                src=""
+                                                allowfullscreen=""
+                                                data-gtm-yt-inspected-2340190_699="true"
+                                                id="240632615">
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide" data-fancybox data-src="#reviews-1">
+                                <div class="block">
+                                    <div class="font-muller item hover:bg-gray-light duration-300 cursor-pointer relative text-start border border-gray-border p-[20px] pb-[100px] rounded-t-[30px] rounded-br-[30px]">
+                                        <div class="flex justify-between">
+                                            <div class="">
+                                                <div class="text-[19px] font-bold">
+                                                    Кондратюк Михаил и <br> Белогубова София
+                                                </div>
+                                                <div class="text-[18px] lg:text-[14px]">
+                                                    Получили гражданство Румынии
+                                                </div>
+                                            </div>
+                                            <div class="relative w-[60px] h-[60px] rounded-full bg-cover bg-center bg-no-repeat" style="background-image:url('./img/mini-avatar.jpg')">
+                                                <div class="absolute -bottom-2 right-0 w-[34px] h-[19px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Текст -->
+                                        <div class="text-[20px] mt-[50px]">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                            </p>
+                                        </div>
+                                        
+                                        <a href="" class="absolute bottom-[20px] left-[20px] text-[16px] underline flex items-center">Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                                            </svg>   
+                                        </a>
+                                    </div>  
+                                </div>
+                                <div id="reviews-1" style="display:none;max-width:1000px; border-radius: 30px 30px 30px 0px; padding-bottom: 100px;">
+                                    <div class="font-muller">
+                                        <div class="flex justify-between">
+                                            <div class="">
+                                                <div class="text-[19px] font-bold">
+                                                    Максим и <br> Даша
+                                                </div>
+                                                <div class="text-[18px] lg:text-[14px]">
+                                                    Получили гражданство Италии
+                                                </div>
+                                            </div>
+                                            <div class="relative w-[60px] h-[60px] rounded-full bg-cover bg-center bg-no-repeat" style="background-image:url('./img/mini-avatar.jpg')">
+                                                <div class="absolute -bottom-2 right-0 w-[34px] h-[19px] bg-cover bg-center bg-no-repeat" style="background-image:url('./img/flag.jpg')"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-[20px] mt-[50px]">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                            </p>
+                                        </div>  
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div class="swiper-slide" data-fancybox data-src="#reviews-2">
+                                <div class="block">
+                                    <div class="font-muller overflow-hidden item bg-[#F2F6F9] hover:bg-gray-light duration-300 cursor-pointer relative text-start border border-gray-border p-[20px] pb-[100px] rounded-t-[30px] rounded-br-[30px]">
+                                        <div class="flex flex-col justify-between h-full">
+                                            <div>
+                                                <div>
+                                                    <svg width="42" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.49 29H28.387L18.99 16.05v-2.1L28.387 1H40.49L30.452 15 40.49 29Zm-17.798 0H10.589L1.19 16.05v-2.1L10.59 1h12.103L12.653 15l10.039 14Z" stroke="#001A70"/></svg>
+                                                </div>
+                                                <h3 class="text-[24px] font-bold font-muller mt-[16px]">Переехали и живут в Алании</h3>
+                                            </div>
+                                            <div>
+                                                <div class="text-[19px] font-bold">
+                                                    Семья (Кожевниковы)
+                                                </div>
+                                                <div class="text-[18px]">
+                                                    Переехали в Аланию
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="absolute bottom-[20px] left-[20px] text-[16px] underline flex items-center">Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                                            </svg>   
+                                        </a>
+                                        <div class="absolute w-[160px] h-[160px] bottom-0 right-0 ">
+                                            <img src="./img/family2.png" alt="семья" class="rounded-tl-[30px]">
+                                        </div>
+                                    </div>  
+                                </div>
+                                
+                                <div id="reviews-2" class="relative overflow-hidden" style="display:none;max-width:1000px; border-radius: 30px 30px 30px 0px; padding-bottom: 100px;">
+                                    <div class="h-full">
+                                        <div class="font-muller">
+                                            <div class="text-[20px] my-[50px]">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus, facere dolorum laborum aliquid non!
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <div class="text-[19px] font-bold">
+                                                    Семья (Кожевниковы)
+                                                </div>
+                                                <div class="text-[18px]">
+                                                    Переехали в Аланию
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="absolute w-[160px] h-[160px] bottom-0 right-0 ">
+                                        <img src="./img/family2.png" alt="семья" class="rounded-tl-[30px]">
+                                    </div> 
+                                </div>  
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- slider -->
+
+                    <div class="flex justify-center">
+                        <a href="" class="mt-[50px] py-4 bg-white text-black hover:bg-black hover:text-white duration-300 text-[18px] w-[350px] flex items-center justify-center font-nunito border">
+                            Читать все отзывы
+                            <svg class="w-[20px] h-[20px] ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /REVIEWS -->
+
+        <!-- STAGES -->
+        <section class="bg-gray-light">
+            <div class="container max-w-[1230px]">
+                <div class="py-[100px]">
+                    <div class="">
+                        <h2 class="font-bold text-[26px] lg:text-[46px] font-nunito">Мы проходим с вами каждый этап</h2>
+                    </div>
+
+
+
+                    <div id="accordionFlushExample" class="lg:hidden">
+                        <div class="py-[16px] border-b border-gray">
+                        
+                          <h2 class="mb-0" id="flush-headingOne">
+                            <button
+                              class="group w-full relative"
+                              type="button"
+                              data-te-collapse-init
+                              data-te-target="#flush-collapseOne"
+                              aria-expanded="false"
+                              aria-controls="flush-collapseOne">
+                              <div>
+                                <div class="flex font-muller items-center">
+                                    <div class="min-w-[50px] min-h-[50px] group-[&:not([data-te-collapse-collapsed])]:bg-blue-dark group-[&:not([data-te-collapse-collapsed])]:text-white duration-300 rounded-full border border-blue-dark items-center text-[24px] text-muller text-blue-dark font-bold flex justify-center">1</div>
+                                    <div class="text-start ml-4">
+                                        <div class="text-[16px] text-blue-dark">1 день</div>
+                                        <div class="text-[21px] font-bold font-nunito">
+                                            Предварительная проверка
+                                        </div>
+                                    </div>
+                                  </div>
+    
+                                  <div class="absolute top-0 right-0 group-[[data-te-collapse-collapsed]]:rotate-45 duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                  </div>
+                              </div>
+                            </button>
+                          </h2>
+                          <div
+                            id="flush-collapseOne"
+                            class="!visible border-0"
+                            data-te-collapse-item
+                            data-te-collapse-show
+                            aria-labelledby="flush-headingOne"
+                            data-te-parent="#accordionFlushExample">
+                            <div class="text-[18px] py-[20px] font-muller">
+                                Compliance Anti Money Laundering Officer изучает документы инвестора. Процедура полностью конфиденциальная и&nbsp;занимает один рабочий день. Заявителю нужно предоставить только паспорт.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-[16px] border-b border-gray">
+                          <h2 class="mb-0" id="flush-headingTwo">
+                            <button
+                              class="group w-full relative"
+                              type="button"
+                              data-te-collapse-init
+                              data-te-collapse-collapsed
+                              data-te-target="#flush-collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="flush-collapseTwo">
+                              <div>
+                                <div class="flex font-muller items-center">
+                                    <div class="min-w-[50px] min-h-[50px] group-[&:not([data-te-collapse-collapsed])]:bg-blue-dark group-[&:not([data-te-collapse-collapsed])]:text-white duration-300 rounded-full border border-blue-dark items-center text-[24px] text-muller text-blue-dark font-bold flex justify-center">2</div>
+                                    <div class="text-start ml-4">
+                                        <div class="text-[16px] text-blue-dark">3 день</div>
+                                        <div class="text-[21px] font-bold font-nunito">
+                                            Предварительная проверка
+                                        </div>
+                                    </div>
+                                  </div>
+    
+                                  <div class="absolute top-0 right-0 group-[[data-te-collapse-collapsed]]:rotate-45 duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                  </div>
+                              </div>
+                            </button>
+                          </h2>
+                          <div
+                            id="flush-collapseTwo"
+                            class="!visible hidden border-0"
+                            data-te-collapse-item
+                            aria-labelledby="flush-headingTwo"
+                            data-te-parent="#accordionFlushExample">
+                            <div class="text-[18px] py-[20px] font-muller">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, fuga adipisci accusantium obcaecati porro a.
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+
+                    <!-- [&:not([data-te-collapse-collapsed])]:bg-blue-dark -->
+                    
+
+                    <!-- Десктоп -->
+                    <div class="mt-[60px] hidden lg:flex">
+
+                        <!-- data-[te-nav-active]:border-primary -->
+
+                        <!--Tabs navigation-->
+                            <ul
+                            class="mr-4 flex list-none flex-col flex-wrap pl-0 min-w-[480px]"
+                            role="tablist"
+                            data-te-nav-ref>
+                                <li role="presentation" class="text-center">
+                                    <button
+                                    href="#tabs-0"
+                                    class="block group"
+                                    data-te-toggle="pill"
+                                    data-te-target="#tabs-0"
+                                    data-te-nav-active
+                                    role="tab"
+                                    aria-controls="tabs-0"
+                                    aria-selected="false"
+                                    >
+                                        <div class="flex font-muller items-center">
+                                            <div class="w-[50px] h-[50px] group-[[data-te-nav-active]]:bg-blue-dark group-[[data-te-nav-active]]:text-white duration-300 rounded-full border border-blue-dark items-center text-[24px] text-muller text-blue-dark font-bold flex justify-center">1</div>
+                                            <div class="text-[21px] text-blue-dark font-bold font-nunito ml-[20px] border-b border-gray py-[30px]">
+                                                Предварительная проверка
+                                            </div>
+                                            <div class="group-[[data-te-nav-active]]:translate-x-[50px] duration-300 opacity-0 group-[[data-te-nav-active]]:opacity-100">
+                                                <svg width="19" height="38" viewBox="0 0 19 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 37L18 19L0.999998 0.999999" stroke="#01206F"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                
+                                <li role="presentation" class="flex-grow text-center">
+                                    <button
+                                    href="#tabs-profile03"
+                                    class="block group"
+                                    data-te-toggle="pill"
+                                    data-te-target="#tabs-profile03"
+                                    role="tab"
+                                    aria-controls="tabs-profile03"
+                                    aria-selected="false"
+                                    >
+                                        <div class="flex font-muller items-center">
+                                            <div class="w-[50px] h-[50px] group-[[data-te-nav-active]]:bg-blue-dark group-[[data-te-nav-active]]:text-white duration-300 rounded-full border border-blue-dark items-center text-[24px] text-muller text-blue-dark font-bold flex justify-center">2</div>
+                                            <div class="text-[21px] text-blue-dark font-bold font-nunito ml-[20px] border-b border-gray py-[30px]">
+                                                Предварительная проверка
+                                            </div>
+                                            <div class="group-[[data-te-nav-active]]:translate-x-[50px] duration-300 opacity-0 group-[[data-te-nav-active]]:opacity-100">
+                                                <svg width="19" height="38" viewBox="0 0 19 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 37L18 19L0.999998 0.999999" stroke="#01206F"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>   
+                            </ul>
+
+                            <!--Tabs content-->
+                            <div class="w-full">
+                                <div
+                                class="hidden opacity-100 transition-opacity data-[te-tab-active]:block font-nunito"
+                                id="tabs-0"
+                                role="tabpanel"
+                                aria-labelledby="tabs-0"
+                                data-te-tab-active>
+                                    <div class="bg-white p-[50px] shadow-tab-content">
+                                        <span class="text-[14px] italic font-muller">От 2 до 4 недель</span>
+                                        <div>
+                                            <h3 class="font-bold text-[30px]">Подготовка документов</h3>
+                                        </div>
+                                        <div class="mt-[20px] text-[20px] font-muller">
+                                            <p>
+                                                Юристы Mircare готовят списки личных и финансовых документов, необходимых для участия в программе гражданства. Среди них — паспорта, свидетельства о рождении и браке, справки и выписки.
+
+                                                Юристы сами заполняют все государственные формы и заверяют копии документов — инвестору остается только поставить подпись.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div
+                                class="hidden opacity-100 transition-opacity data-[te-tab-active]:block font-nunito"
+                                id="tabs-profile03"
+                                role="tabpanel"
+                                aria-labelledby="tabs-profile-tab03">
+                                    <div class="bg-white p-[50px] shadow-tab-content">
+                                        <span class="text-[14px] italic font-muller">От 2 до 4 недель</span>
+                                        <div>
+                                            <h3 class="font-bold text-[30px]">Подготовка документов</h3>
+                                        </div>
+                                        <div class="mt-[20px] text-[20px] font-muller">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus ratione quaerat minus doloremque optio aliquam.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </section>
+        <!-- /STAGES -->
+
+
+        <!-- REQUEST -->
+        <section class="bg-form-color lg:bg-white">
+            <div class="container max-w-[1230px]">
+                <div class="py-[60px] font-muller bg-form-color lg:mt-[100px] lg:py-[70px] lg:px-[50px]">
+                    
+                    <form action="" class="relative">
+                        <div class="absolute hidden lg:flex top-0 right-0">
+                            <div class="text-[20px] ml-4">
+                                <div class="font-bold font-muller">Анна Курылло</div>
+                                <span class="text-[14px]">Руководитель</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 right-0 w-[500px] hidden lg:flex">
+                            <img src="./img/anna.png" alt="">
+                        </div>
+                        <span class="text-[14px] lg:text-[20px]">Свяжитесь с нами</span>
+                        <div>
+                            <h2 class="text-[26px] lg:text-[46px] font-bold font-nunito">Давайте обсудим детали</h2>
+                        </div>
+
+                        <div class="mt-[50px] space-y-4 lg:w-1/2">
+
+                            <div class="relative">
+                                <input type="text" id="name" class="lg:max-w-[520px] block rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" " />
+                                <label for="name" class="absolute text-[20px] text-[#666] duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Имя*</label>
+                            </div>
+
+                            <div class="relative w-full">
+                                <input type="text" id="name" class="lg:max-w-[520px] block phone-mask rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" 692 12 34 56" />
+                            </div>
+
+                            <div class="relative">
+                                <input type="text" id="telegram" class="lg:max-w-[520px] block rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" " />
+                                <label for="telegram" class="absolute text-[20px] text-[#666] duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Ник в телеграм</label>
+                            </div>
+
+                            <div>
+                                <div class="flex items-start mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="lg:max-w-[520px] min-w-[20px] min-h-[20px] bg-gray-100 border-gray-300">
+                                    <label for="default-checkbox" class="ml-2 text-[14px]">Я согласен с Политикой конфиденциальности Mircare. Подробную информацию о том, как мы обрабатываем ваши персональные данные, можно найти здесь.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-[50px] lg:hidden">
+                            <div class="relative w-[70px] rounded-full bg-cover bg-center bg-no-repeat aspect-square" style="background-image:url('./img/anna-m.png')"></div>
+                            <div class="text-[14px] ml-4">
+                                <div class="font-bold font-muller">Анна Курылло</div>
+                                <span>Руководитель</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="max-w-[320px] mt-[30px] py-4 bg-blue text-white hover:opacity-90 duration-300 text-[18px] lg:text-[20px] w-full flex items-center justify-center font-nunito">
+                            Отправить
+                        </button>
+                    </form>
+
+                    <div class="mt-[50px] lg:flex lg:items-center">
+                        <div class="text-[20px]">
+                            Или напишите нам в мессенджеры
+                        </div>
+
+                        <div class="hidden lg:flex text-[20px] ml-4 space-x-4">
+                            <a href="" class="group flex items-center hover:underline-offset-8 transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span class="ml-2 border-b border-black border-opacity-0  group-hover:border-opacity-100 duration-500">WhatsApp</span>    
+                            </a>
+                            <a href="" class="group flex items-center hover:underline-offset-8 transition-all">
+                                <svg width="24px" height="24px" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                <span class="ml-2 border-b border-black border-opacity-0  group-hover:border-opacity-100 duration-500">Telegram</span>    
+                            </a>
+                        </div>
+
+                        <div class="mt-[20px] space-y-[15px] lg:hidden">
+                            <a href="" class="bg-btn-green p-[12px] border-b border-white hover:border-blue duration-500 flex items-center justify-center relative text-[20px] text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-[12px] fill-white" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                WhatsApp
+                            </a>
+
+                            <a href="" class="bg-btn-blue p-[12px] border-b border-white hover:border-blue duration-500 flex items-center justify-center relative text-[20px]">
+                                <svg width="24px" height="24px" class="absolute left-[12px] fill-white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /REQUEST -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container max-w-[1230px]">
+            <div class="py-[50px]">
+                <div class=" font-nunito font-nunito py-[25px] lg:grid lg:grid-cols-4">
+                    <div class="border-t border-gray-border py-[25px] lg:py-[50px]">
+                        <div class="text-[18px] lg:text-[20px] w-full font-bold">Гражданство</div>
+                        <ul class="text-[16px] mt-[20px] grid grid-cols-2 lg:grid-cols-1 gap-y-3">
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                        </ul>
+                        <a href="" class="text-blue flex items-center lg:hidden">Все программы
+                            <svg class="w-[14px] h-[14px] ml-2 fill-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="border-t border-gray-border py-[25px] lg:py-[50px]">
+                        <div class="text-[18px] w-full lg:text-[20px] font-bold">Вид на жительство</div>
+                        <ul class="text-[16px] mt-[20px] grid grid-cols-2 lg:grid-cols-1 gap-y-3">
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                        </ul>
+                        <a href="" class="text-blue flex lg:text-[20px] lg:hidden items-center">Все программы
+                            <svg class="w-[14px] h-[14px] ml-2 fill-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="border-t border-gray-border py-[25px] lg:py-[50px]">
+                        <div class="">
+                            <div class="text-[18px] w-full lg:text-[20px] font-bold">Компания</div>
+                            <ul class="text-[16px] mt-[20px] grid grid-cols-2 lg:grid-cols-1 gap-y-3">
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="lg:mt-[50px]">
+                            <div class="text-[18px] w-full font-bold lg:text-[20px]">Ресурсы</div>
+                            <ul class="text-[16px] mt-[20px] grid grid-cols-2 lg:grid-cols-1 gap-y-3">
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                                <li><a class="border-b border-white hover:border-blue duration-500 lg:text-[18px] hover:text-blue" href="">Италия</a></li>
+                            </ul>
+                        </div> 
+                    </div>
+
+                    <div class="border-t border-gray-border lg:text-[20px] py-[25px] lg:py-[50px]">
+                        <div class="text-[18px] w-full lg:text-[20px] font-bold">Офисы и комнаты</div>
+
+                        <div class="text-[16px] lg:text-[18px]">
+                            <ul>
+                                <li class="font-nunito mt-[20px]">
+                                    <div>
+                                        <b>Москва, Россия</b><br> 
+                                        127572, Москва, ул. Угличская, 12
+                                    </div>
+                                    <a href="tel:1212314123" class="underline underline-offset-4">12341234121</a>
+                                </li>
+
+                                <li class="font-nunito mt-[20px]">
+                                    <div>
+                                        <b>Москва, Россия</b><br> 
+                                        127572, Москва, ул. Угличская, 12
+                                    </div>
+                                    <a href="tel:1212314123" class="underline underline-offset-4">12341234121</a>
+                                </li>
+                            </ul>
+                            <a href="" class="text-blue group flex items-center font-nunito mt-4">
+                                <span class="border-b border-white group-hover:border-blue duration-500">Все офисы</span>    
+                                <svg class="w-[14px] h-[14px] ml-2 fill-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="flex items-center font-nunito text-[20px] space-x-4 mt-8">
+                            <a href="" class="group flex items-center duration-500 transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span class="ml-2 border-b border-black border-opacity-0  group-hover:border-opacity-100 duration-500">WhatsApp</span>    
+                            </a>
+                            <a href="" class="group flex items-center duration-500 transition-all">
+                                <svg width="24px" height="24px" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                <span class="ml-2 border-b border-black border-opacity-0  group-hover:border-opacity-100 duration-500">Telegram</span>    
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="w-full flex lg:justify-end border-b border-gray-border pb-[30px]">
+                    <div class="h-[50px] flex items-center font-nunito">
+                        <img class="h-[50px]" src="./img/IMC-Logo-Member.jpg" alt="">
+                        <div class="ml-4 leading-tight">
+                            Miracle - <br> участник IMC
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="font-muller py-6 flex flex-col lg:flex-row lg:justify-between">
+
+                    <div class="lg:hidden pb-[24px] border-b border-gray-border">
+                        <ul class="flex items-center space-x-[24px]">
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-[12px] flex flex-col pt-[24px] lg:pt-[0px]">
+                        <ul class="flex flex-col lg:flex-row lg:items-center space-y-2 lg:space-y-0 lg:space-x-5">
+                            <li><a href="" class="text-gray hover:underline duration-300 hover:text-blue-dark">Правила использования сайта </a></li>
+                            <li><a href="" class="text-gray hover:underline duration-300 hover:text-blue-dark">Ссылка</a></li>
+                            <li><a href="" class="text-gray hover:underline duration-300 hover:text-blue-dark">Ссылка</a></li>
+                            <li><a href="" class="text-gray hover:underline duration-300 hover:text-blue-dark">Ссылка</a></li>
+                        </ul>
+
+                        <div class="text-gray mt-3">
+                            Copyright © 2023
+                            <a href="" class="text-gray hover:underline duration-300 hover:text-blue-dark">Mircare, зарегистрированный товарный знак №923905</a>
+                        </div>
+                    </div>
+
+                    <a href="" class="hidden lg:flex">
+                        <svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.016 11c-.048-1.03-.168-2.035-.356-3h3.5c.41.935.685 1.942.79 3h-3.934zm3.933 2c-.105 1.058-.38 2.065-.79 3h-3.5c.188-.965.309-1.97.356-3h3.934zm-1.968-7h-2.83c-.375-1.197-.875-2.292-1.461-3.286 1.716.684 3.195 1.831 4.291 3.286zm-4.948 0h-2.033v-3.674c.841 1.01 1.526 2.256 2.033 3.674zm-2.033 12h2.033c-.507 1.418-1.192 2.664-2.033 3.674v-3.674zm-2-15.674v3.674h-2.033c.507-1.418 1.192-2.664 2.033-3.674zm0 5.674v3h-2.994c.052-1.04.181-2.044.389-3h2.605zm0 5v3h-2.605c-.208-.956-.336-1.96-.389-3h2.994zm0 5v3.674c-.841-1.01-1.526-2.256-2.033-3.674h2.033zm2-2v-3h2.994c-.052 1.04-.181 2.044-.389 3h-2.605zm0-5v-3h2.605c.208.956.336 1.96.389 3h-2.994zm-4.69-8.286c-.586.994-1.086 2.089-1.461 3.286h-2.83c1.096-1.455 2.575-2.602 4.291-3.286zm-2.326 8.286h-3.933c.105-1.058.38-2.065.79-3h3.5c-.189.965-.309 1.97-.357 3zm.357 5h-3.5c-.41-.935-.685-1.942-.79-3h3.934c.047 1.03.167 2.035.356 3zm-2.322 2h2.83c.375 1.197.875 2.292 1.461 3.286-1.716-.684-3.195-1.831-4.291-3.286zm11.671 3.286c.586-.994 1.086-2.089 1.461-3.286h2.83c-1.096 1.455-2.575 2.602-4.291 3.286z"/></svg>
+                    </a>
+
+                    <div class="hidden lg:flex">
+                        <ul class="flex items-center space-x-[24px]">
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                            </li>
+                            <li>
+                                <a href=""><svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+
+                <a href="" class="flex lg:hidden">
+                    <svg class="fill-gray hover:fill-black duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.016 11c-.048-1.03-.168-2.035-.356-3h3.5c.41.935.685 1.942.79 3h-3.934zm3.933 2c-.105 1.058-.38 2.065-.79 3h-3.5c.188-.965.309-1.97.356-3h3.934zm-1.968-7h-2.83c-.375-1.197-.875-2.292-1.461-3.286 1.716.684 3.195 1.831 4.291 3.286zm-4.948 0h-2.033v-3.674c.841 1.01 1.526 2.256 2.033 3.674zm-2.033 12h2.033c-.507 1.418-1.192 2.664-2.033 3.674v-3.674zm-2-15.674v3.674h-2.033c.507-1.418 1.192-2.664 2.033-3.674zm0 5.674v3h-2.994c.052-1.04.181-2.044.389-3h2.605zm0 5v3h-2.605c-.208-.956-.336-1.96-.389-3h2.994zm0 5v3.674c-.841-1.01-1.526-2.256-2.033-3.674h2.033zm2-2v-3h2.994c-.052 1.04-.181 2.044-.389 3h-2.605zm0-5v-3h2.605c.208.956.336 1.96.389 3h-2.994zm-4.69-8.286c-.586.994-1.086 2.089-1.461 3.286h-2.83c1.096-1.455 2.575-2.602 4.291-3.286zm-2.326 8.286h-3.933c.105-1.058.38-2.065.79-3h3.5c-.189.965-.309 1.97-.357 3zm.357 5h-3.5c-.41-.935-.685-1.942-.79-3h3.934c.047 1.03.167 2.035.356 3zm-2.322 2h2.83c.375 1.197.875 2.292 1.461 3.286-1.716-.684-3.195-1.831-4.291-3.286zm11.671 3.286c.586-.994 1.086-2.089 1.461-3.286h2.83c-1.096 1.455-2.575 2.602-4.291 3.286z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
+
+    <!-- Модальное окно с формой -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="exampleModalFullscreen"
+        tabindex="-1"
+        aria-labelledby="exampleModalFullscreenLabel"
+        aria-hidden="true">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[0px]:m-0 min-[0px]:h-full min-[0px]:max-w-none">
+            <div
+            class="pointer-events-auto relative flex w-full flex-col items-center justify-center rounded-md bg-modal-screen bg-clip-padding text-current shadow-lg outline-none min-[0px]:h-full min-[0px]:rounded-none min-[0px]:border-0">
+
+                <div class="bg-white text-black max-w-[520px] opacity-100 p-[20px] relative pt-[130px] lg:pt-[20px]">
+
+                    <div class="absolute right-[20px] top-[130px] lg:top-[20px] cursor-pointer"
+                    data-te-modal-dismiss
+                    aria-label="Close"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+
+                    <form action="">
+                        <div class="text-[20px] font-bold font-nunito">Обратный звонок</div>
+                        <div class="font-muller leading-tight text-[15px]">Мы перезвоним вам в ближайшее время и ответим  на интересующие вас вопросы</div>
+
+                        <div class="mt-[20px] space-y-4 font-nunito">
+
+                            <div class="relative">
+                                <input type="text" id="name" class="lg:max-w-[520px] block rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" " />
+                                <label for="name" class="absolute text-[15px] lg:text-[20px] text-[#666] duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Имя*</label>
+                            </div>
+
+                            <div class="relative">
+                                <input type="email" id="email" class="lg:max-w-[520px] block rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" " />
+                                <label for="name" class="absolute text-[15px] lg:text-[20px] text-[#666] duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Email*</label>
+                            </div>
+
+                            <div class="relative w-full">
+                                <input type="text" id="name" class="lg:max-w-[520px] block phone-mask rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" 692 12 34 56" />
+                            </div>
+
+                            <div class="relative">
+                                <input type="text" id="telegram" class="lg:max-w-[520px] block rounded-[2px] px-3 h-[62px] bg-gray-light focus:bg-white w-full text-[20px] border focus:border-black border-gray appearance-none focus:outline-none peer" placeholder=" " />
+                                <label for="telegram" class="absolute text-[15px] lg:text-[20px] text-[#666] duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Ник в телеграм</label>
+                            </div>
+
+                            <div>
+                                <textarea id="message" rows="4" class="block p-2.5 w-full text-[15px] lg:text-[20px] text-[#666] bg-gray-light rounded-[2px] border focus:border-black border-gray" placeholder="Если у вас есть вопрос оставьте его"></textarea>
+                            </div>
+
+                            <div>
+                                <div class="flex items-start mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="lg:max-w-[520px] min-w-[20px] min-h-[20px] bg-gray-100 border-gray-300">
+                                    <label for="default-checkbox" class="font-muller ml-2 text-[14px]">Я согласен с Политикой конфиденциальности Mircare. Подробную информацию о том, как мы обрабатываем ваши персональные данные, можно найти здесь.</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="max-w-[320px] mt-[30px] py-4 bg-blue text-white hover:opacity-90 duration-300 text-[18px] lg:text-[20px] w-full flex items-center justify-center font-nunito">
+                            Отправить
+                        </button>
+                    </form>
+
+                    <div class="mt-[50px] lg:flex lg:items-center font-nunito">
+                        <div class="text-[18px]">
+                            Или напишите нам в мессенджеры
+                        </div>
+
+                        <div class="hidden lg:flex text-[20px] ml-4 space-x-4">
+                            <a href="" class="hover:underline flex items-center hover:underline-offset-8 duration-300 transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span class="ml-2">WhatsApp</span>    
+                            </a>
+                            <a href="" class="hover:underline flex items-center hover:underline-offset-8 duration-300 transition-all">
+                                <svg width="24px" height="24px" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                <span class="ml-2">Telegram</span>    
+                            </a>
+                        </div>
+
+                        <div class="mt-[20px] space-y-[15px] lg:hidden">
+                            <a href="" class="bg-btn-green p-[12px] flex items-center justify-center relative text-[20px] text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-[12px] fill-white" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                WhatsApp
+                            </a>
+
+                            <a href="" class="bg-btn-blue p-[12px] flex items-center justify-center relative text-[20px]">
+                                <svg width="24px" height="24px" class="absolute left-[12px] fill-white" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно с выбором языка -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1100] hidden h-full w-full bg-modal-screen overflow-y-auto overflow-x-hidden outline-none"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div
+            data-te-modal-dialog-ref
+            class="p-[20px] pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[700px]">
+            <div
+            class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+            
+
+            <!--Modal body-->
+            <div class="relative flex-auto p-[20px] pb-[70px] w-[5/6] bg-transparent" data-te-modal-body-ref>
+                <div class="w-full flex justify-end">
+                    <button
+                    type="button"
+                    class=""
+                    data-te-modal-dismiss
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:rotate-90 duration-300">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="bg-white">
+                    <div class="font-nunito text-[32px] text-center font-bold">
+                        Выберите язык
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-3 lg:gap-x-[100px] lg:px-[20px] justify-items-center mt-[20px] gap-3">
+                        <a href="" class="hover:scale-125 duration-500">
+                            <div class="max-w-[100px]">
+                                <img src="./img/flag_ru.jpg" alt="">
+                            </div>
+                            <div class="text-[20px] text-blue text-center font-muller">Русский</div>
+                            <div class="text-[16px] font-muller text-center text-gray">Русский</div>
+                        </a>
+                        <a href="" class="hover:scale-125 duration-500">
+                            <div class="max-w-[100px]">
+                                <img src="./img/flag_ru.jpg" alt="">
+                            </div>
+                            <div class="text-[20px] text-blue text-center font-muller">Русский</div>
+                            <div class="text-[16px] font-muller text-center text-gray">Русский</div>
+                        </a>
+                        <a href="" class="hover:scale-125 duration-500">
+                            <div class="max-w-[100px]">
+                                <img src="./img/flag_ru.jpg" alt="">
+                            </div>
+                            <div class="text-[20px] text-blue text-center font-muller">Русский</div>
+                            <div class="text-[16px] font-muller text-center text-gray">Русский</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./js/intlTelInput-jquery.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.matchHeight.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+  
+
+
+  
